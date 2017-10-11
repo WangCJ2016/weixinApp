@@ -1,0 +1,85 @@
+.model_wrap {
+  @extend %flex;
+  @extend %flexWrap;
+  max-width: px2rem(750);
+  margin: 0 auto;
+  > p {
+    width: px2rem(375);
+    height: px2rem(375);
+    border-radius: px2rem(10);
+    position: relative;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .activat::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #000;
+    animation:mymove .5s ;
+    animation-fill-mode: forwards;
+	-webkit-animation:mymove .5s ;
+  -webkit-animation-fill-mode: forwards;
+  }
+  @keyframes mymove
+{
+from {
+  top:2.5rem;
+  left: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  opacity: 0;
+}
+to {
+  opacity: .3;
+  top:-2.5rem;
+  left: -2.5rem;
+  width: 15rem;
+  height: 15rem;
+}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+  from {
+    top:2.5rem;
+    left: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+    opacity: 0;
+  }
+  to {
+    opacity: .3;
+    top:-2.5rem;
+    left: -2.5rem;
+    width: 15rem;
+    height: 15rem;
+  }
+}
+.model_img{
+  background: url('../imgs/wcj/model/yingbin.png') no-repeat 100% 100%;
+}
+.外出情景{
+  background: url('../imgs/wcj/model/waichu.png') no-repeat 100% 100%;
+}
+.迎宾情景{
+  background: url('../imgs/wcj/model/yingbin.png') no-repeat 100% 100%;
+}
+.起床情景{
+  background: url('../imgs/wcj/model/qichuang.png') no-repeat 100% 100%;
+}
+.影视情景{
+  background: url('../imgs/wcj/model/yingshi.png') no-repeat 100% 100%;
+}
+.阅读情景{
+  background: url('../imgs/wcj/model/yuedu.png') no-repeat 100% 100%;
+}
+.睡眠情景{
+  background: url('../imgs/wcj/model/shuimian.png') no-repeat 100% 100%;
+}
+}

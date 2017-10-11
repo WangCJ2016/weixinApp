@@ -1,0 +1,87 @@
+<ion-view view-title="个人设置">
+	<ion-nav-buttons side="left">
+		<button class="button button-clear ajk_back" native-ui-sref="tab.userCenter" native-options="{type: 'slide', direction:'right'}"></button>
+	</ion-nav-buttons>
+	<ion-content class="userCenter-back">
+		<div class="list setting-list">
+			<a href="">
+				<div class="item marginB" >
+					<div class="center" ng-click='qrCode();'>
+						<p>
+							<img src="imgs/kwn/code.png" alt="" />
+							<span></span>
+						</p>
+						<span>二维码</span>
+						<i>
+							<img src="imgs/kwn/arrows.png" alt="" />
+							<span></span>
+						</i>
+					</div>
+				</div>
+			</a>
+			<a href="#/binding">
+				<div class="item shortboder" >
+					<div class="center">
+						<p>
+							<img src="imgs/kwn/data.png" alt="" />
+							<span></span>
+						</p>
+						<span>身份绑定</span>
+						<i>
+							<img src="imgs/kwn/arrows.png" alt="" />
+							<span></span>
+						</i>
+					</div>
+				</div>
+			</a>
+			<a href="">
+				<div class="item marginB shortboder" ng-click='changeHeadPic();'>
+					<div class="center">
+						<p class="headChange">
+							<img ng-src="imgs/kwn/head.png" alt="" />
+							<span></span>
+						</p>
+						<span>头像更换</span>
+						<i>
+							<img src="imgs/kwn/arrows.png" alt="" />
+							<span></span>
+						</i>
+					</div>
+				</div>
+			</a>
+			<a href="#/bindingPhone">
+				<div class="item shortboder bindPhone">
+					<div class="center">
+						<p>
+							<img src="imgs/kwn/phone.png" alt="" />
+							<span></span>
+						</p>
+						<span>手机绑定</span>
+						<i>
+							<img src="imgs/kwn/arrows.png" alt="" />
+							<span></span>
+						</i>
+					</div>
+				</div>
+			</a>
+			<a href="#/ChangePwd">
+				<div class="item shortboder changePassword">
+					<div class="center">
+						<p>
+							<img src="imgs/kwn/lock.png" alt="" />
+							<span></span>
+						</p>
+						<span>修改密码</span>
+						<i>
+							<img src="imgs/kwn/arrows.png" alt="" />
+							<span></span>
+						</i>
+					</div>
+				</div>
+			</a>
+		</div>
+	</ion-content>
+	<ion-footer-bar align-title="left" class="setting-footer" ng-click='logout();'>
+		<p>退出当前账户</p>
+	</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,124 @@
+<ion-view hide-nav-bar='true'>
+  <!--  <div class='fixed_home' id='fixed' get-height>
+  </div>
+  <div class="fixedHeader " id="fixedHeader">
+    <div class="search_bar">
+      <div class="wrap">
+        <div class='newCity' ui-sref='getCity'>
+          <span>{{city}}</span><i class="icon ion-arrow-down-b"></i>
+        </div>
+        <!-- <div class="search_btn">
+        </div> -->
+  <!-- <a ng-click='goSelectBussiniss($event)' class="mask">
+          <div>搜索目的、商圈、生活圈</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="fixedHeader" id="fixedHeaderDefalut">
+    <div class="search_bar">
+      <div class="wrap">
+        <div class='newCity' ui-sref='getCity'>
+          <span>{{city}}</span><i class="icon ion-arrow-down-b"></i>
+        </div>
+        <!-- <div class="search_btn">
+        </div> 
+        <a ng-click='goSelectBussiniss($event)' class="mask">
+          <div>搜索目的、商圈、生活圈</div>
+        </a>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="changeStatus" ng-class='{verticalStatus:rank}' ng-click="rank=!rank"></div> -->
+  <ion-content  class='has-footer home' style='background-color:#f6f6f6;'>
+    <div class="home_wrap">
+      <ion-slide-box id='slide' class='slide' does-continue="true" auto-play="true" slide-interval="4000">
+        <ion-slide ng-repeat='mainAD in mainADs track by $index' native-ui-sref="houseDtail({id:mainAD.hotelId})">
+          <div class="box "><img ng-src={{mainAD.picture}}></div>
+        </ion-slide>
+      </ion-slide-box>
+      <div class="home_search_wrap">
+        <div class="home_search">
+          <div class="search_row">
+            <div class="search_bar">
+              <p class="city" ui-sref='getCity'><span>{{city}}</span><i class="icon ion-arrow-down-b"></i></p>
+              <p class="seach_where" ng-click='goSelectBussiniss($event)'>搜索目的、商圈、生活圈</p>
+            </div>
+            <img ng-src="imgs/wcj/home/map.png" class="loc" />
+          </div>
+          <p class="search_btn" ui-sref='nearby'>查找酒店</p>
+        </div>
+      </div>
+      <div class="mainBtns">
+        <div class="mainBtn" ng-click="goNearBy()">
+          <img ng-src="imgs/wcj/home/near_house.png" />
+          <p>附近房源</p>
+        </div>
+        <div class="mainBtn" native-ui-sref='landlordProfit'>
+          <img ng-src="imgs/wcj/home/resruit.png" />
+          <p>房东招募</p>
+        </div>
+        <div class="mainBtn" native-ui-sref='myCollect'>
+          <img ng-src="imgs/wcj/home/collection.png" />
+          <p>我的收藏</p>
+        </div>
+        <div class="mainBtn">
+          <img ng-src="imgs/wcj/home/more.png" />
+          <p>敬请期待</p>
+        </div>
+      </div>
+      <div class="ad_pics_wrap">
+        <h3 class="home_title"><i class="icon_div"></i>活动咨询</h3>
+        <ion-scroll direction='x' class="ad_pics cl">
+          <div class="">
+            <figure ng-repeat="subAD in subADs track by $index" native-ui-sref="houseDtail({id:subAD.hotelId})">
+              <img ng-src={{subAD.picture}} alt="">
+            </figure>
+          </div>
+          </ion-sroll>
+      </div>
+      <div class="content">
+        <h3 class="home_title"><i class="icon_div"></i>推荐房源</h3>
+        <div>
+          <div class="ajklist" ng-repeat="hotel in hotels track by $index" ng-click="goHotelDetail(hotel.id)">
+            <div>
+              <div class='item_ad'>
+                <img ng-src={{hotel.mainPicture}}>
+                <div class="intr">
+                  <h2>{{hotel.name}}</h2>
+                  <p class="loc"><span><i class="icon"></i>{{hotel.address}}</span></p>
+                  <p class="comment_star">
+                    <i class="start_full" ng-repeat="star in hotel.full_stars track by $index"></i>
+                    <i class="start_blank" ng-repeat="star in hotel.star_blank track by $index"></i>
+                  </p>
+                  <p class="price"><span>¥</span>{{hotel.price}}<span>起</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class='vertical' ng-if="rank">
+          <div class="ajklist_vertical" ng-repeat="hotel in hotels track by $index" ng-click="goHotelDetail(hotel.id)">
+                <img ng-src={{hotel.mainPicture}}>
+                <div class="intr">
+                  <h2>{{hotel.name}}</h2>
+                  <p class="loc"><i class="icon"></i>{{hotel.address}}</p>
+                  <p class="comment_star">
+                      <i class="start_full" ng-repeat="star in hotel.stars track by $index"></i>
+                      <i class="start_blank" ng-repeat="star in hotel.star_blank track by $index"></i>
+                  </p>
+                  <p class="price"><span>¥</span>{{hotel.price}}<span>起</span></p>
+                </div>
+            </div>
+        </div> -->
+      </div>
+      <!-- <div class="divier">
+
+      </div> -->
+    </div>
+    <ion-infinite-scroll ng-if="moreDataCanBeLoaded" on-infinite="loadMoreData()" distance="10%" immediate-check='false'>
+    </ion-infinite-scroll>
+    <div class="divier" style="height:50px">
+    </div>
+  </ion-content>
+</ion-view>

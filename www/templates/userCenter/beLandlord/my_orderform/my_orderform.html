@@ -1,0 +1,56 @@
+<ion-view hide-nav-bar='true'>
+	<ion-content has-subheader="false">
+		<div class="my_orderform_wrap">
+			<div class="divier"></div>
+			<div class="header">
+				<span><i class="close" native-ui-sref='myHouse' native-options="{type: 'slide', direction:'right'}"></i></span>
+				<div class="select_btn">
+					<span ng-click="select=true" ng-class="{selectBtn:select}">进行中</span>
+					<span ng-click="select=false" ng-class="{selectBtn:!select}">已结束</span>
+				</div>
+			</div>
+			<div ng-show="select">
+			  <div class="normal" ng-repeat ='order in orders track by $index'>
+               <div ng-repeat='hotel in order.hotelsx track by $index'>
+    			<h2>{{hotel.hotelName}}</h2>
+    			<div class="normal_house"  ng-repeat='house in hotel.houses track by $index' ng-click="goAccountDetail(house,hotel.hotelName)">
+    				<div class="item-four">
+    						<img ng-src="{{house.picture}}" alt="">
+    						<ul>
+    							 <li class="OrderNum">订单号:{{order.orderCode}}</li>
+    							<li>{{house.houseName}}</li>
+    							<li>{{house.address}}</li>
+                  <li>入住时间:{{house.inTimes}}</li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+
+    		</div>
+
+			</div>
+			<div ng-hide="select">
+				 <div class="normal" ng-repeat ='order in endOrders track by $index'>
+               <div ng-repeat='hotel in order.hotels track by $index'>
+                <h2>{{hotel.hotelName}}</h2>
+                <div class="normal_house" ui-sref='orderFormDetail' ng-repeat='house in hotel.houses track by $index' ng-click="goAccountDetail(house,hotel.hotelName)">
+                    <div class="item-four">
+                            <img ng-src={{house.picture}} alt="">
+                            <ul>
+                                 <li>订单号:{{order.orderCode}}</li>
+                                <li>{{house.houseName}}</li>
+                                <li>{{house.address}}</li>
+                                <li>入住时间:{{house.inTimes}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+    		</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

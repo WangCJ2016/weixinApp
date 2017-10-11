@@ -1,0 +1,127 @@
+.s_b_search{
+    background:url(../imgs/wcj/select_bussiniss/search_btn.png)no-repeat;
+    background-size:px2rem(40) px2rem(40);
+}
+.selectBussiniss_search{
+    width: 100%;
+    height:px2rem(80);
+    @extend %flex;
+    @extend %flexCrossCenter;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #fff;
+    span{
+        max-height:px2rem(80);
+        width:px2rem(80);
+        height:px2rem(80)!important;
+        line-height:px2rem(80);
+        margin-left:0!important;
+        padding: 0 px2rem(10);
+        background: url(../imgs/wcj/be_landlord/left_arr.png)no-repeat;
+        background-size: px2rem(24) px2rem(40);
+        background-position: px2rem(18) px2rem(20);
+    }
+
+    div{
+        flex-grow: 1;
+        -webkit-flex-grow:1;
+        margin-right: px2rem(30);
+        line-height:px2rem(60);
+        text-align: left;
+        background-color: $ajk_backColor;
+        border-radius: px2rem(5);
+        i{
+            margin-left: px2rem(20);
+            display:inline-block;
+            width:px2rem(40);
+            height:px2rem(40);
+            vertical-align:middle;
+        }
+        form{display: inline-block;}
+        input{
+            display:inline-block;
+            width:px2rem(450);
+            height:px2rem(40);
+            padding:0;
+            line-height:px2rem(40);
+             @include font-dpr(13px);
+             background: none;
+        }
+    }
+}
+.platform-ios .selectBussiniss_search{
+     height:px2rem(134);
+     padding-top: px2rem(34);
+}
+.selectBussiniss_back{
+ background-color:$ajk_backColor;
+}
+.selectBussinss_wrap{
+    @extend %flex;
+    width:100%;
+    height:100%;
+    .selectBussinss_list{
+        width:px2rem(180);
+        margin-left:px2rem(2);
+        .first_floor{
+            width:100%;
+            @include font-dpr(13px);
+            text-align:center;
+            line-height:px2rem(80);
+        }
+        .active{
+            background:#fff;
+            color:$ajk_color;
+        }
+    }
+    .metro_list{
+        width:px2rem(260);
+        background:#fff;
+        max-height:px2rem(320);
+        margin-right:px2rem(2);
+        overflow-y: auto;
+        li{
+            @include font-dpr(13px);
+            text-indent: px2rem(30);
+            line-height:px2rem(80);
+        }
+    }
+    .content_list{
+        overflow-y: auto;
+        -webkit-flex-grow:1;
+        flex-grow: 1;
+        .list{
+
+            @include font-dpr(12px);
+            text-indent: px2rem(30);
+            border: none;
+             margin:0;
+             display:block;
+             padding: 0;
+            .item{
+                padding:0;
+                margin:0;
+                border-width: 0px;
+                border-style: none;
+            }
+            .initial{
+                height: px2rem(40);
+                 @include font-dpr(12px);
+                line-height:px2rem(40);
+                color:#616161;
+            }
+            .cont_list{
+                height:px2rem(80);
+                line-height:px2rem(80);
+                @include font-dpr(13px);
+
+            }
+        }
+        .metro_cont_list{
+
+        }
+    }
+}
+.mysubway{
+    width:0 !important;
+    height:0 !important;
+}

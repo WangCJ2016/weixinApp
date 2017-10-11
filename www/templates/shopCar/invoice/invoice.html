@@ -1,0 +1,28 @@
+<ion-view title='发票'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" ng-click='back()' ></button>
+    </ion-nav-buttons>
+    <ion-content class="shopcar-back">
+     	<div class="invoice_btn">
+     		<div class="btn_common needless">不需要发票</div>
+     		<div class="btn_common need">
+     			<p>需要发票 (电子)</p>
+     			<span>开具发票后发至您邮箱</span>
+     		</div>
+     	</div>
+     	<div class="invoice_cont">
+     		<p>
+     			<label for="invoice_title">发票抬头</label>
+     			<input type="text" id="invoice_title" value="杭州同步科技有限公司" />
+     		</p>
+     		<p>
+     			<label for="invoice_ details">发票明细</label>
+     			<input type="text" id="invoice_ details" value="房费" />
+     		</p>
+     		<p class="noborder">
+     			<label for="e-mail_address">邮箱地址</label>
+     			<input type="text" id="e-mail_address" placeholder="用于接收电子发票" />
+     		</p>
+     	</div>
+    </ion-content>
+</ion-view>

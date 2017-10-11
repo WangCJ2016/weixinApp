@@ -1,0 +1,70 @@
+.lose-efficacy-list{
+    background-color: #FFFFFF;
+    h1{
+        padding-top: px2rem(30);
+        margin-left: px2rem(30);
+        @include font-dpr(19px);
+    }
+    .list{
+        width:100%;
+        height:px2rem(160);
+        border-bottom:1px solid $ajk_borderColor;
+        overflow: hidden;
+       p{
+            display: block;
+            width:px2rem(150);
+            height:px2rem(120);
+             margin-left: px2rem(40);
+             padding-top: px2rem(10);
+             float: left;
+          img{
+                padding-top: px2rem(8);
+                width:100%;
+                height:px2rem(120);
+                margin:0;
+            }
+        }
+
+        ul{
+            width: 50%;
+            height:100%;
+            float:left;
+            margin-left: px2rem(20);
+            padding-top:px2rem(15);
+           .address{
+                @include font-dpr(15px);
+                color: #000;
+                line-height:px2rem(35);
+                @extend %flex;
+                }
+            .OrderNum{
+               @include font-dpr(12px);
+                color: #ababab;
+                line-height:px2rem(50);
+                font-family: "PingFang SC Medium";
+            }
+            .money{
+                @include font-dpr(17px);
+                color: $ajk_color;
+                line-height:px2rem(40);
+            }
+            .evaluate{
+                input{
+                    height: px2rem(40);
+                    width: px2rem(100);
+                    background-color: #bebebe;
+                    color:white;
+                    @include font-dpr(13px);
+                    position: absolute;
+                    top:px2rem(60);
+                    right: px2rem(30);
+                    border:none;
+                    border-radius: 10% 10% ;
+                    line-height:px2rem(20);
+                }
+
+            }
+        }
+    }
+
+}

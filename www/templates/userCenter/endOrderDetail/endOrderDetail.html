@@ -1,0 +1,29 @@
+<ion-view view-title='已结束'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="lose-efficacy" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+         <div class="order status">
+               <div class='hotel' ng-repeat="hotel in order.hotelsx track by $index">
+                <p><span>{{hotel.hotelName}}</span></p>
+
+                <div class="item-three" ng-repeat='house in hotel.houses track by $index'>
+                    <img ng-src='{{house.picture}}' />
+                    <ul>
+                        <li >{{house.houseName}}
+                          <p class='cancel'>{{house.mark}}</p>
+                        </li>
+                        <li class="Time">{{house.inTimes}}<span class="Day">共{{house.days}}晚</span></li>
+                        <li class="money">¥{{house.totalFee}}</li>
+                    </ul>
+
+                </div>
+                </div>
+            </div>
+        <div class="order-information">
+        	<h3>订单信息</h3>
+        	<p><i>订单编号：</i><span>{{order.orderCode}}</span></p>
+        	<p><i>下单时间：</i><span>{{order.orderTime}}</span></p>
+        </div>
+    </ion-content>
+</ion-view>

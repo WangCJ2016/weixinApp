@@ -1,0 +1,67 @@
+<ion-view title="灯">
+  <ion-nav-buttons side="left">
+     <button class="button button-clear ajk_back" ng-click="goback()"></button>
+ </ion-nav-buttons>
+ <ion-content>
+   <div class="light_wrap">
+     <!-- <section class="model">
+       <figure ng-click="modelCtrl('homeon')">
+         <img ng-show='!yellow' ng-src="imgs/wcj/light/disModel.png" alt="">
+         <img ng-hide='!yellow' ng-src="imgs/wcj/light/yellow.png" alt="">
+         <figcaption>
+           卧室全开
+         </figcaption>
+       </figure>
+       <figure ng-click="modelCtrl('homeoff')">
+         <img ng-show='!red' ng-src="imgs/wcj/light/disModel.png" alt="">
+         <img ng-hide='!red' ng-src="imgs/wcj/light/red.png" alt="">
+         <figcaption>
+           卧室全关
+         </figcaption>
+       </figure>
+       <figure ng-click="modelCtrl('ledon')">
+         <img ng-show='!blue' ng-src="imgs/wcj/light/disModel.png" alt="">
+         <img ng-hide='!blue' ng-src="imgs/wcj/light/blue.png" alt="">
+         <figcaption>
+           房间全开
+         </figcaption>
+       </figure>
+       <figure ng-click="modelCtrl('ledoff')">
+         <img ng-show='!green' ng-src="imgs/wcj/light/disModel.png" alt="">
+         <img ng-hide='!green' ng-src="imgs/wcj/light/green.png" alt="">
+         <figcaption>
+           房间全关
+         </figcaption>
+       </figure>
+     </section> -->
+     <div class="tab_wrap">
+       <div class="tab_nav" 
+       ng-class="{active: $index === tabIndex}"
+       ng-repeat='nav in tab_navs'
+       ng-click='tabClick(nav, $index)'>
+         {{nav}}
+       </div>
+     </div>
+     <section class="lights" >
+       <!-- <figure class='colorLight' ng-click="goColorLight()">
+         <p></p>
+         <figcaption>
+           彩灯
+         </figcaption>
+       </figure>
+       <figure class='readLight' ui-sref='readLight'>
+         <p></p>
+         <figcaption>
+           阅读灯
+         </figcaption>
+       </figure> -->
+       <figure class='{{light.status}} {{light.name+light.status}}' ng-click='lightCtrl(light)' ng-repeat="light in lights track by $index">
+         <p></p>
+         <figcaption>
+           {{light.name}}
+         </figcaption>
+       </figure>
+     </section>
+   </div>
+ </ion-content>
+</ion-view>

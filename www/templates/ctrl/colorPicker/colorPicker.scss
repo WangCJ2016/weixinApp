@@ -1,0 +1,103 @@
+.colorPicker_wrap {
+  .scroll {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #e9e9e9;
+  }
+
+  .rbgbtns {
+    @extend %flex;
+    @extend %flexMainJustify;
+    &:first-child {
+      margin-top: px2rem(120);
+    }
+    padding: 0 px2rem(30);
+
+    > p {
+      width: px2rem(130);
+      height: px2rem(60);
+      border-radius: px2rem(20);
+      margin: px2rem(20);
+    }
+  }
+
+  .btnSelected {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  canvas {
+    display: block;
+    // height: px2rem(500);
+    position: absolute;
+    top: px2rem(400);
+    left: 50%;
+    // background-color: red;
+  }
+
+  .pot {
+    display: inline-block;
+    width: px2rem(10);
+    height: px2rem(10);
+    background: url(../imgs/wcj/colorPicker/pot.png)no-repeat;
+    background-size: px2rem(10) px2rem(10);
+    position: absolute;
+  }
+
+  #dd {
+    width: px2rem(150);
+    height: px2rem(150);
+    margin-top: px2rem(150);
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: px2rem(100);
+    @extend %flex;
+    @extend %flexCrossCenter;
+    @extend %flexMainCenter;
+    width: 100%;
+
+    > div {
+      width: px2rem(100);
+    }
+
+    > a {
+      width: px2rem(244);
+      height: px2rem(85);
+      background-size: px2rem(244) px2rem(85);
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+
+      img {
+        width: px2rem(63);
+      }
+    }
+
+    .check {
+      background: url("../imgs/wcj/colorPicker/unchecked.png") no-repeat;
+      background-size: px2rem(244) px2rem(85);
+    }
+
+    .open {
+      background: url("../imgs/wcj/colorPicker/close.png") no-repeat;
+      background-size: px2rem(244) px2rem(85);
+    }
+
+    .check.activated {
+      background: url("../imgs/wcj/colorPicker/checked.png") no-repeat;
+      background-size: px2rem(244) px2rem(85);
+    }
+
+    .open.activated {
+      background: url("../imgs/wcj/colorPicker/open.png") no-repeat;
+      background-size: px2rem(244) px2rem(85);
+    }
+  }
+}
+
+.colorPicker_wrap.has-header {
+  top: 0!important;
+}

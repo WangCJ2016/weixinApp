@@ -1,0 +1,90 @@
+.curtain_wrap {
+  float: left;
+  .curtain_btns {
+    height: px2rem(68);
+    margin: px2rem(50) 0 px2rem(30) px2rem(30);
+    @extend %flex;
+    @extend %flexMainJustify;
+    > span {
+      display: inline-block;
+      @include font-dpr(16px);
+      height: px2rem(68);
+      line-height: px2rem(68);
+    }
+
+    .btns {
+      @extend %flex;
+      @extend %flexMainJustify;
+      > span {
+        &.activated {
+          background-color:$ajk_color;
+          color:#fff;
+        }
+        display: inline-block;
+        width: px2rem(138);
+        height: px2rem(68);
+        line-height: px2rem(68);
+        border: 1px solid $ajk_borderColor;
+        @include font-dpr(16px);
+        margin-right: px2rem(30);
+        text-align: center;
+      }
+    }
+  }
+
+  .slide {
+    @extend %flex;
+    @extend %flexMainCenter;
+    @extend %flexCrossCenter;
+    height: px2rem(106);
+    border-bottom: 1px solid #e1e1e1;
+    i {
+      display: inline-block;
+      width: px2rem(50);
+      height: px2rem(50);
+      margin: 0 px2rem(30);
+    }
+
+    .curtainOn {
+      background: url(../imgs/wcj/curtain/curtainOn.png)no-repeat;
+      background-size: px2rem(50);
+    }
+
+    .curtainOff {
+      background: url(../imgs/wcj/curtain/curtainOff.png)no-repeat;
+      background-size: px2rem(50);
+    }
+
+    .winCurtainOn {
+      background: url(../imgs/wcj/curtain/winScreenOn.png)no-repeat;
+      background-size: px2rem(50);
+    }
+
+    .winCurtainOff {
+      background: url(../imgs/wcj/curtain/winScreenOff.png)no-repeat;
+      background-size: px2rem(50);
+    }
+  }
+}
+input[type="range"] {
+  height: px2rem(5);
+  margin: 17px 0;
+  padding: 0;
+  width: 70%;
+  cursor: pointer;
+  border: 0;
+  border-radius: px2rem(5);
+  outline: 0;
+  background-color: #ffb354;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: default;
+  height: px2rem(50);
+  width: px2rem(50);
+  background: #e1e1e1;
+  border-radius: 50%;
+  border-color: #fff;
+}

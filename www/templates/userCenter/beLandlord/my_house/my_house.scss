@@ -1,0 +1,85 @@
+.myHouse_wrap_house:not(:first-child){
+   margin-top:px2rem(20)
+}
+.myHouse_wrap{
+    &_detail{
+
+      height:px2rem(160);
+      @extend %flex;
+      @extend %flexCrossCenter;
+     position: relative;
+     &::before{
+       @include borderMixinBottom;
+     }
+      img{
+      	width: px2rem(150);
+      	height:px2rem(120);
+      	margin-left: px2rem(30);
+      }
+      >div{
+      	height:px2rem(120);
+      	margin-left:px2rem(20);
+        @extend %flex;
+        @extend %flexMainCenter;
+        @extend %flexDirTop;
+      	h2{
+      		color: #000;
+      		@include font-dpr(15px);
+          height: px2rem(40)
+      	}
+      	p{
+      		color:#ababab;
+            margin:0;
+            max-width: px2rem(500);
+            line-height: px2rem(40);
+            height: px2rem(40);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+      	}
+        .num{
+        line-height: px2rem(50);
+        height: px2rem(40);
+        }
+      }
+    }
+   &_btn{
+   	 height:px2rem(90);
+     @extend %flex;
+     @extend %flexCrossCenter;
+   	 background-color: $ajk_backColor;
+     position: relative;
+     &::before{
+       @include borderMixinBottom;
+     }
+   	 >div{
+   	 	height:px2rem(50);
+   	 	width:33.3%;
+   	 	text-align:center;
+   	 	span{
+   	 		display:inline-block;
+   	 		width:px2rem(100);
+   	 		height:px2rem(50);
+   	 		color:rgb(97,97,97);
+   	 		border: 1px solid $ajk_color;
+   	 		text-align:center;
+   	 		line-height:px2rem(50);
+   	 		&:active,
+   	 		&:hover,
+   	 		&:focus,{
+   	 		background-color:$ajk_color;
+            color:#fff;
+   	 	   }
+   	 	}
+   	 	span:active{
+   	 		background-color:$ajk_color;
+   	 	}
+   	 }
+   	 >div:not(:last-child){
+       position: relative;
+       &::before{
+         @include borderMixinRight;
+       }
+   	 }
+   }
+ }

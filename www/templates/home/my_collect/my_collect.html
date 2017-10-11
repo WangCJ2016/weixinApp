@@ -1,0 +1,21 @@
+<ion-view title="我的收藏">
+    <ion-nav-buttons side="left">
+            <button class="button button-clear ajk_back" ng-click='back()'></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="my_collect_wrap">
+            <div class="hotel" ng-repeat="collect in collects track by $index">
+                <div class="item-three iterm-three-avater" ui-sref="houseDtail({id:collect.hotelId})">
+                            <img ng-src="{{collect.hotel.mainPicture}}">
+                            <ul class="intr">
+                                <li>{{collect.hotel.name}}</li>
+                                <li class="loc"></span>{{collect.hotel.address}}<span></li>
+                                <li class="money">¥{{collect.hotel.price}}</li>
+                            </ul>
+                         <p class="avater"><i class="icon left_arr"></i></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,66 @@
+.Nopay-list{
+
+    .Nopay-head{
+        height: px2rem(90);
+        width: 100%;
+        background-color: #FFFFFF;
+        h1{
+        padding-top: px2rem(30);
+        margin-left: px2rem(30);
+        @include font-dpr(15px);
+        font-family:"PingFang-SC-Medium";
+        color: #000;
+        }
+    }
+    .list{
+        width:100%;
+        height:px2rem(160);
+        border-bottom:1px solid $ajk_borderColor;
+        overflow: hidden;
+        background-color:#FAF9F9 ;
+        margin-bottom: px2rem(20);
+       p{
+            display: block;
+            width:px2rem(150);
+            height:px2rem(120);
+             margin-left: px2rem(40);
+             padding-top: px2rem(10);
+             float: left;
+          img{
+                width:100%;
+                height:px2rem(120);
+                margin:0;
+            }
+        }
+
+        ul{
+            width: 50%;
+            height:100%;
+            float:left;
+            margin-left: px2rem(20);
+           .OrderNum{
+                @include font-dpr(12px);
+                color: #ababab;
+                line-height:px2rem(55);
+                font-family: "PingFang SC Medium";
+                }
+            .Time{
+                @include font-dpr(12px);
+                color: #ababab;
+                line-height:px2rem(24);
+                @extend %flex;
+                 span{
+                     margin-left:px2rem(30);
+                     @include font-dpr(12px);
+                    color: $ajk_color;
+                 }
+            }
+            .money{
+                @include font-dpr(17px);
+                color: $ajk_color;
+                line-height:px2rem(55);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,47 @@
+<ion-view view-title="定位城市">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="tab.home" native-options="{type: 'slide', direction:'down'}"></button>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="true" >
+    <div class="getCity_wrap">
+    	<div class="find_cityback">
+    		<div class="find_city">
+
+	                <i class="icon"></i>
+	                <input type="text" ng-model='search.text' placeholder="城市/行政区/拼音" ng-blur='searchGo()'>
+	        </div>
+    	</div>
+         <div class="getCity_left">
+    		<div class="getCity_cont">
+	        	<div class="current_loc" id="state_0">
+	        	    <h2>当前位置</h2>
+	        		<button class="button" ng-click="cityChoose(nowCity)" ui-sref="tab.home">{{nowCity}}</button>
+	        	</div>
+	        	<div class="lately_city current_loc" id="state_1">
+	        		<h2>最近访问过城市</h2>
+	        		<button class="button" ng-repeat="visitedCity in visitedCity track by $index" ng-click="cityChoose(visitedCity)" ui-sref="tab.home">{{visitedCity}}</button>
+	        	</div>
+	        	<div class="hot_city current_loc" id="state_2">
+	        		<h2>热门城市</h2>
+	        		<button class="button " ng-repeat="hotCity in hotCity track by $index" ng-click="cityChoose(hotCity)" ui-sref="tab.home">{{hotCity}}</button>
+	        	</div>
+	      </div>
+	        <div class="list cities" ng-repeat="allcityArr in allcityArr track by $index">
+			  <div class="item initial" id="city_{{allcityArr.letter.toUpperCase()}}">{{allcityArr.letter.toUpperCase()}}</div>
+			  <p class="city" href="javascript:;" ng-repeat="city in allcityArr.data track by $index" ng-click="cityChoose(city)" ui-sref="tab.home">{{city}}</p>
+			</div>
+    	</div>
+
+    </div>
+    </ion-content>
+    <div class="letter_list">
+      <h2>
+        <p ng-repeat="now in now track by $index" ng-click="nowTouch($index)">{{now}}</p>
+      </h2>
+      <p ng-repeat="letter in letters track by $index" ng-touchmove="mTouch(letter)" ng-click="mTouch(letter)">{{letter}}</p>
+    </div>
+     <div style="position:fixed;left:47%;top:47%;width:40px;height:40px;background:#ddd;display:flex;justify-content:center;align-items:center;font-size:20px;color:#262626;" ng-show="showMiddle">
+        {{hint}}
+    </div>
+    <div id="mysubway" style="display:none;"></div>
+</ion-view>

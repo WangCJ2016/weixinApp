@@ -1,0 +1,132 @@
+
+
+.bar_home_off{
+    color: #444;
+    background: url(../imgs/wcj/tabs/home_off.png)no-repeat center center;
+    background-size: px2rem(44) px2rem(44);
+}
+.bar_home_on{
+    color: #444;
+    background: url(../imgs/wcj/tabs/home_on.png)no-repeat center center;
+    background-size: px2rem(44) px2rem(44);
+}
+
+.bar_discover_off{
+  color: #444;
+  background: url(../imgs/wcj/tabs/discover_off.png)no-repeat center center;
+  background-size: px2rem(44) px2rem(44);
+}
+.bar_discover_on{
+  color: #444;
+  background: url(../imgs/wcj/tabs/discover_on.png)no-repeat center center;
+  background-size: px2rem(44) px2rem(44);
+}
+.bar_userCenter_on+.tab-title,.bar_discover_on+.tab-title,.bar_shopCar_on+.tab-title,.bar_home_on+.tab-title{
+  color: $ajk_color
+}
+.bar_shopCar_off{
+    color: #444;
+    background: url(../imgs/wcj/tabs/shopCar_off.png)no-repeat center center;
+    background-size: px2rem(59) px2rem(44);
+}
+.bar_shopCar_on{
+    color: #444;
+    background: url(../imgs/wcj/tabs/shopCar_on.png)no-repeat center center;
+    background-size: px2rem(59) px2rem(44);
+}
+.bar_userCenter_off{
+    color: #444;
+    background: url(../imgs/wcj/tabs/user_off.png)no-repeat center center;
+    background-size: px2rem(43) px2rem(44);
+}
+.bar_userCenter_on{
+    color: #444;
+    background: url(../imgs/wcj/tabs/user_on.png)no-repeat center center;
+    background-size: px2rem(43) px2rem(44);
+}
+.bar_ctrl_on{
+    position: absolute;
+    background:url('../imgs/wcj/tabs/userCenter_off.png') no-repeat center;
+    background-size:px2rem(50) px2rem(50);
+}
+ion-tabs.tabs-color-active-calm .tab-item.tab-item-active, ion-tabs.tabs-color-active-calm .tab-item.active, ion-tabs.tabs-color-active-calm .tab-item.activated{
+  color:#ababab;
+}
+ion-tabs.tabs-color-active-calm .tab-item {
+    color: #ababab;
+}
+.ctrl{
+    position: absolute;
+    z-index:99999;
+    width:px2rem(130);
+    height:px2rem(130)!important;
+    transition: all .5s;
+    border-radius:50%;
+    bottom:0;
+    left:50%;
+    margin-left: px2rem(-65);
+    background:url('../imgs/wcj/tabs/ctrlBtn_off.png') no-repeat center;
+    background-size:px2rem(130) px2rem(130);
+}
+.tab-item{
+  overflow:visible!important;
+  .icon{
+    font-size: px2rem(50);
+  }
+}
+.ctrlOnBig{
+  transform: scale(1.3,1.3);
+  -webkit-transform: scale(1.2,1.2);
+}
+.ctrlOnSmall{
+  position: absolute;
+  z-index:99999;
+  width:px2rem(130);
+  height:px2rem(130)!important;
+  margin-left: px2rem(-65);
+  border-radius:50%;
+  bottom:0;
+  background:url('../imgs/wcj/tabs/ctrlBtn_on.png') no-repeat center;
+  background-size:px2rem(130) px2rem(130);
+}
+.tabs{
+    height:px2rem(98);
+    border-color: #fff;
+    //border-top-width: 0!important;
+}
+.tab-item {
+ max-width:px2rem(500);
+ overflow:visible!important;
+ opacity: .9;
+ .icon{
+    height:px2rem(60);
+}
+.tab-title{
+  display: block;
+  line-height: px2rem(35);
+}
+}
+.tab-nav.tabs{
+  &::before{
+    @include borderMixinTop;
+  }
+}
+.platform-android .tab-nav.tabs{
+  border-top: none!important;
+}
+.tabs-striped .tab-item.tab-item-active{
+    border-width: 0;
+}
+
+//back按钮
+.button.button-clear.ajk_back{
+  width:px2rem(75)!important;
+  height: px2rem(109)!important;
+  background: url(../imgs/wcj/left_arr.png) no-repeat center;
+  background-size: px2rem(24) px2rem(40);
+}
+.platform-android .button.button-clear.ajk_back{
+  height: px2rem(78)!important;
+  margin-left: px2rem(-10);
+}
+//.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated

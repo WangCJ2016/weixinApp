@@ -1,0 +1,51 @@
+<ion-view title='维修'>
+  <ion-nav-buttons side="left">
+     <button class="button button-clear ajk_back" ng-click="goback()"></button>
+ </ion-nav-buttons>
+ <ion-content>
+   <div class="sweepTime_wrap">
+   <div class="sweepTime_select" ng-show='contenSwitch'>
+     <section>
+       <div class="service repair" ng-click="changeRepair()">
+         <p>服务:</p>
+         <p>{{selectApplication}}维修</p>
+       </div>
+       <div class="service" >
+         <p>时间</p>
+         <p>立即维修</p>
+       </div>
+     </section>
+     <div class="conform_bnt">
+       <button class="button button-full button-calm" ng-click="submitRepair()">确定</button>
+     </div>
+     <div class="select_time repair"  ng-class="{'transitionUp':timeSwitch}">
+       <p>选择维修物品</p>
+       <p  ng-class='{select_bg:$index==index}' ng-repeat='time in repairThings track by $index' ng-click="selectRepair($index,time)">{{time}}</p>
+     </div>
+     <div class='backdrop visible active' ng-show ='timeSwitch' ng-click='timeSwitch=false' ></div>
+   </div>
+   <div class="sweepTime_select sweepTime_schedule" ng-show="!contenSwitch">
+     <section>
+       <div class="service second">
+         <p>服务:</p>
+         <p>{{selectApplication}}维修</p>
+       </div>
+       <div class="service second">
+         <p>时间:</p>
+         <p>立即维修</p>
+       </div>
+       
+     </section>
+     <div class="status">
+          <p>状态</p>
+          <div></div>
+          <div class="content">
+            <p ng-class="{statusNow:waitingStatus}"><span>等待处理</span></p>
+            <p ng-class="{statusNow:handleStatus}"><span>维修中</span></p>
+            <p ng-class="{statusNow:completeStatus}"><span>维修完成</span></p>
+          </div>
+     </div>
+   </div>
+ </div>
+ </ion-content>
+ </ion-view>

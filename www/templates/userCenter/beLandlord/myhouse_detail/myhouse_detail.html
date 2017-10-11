@@ -1,0 +1,23 @@
+<ion-view view-title="爱居客酒店">
+	 <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="myHouse" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content has-subheader="false">
+    	<div class="myhouse_detail_wrap">
+    		<div class="normal" ng-repeat = 'hotel in hotels track by $index'>
+    			<h2>{{hotel.houseTypex}}</h2>
+    			<div class="normal_house" ng-repeat='house in hotel.houses track by $index'>
+    					<div style='background-color:#fff' class="item-two item-two-avater" ng-click='myhouseIntr(house.id)'>
+    						<img ng-src="{{house.picture}}" alt="">
+    						<ul>
+    							<li class="houseName OrderNum">{{house.name}}</li>
+    							<li>编号:12345687955412</li>
+    						</ul>
+								<p class='money' ui-sref='myhouseChangePrice({id:house.id,name:"{{house.name}}",price:house.defaultPrice})'>更改房价</p>
+    					</div>
+    				</div>
+    		</div>
+
+    	</div>
+    </ion-content>
+</ion-view>

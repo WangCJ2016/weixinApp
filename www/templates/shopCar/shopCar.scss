@@ -1,0 +1,236 @@
+.shopCar_blank{
+  height: px2rem(90);
+}
+.cart-list {
+  width: 100%;
+
+  .checkbox {
+    width: px2rem(100);
+    height: px2rem(100);
+    padding: px2rem(10) px2rem(50) 0 0;
+  }
+
+  .special {
+    top: px2rem(-7)!important;
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  label:before {
+    content: "";
+    display: inline-block;
+    width: px2rem(42);
+    height: px2rem(42);
+    margin-right: 10px;
+    position: absolute;
+    left: px2rem(10);
+    top: px2rem(7);
+    background: url("../imgs/kwn/cart/check.png") no-repeat;
+    background-size: px2rem(40) px2rem(40);
+    border-radius: 50%;
+  }
+
+  .checkbox label:before {
+    border-radius: 50%;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    content: "";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 30px;
+    color: #fff;
+    background: url("../imgs/kwn/cart/tick.png") no-repeat;
+    background-size: px2rem(40) px2rem(40);
+    text-align: center;
+    line-height: 40px;
+  }
+
+  li {
+    width: 100%;
+    margin-bottom: px2rem(20);
+   .title {
+      padding-left: px2rem(30);
+      width: 100%;
+      height: px2rem(90);
+      @extend %flex;
+      background-color: #fff;
+      span {
+        height: 100%;
+        @include font-dpr(15px);
+        line-height: px2rem(90);
+        color: #000;
+      }
+    }
+
+    .list-cont {
+      width: 100%;
+      height: px2rem(180);
+      border-width: none;
+      border-style: none;
+
+      .item-content {
+        @extend %flex;
+        @extend %flexCrossCenter;
+        height: 100%;
+        padding: 0;
+        background-color: #f5f5f5;
+        padding-left: px2rem(30);
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        > p {
+          overflow: visible!important;
+        }
+      }
+
+      .check {
+        width: px2rem(40);
+        height: px2rem(40);
+        background: url("../imgs/kwn/cart/check.png") no-repeat;
+        background-size: 100% 100%;
+        margin: px2rem(70) px2rem(30) 0 0;
+      }
+
+      .active {
+        background: url("../imgs/kwn/cart/tick.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .list-pic {
+        width: px2rem(150);
+        height: px2rem(130);
+        margin: 0 px2rem(20) 0 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .list-desc {
+        width: px2rem(430);
+        height: px2rem(130);
+        @extend %flex;
+        @extend %flexMainJustify;
+        @extend %flexDirTop;
+
+        p {
+          @include font-dpr(12px);
+          line-height: px2rem(30);
+          color: #ababab;
+
+          i {
+            margin-left: px2rem(30);
+            color: #ababab;
+          }
+        }
+
+        .price {
+          @include font-dpr(12px);
+          line-height: px2rem(35);
+          height: px2rem(30);
+          @extend %flex;
+          @extend %flexMainJustify;
+          color: $ajk_color;
+          @include font-dpr(14px);
+          color: $ajk_color;
+          font-style: normal;
+
+          i {
+            @include font-dpr(12px);
+            line-height: px2rem(24);
+            color: #ababab;
+          }
+        }
+      }
+
+      .del {
+        width: px2rem(120);
+        height: 100%;
+        background: $ajk_color;
+        text-align: center;
+        @include font-dpr(14px);
+        color: #fff;
+        line-height: px2rem(180);
+        font-style: normal;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.cart-footer {
+  width: 100%;
+  height: px2rem(90);
+  position: fixed;
+  left: 0;
+  bottom: px2rem(95);
+  border-bottom: 1px solid $ajk_borderColor;
+  background: #fff;
+
+  .check-all {
+    @extend %flex;
+    width: px2rem(400);
+    height: 100%;
+    @include font-dpr(15px);
+    line-height: px2rem(90);
+    color: #000;
+    float: left;
+
+    p {
+      margin-left: px2rem(22);
+      margin-top: px2rem(5);
+      width: px2rem(60);
+      height: px2rem(60);
+      background: url("../imgs/kwn/cart/check.png") no-repeat bottom right;
+      background-size: px2rem(40) px2rem(40);
+    }
+
+    .active {
+      background: url("../imgs/kwn/cart/tick.png") no-repeat;
+      background-size: px2rem(40) px2rem(40);
+      background-position: px2rem(14) px2rem(20);
+    }
+  }
+
+  .total {
+    @include font-dpr(12px);
+    line-height: px2rem(90);
+    color: #000;
+    float: left;
+
+    i {
+      @include font-dpr(17px);
+      color: $ajk_color;
+    }
+  }
+
+  .calculate {
+    width: px2rem(150);
+    height: 100%;
+    float: right;
+    background: $ajk_color;
+    @include font-dpr(13px);
+    line-height: px2rem(90);
+    color: #fff;
+    text-align: center;
+
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.platform-android label:before {
+  top: px2rem(-5);
+}

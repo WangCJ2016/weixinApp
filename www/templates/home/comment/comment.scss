@@ -1,0 +1,121 @@
+.comment_wrap {
+    height:100%;
+    background-color: $ajk_backColor;
+    .star_full {
+        background: url(../imgs/wcj/comment/star_full.png)no-repeat;
+        background-size: px2rem(28) px2rem(25)
+    }
+    .star_blank {
+        background: url(../imgs/wcj/comment/star_blank.png)no-repeat;
+        background-size: px2rem(28) px2rem(25)
+    }
+   .card{box-shadow: none;border-radius: 0}
+    .comment_all {
+        @extend %flex;
+        border-width: 0;
+        position: relative;
+        &:before{
+          @include borderMixinBottom;
+        }
+        background-color:#fff;
+        height: px2rem(80);
+        h2 {
+            @include font-dpr(15px);
+            line-height: px2rem(80);
+            margin: 0 px2rem(20) 0 px2rem(30);
+
+        }
+        .stars {
+            line-height: px2rem(80);
+            span {
+                display: inline-block;
+                width: px2rem(30);
+                height: px2rem(26.5);
+                vertical-align: middle;
+            }
+        }
+        &>span {
+            margin-left: px2rem(28);
+            line-height: px2rem(80);
+            color: $ajk_color;
+            @include font-dpr(15px);
+        }
+    }
+
+    .comment {
+        margin:0;
+        padding:0 px2rem(30);
+        border-top: none;
+        img{
+            left:0
+        }
+        .item{
+            margin-top:px2rem(10);
+            margin-bottom:px2rem(20);
+            border: none;
+            p{
+                margin-left:px2rem(20)
+            }
+        }
+          >p{
+                margin:0!important;
+                  @include font-dpr(12px);
+                  height:auto;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+            }
+            .all{height:auto}
+
+        .praise {
+            display: inline-block;
+            width: px2rem(31);
+            height: px2rem(30);
+            background: url(../imgs/wcj/comment/comment_praise.png);
+            background-size: px2rem(31) px2rem(30);
+            margin-right: px2rem(20);
+        }
+        .point {
+
+            margin-left: px2rem(20);
+            @include font-dpr(12px);
+            text-align:center;
+             font-family: 'PingFang SC';
+             display:inline-block;
+             width:px2rem(80);
+             height:px2rem(39);
+             line-height:px2rem(39);
+            color:$ajk_color;
+            position: relative;
+        }
+        .point:before{
+             content:'';
+             position: absolute;
+             top:0;
+             left: 0;
+             display:inline-block;
+             width:px2rem(80);
+             height:px2rem(39);
+             background-color:$ajk_color;
+             opacity: 0.2;
+        }
+        .about {
+          @extend %flex;
+          @extend %flexMainJustify;
+            padding-bottom: px2rem(25);
+            height: px2rem(70);
+            a {
+                color: $ajk_fontColr;
+                 margin-right: px2rem(20);
+            }
+        }
+        .more{
+            text-align:center;
+        }
+    }
+     >div:nth-child(2){
+        margin-top:px2rem(10);
+    }
+    .list{
+      margin-bottom: px2rem(10);
+    }
+}

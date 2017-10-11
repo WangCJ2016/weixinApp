@@ -1,0 +1,72 @@
+<ion-view hide-nav-bar='true'>
+      <div class="houseIntr_fixed" id='fixedScroll'>
+        <a  class="back" ng-click='back();'><i></i></a>
+        <div class="share" ng-click='share();'>
+
+            <a><i class="navigation"></i></a>
+        </div>
+      </div>
+      <div class="houseIntr_fixed default" id='fixedDefault'>
+        <a  class="back" ng-click='back();'><i></i></a>
+        <div class="share" ng-click='share();'>
+
+            <a><i class="navigation"></i></a>
+        </div>
+      </div>
+      <ion-scroll on-scroll='swipe()'  class='houseIntr_content' get-height>
+        <div class="houseIntr_wrap">
+            <div class="top_img">
+                <ion-slide-box class='slide'>
+                    <ion-slide ng-repeat='img in houseIntr.housePictures track by $index'>
+                        <div class="box "><img ng-src="{{img}}"></div>
+                    </ion-slide>
+                </ion-slide-box>
+                <p>{{houseIntr.name}}</p>
+            </div>
+            <!-- <div class="house_mess">
+                <h2>{{houseIntr.name}}</h2>
+                <p class="house_num">房间编号:08080808</p>
+                <p>
+                    西溪蝶园，欧美风格，西溪湿地附近
+                    3室1厅1厨一卫1阳台110 可住6人双人床3张，智能化体验
+                     欧式风格，简装风格
+                </p>
+            </div> -->
+            <div class="house_detail">
+                <h2>房间详情</h2>
+                <div class="state">
+                    <span>可租房态</span>
+                    <span ng-click='selectDate()'>查看日历</span>
+                </div>
+                <div class="money room">
+                    <span>押金</span>
+                    <span>{{defaultPrice1}}</span>
+                </div>
+                <div class="gettime room">
+                    <span>接待时间</span>
+                    <span>{{houseIntr.receptionTimeStr}}</span>
+                </div>
+                <div class="intime room">
+                    <span>入住时间</span>
+                    <span>{{houseIntr.inTime}}以后</span>
+                </div>
+                <div class="outtime room">
+                    <span>退房时间</span>
+                    <span>{{houseIntr.leaveTime}}之前</span>
+                </div>
+            </div>
+            <div class="house_devices" >
+                <h2>房间设施</h2>
+                <div class="devices">
+                    <p ng-repeat='assort in assorts track by $index'><i><img ng-src="{{assort[1]}}"></i>{{assort[0]}}</p>
+                </div>
+                <p class="more"></p>
+            </div>
+
+        </div>
+      </ion-scroll>
+
+    <button class="button button-full button-calm" style="position: fixed;bottom:0;margin-bottom: 0;opacity:0.8" ng-click='joinShopCar();'>
+                <i class="icon ion-loading-c"></i>加入购物车
+            </button>
+</ion-view>

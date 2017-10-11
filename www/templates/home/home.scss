@@ -1,0 +1,455 @@
+
+.home .scroll{
+  height: auto!important;
+}
+.changeStatus{
+  width: px2rem(90);
+  height: px2rem(90);
+  background: url('../imgs/wcj/home/shupai.png') no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  right: px2rem(30);
+  z-index: 9999;
+  top:px2rem(860);
+}
+.verticalStatus{
+  background: url('../imgs/wcj/home/hengpai.png') no-repeat;
+  background-size: 100% 100%;
+}
+.home_wrap {
+    background-color: $ajk_backColor;
+    height: 100%;
+    .divier{
+      height: px2rem(100);
+    }
+    .header {
+        position: absolute;
+        z-index: 99999;
+        width: 100%;
+        height: px2rem(88);
+        background-color: transparent;
+
+    }
+    .slide {
+        height: px2rem(442);
+        .box {
+            height: 100%;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .mainBtns {
+        padding: px2rem(50) px2rem(40) px2rem(30);
+        @extend %flex;
+        justify-content: space-between;
+        height: px2rem(248);
+        background-color: #fff;
+        .mainBtn {
+            text-align: center;
+            img {
+                width: px2rem(114);
+                height: px2rem(114);
+            }
+            p {
+                margin-top: px2rem(30);
+                @include font-dpr(15px);
+                color: rbg(85,85,85);
+                font-weight: 500;
+            }
+        }
+    }
+    .ad_pics_wrap{
+      background-color: #fff;
+      width: 100%;
+      overflow: hidden;
+      margin-top: px2rem(10);
+      padding: px2rem(50) 0 px2rem(30);
+    }
+    .home_title{
+      display: flex;
+      align-items: center;
+      padding-left: px2rem(30);
+      @include font-dpr(16px);
+      color: rgb(51,51,51);
+      line-height: px2rem(30);
+    }
+    .icon_div{
+      display: inline-block;
+      width: px2rem(6);
+      height: px2rem(30);
+      background: url('../imgs/wcj/home/dh.png') 100% 100%;
+      margin-right: px2rem(20);
+    }
+    .ad_pics,.scroll {
+        margin-top: px2rem(30);
+        width: 100%;
+        padding: 0 px2rem(15);
+        height: px2rem(300);
+          >div{
+            position: absolute;
+            white-space: nowrap;
+          }
+          figure{
+          display: inline-block;
+            margin-right: px2rem(30);
+            img{
+              width: px2rem(430);
+              height: px2rem(240);
+              border-radius: px2rem(10);
+            }
+            figcaption{
+              line-height: px2rem(40);
+              @include font-dpr(15px);
+              text-align: center;
+            }
+          }
+
+
+    }
+    .content {
+        margin-top: px2rem(15);
+        background-color: #fff;
+        padding-top: px2rem(50);
+        >div{
+          padding-top: px2rem(60);
+        }
+    }
+    .home_search_wrap{
+      position: relative;
+      height: px2rem(260);
+      .home_search{
+        position: absolute;
+        top: px2rem(-40);
+        left: px2rem(20);
+        right: px2rem(20);
+        background-color: #fff;
+        border-radius: px2rem(10);
+        padding: px2rem(60) px2rem(45) px2rem(30);
+        .loc{
+          display: inline-block;
+          width: px2rem(34);
+          height: px2rem(46);
+          padding: px2rem(10);
+          box-sizing: content-box;
+        }
+        .search_row{
+          display: flex;
+          justify-content: space-between;
+          .search_bar{
+            display: flex;
+            border-bottom: 1px solid rgb(191,191,191);
+            padding-bottom: px2rem(30);
+            .city{
+              span{
+                width: px2rem(100);  
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                text-overflow: ellipsis;
+                @include font-dpr(16px);
+                color: rgb(51,51,51);
+                margin-left: px2rem(10);
+
+              }
+            }
+            .seach_where{
+              @include font-dpr(16px);
+              color: rgb(102,102,102);
+              margin-left: px2rem(40)
+            }
+          }
+        }
+        .search_btn{
+          margin-top: px2rem(50);
+            width: 100%;
+            color: #fff;
+            @include font-dpr(16px);
+            border-radius: px2rem(10);
+            text-align: center;
+            line-height: px2rem(72);
+            background: url('../imgs/wcj/home/search_btn_bg.png')no-repeat 100% 100%;
+        }
+      }
+    }
+    .ajklist {
+        >div{
+          position: relative;
+          &::before{
+            @include borderMixinBottom1;
+          }
+          background-color: #fff;
+            margin-bottom: 0;
+            @extend %flex;
+            height: px2rem(260);
+            @extend %flexCrossCenter;
+            padding: 0 px2rem(30);
+            >p{
+              min-width: px2rem(100);
+              @include font-dpr(16px);
+              color: $ajk_color;
+              >span{
+                color: $ajk_fontColr;
+              }
+            }
+        }
+        .item_ad {
+            height: px2rem(220);
+            @extend %flex;
+            @extend %flexMainJustify;
+            @extend %flexCrossCenter;
+            -webkit-flex-grow:1;
+            flex-grow:1;
+            border: none!important;
+            overflow: hidden;
+            >p {
+                color: $ajk_color;
+                line-height: px2rem(60);
+                ;
+                @include font-dpr(14px);
+                margin-top: px2rem(80);
+                span {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: px2rem(60);
+                    color: #000;
+                    @include font-dpr(10px);
+                }
+            }
+            img {
+                width: px2rem(260)!important;
+                height: px2rem(220)!important;
+            }
+            >div {
+              @extend %flex;
+            }
+            .intr {
+                @extend %flex;
+                @extend %flexMainJustify;
+                @extend %flexDirTop;
+                -webkit-flex-grow:1;
+                flex-grow:1;
+                height: px2rem(220);
+                width: px2rem(400);
+                margin-left: px2rem(20);
+                h2 {
+                    font-family: 'PingFang SC Heavy';
+                    @include font-dpr(17px);
+                    line-height: px2rem(32);
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .point {
+                    @include font-dpr(14px);
+                    color: #ababab;
+                    line-height: px2rem(50);
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .comment_star{
+                  height: px2rem(60);
+                  @extend %flex;
+                  @extend %flexCrossCenter;
+                  i{
+                    display: inline-block;
+                    width: px2rem(30);
+                    height: px2rem(26);
+                  };
+                  .start_full {
+                    background: url(../imgs/wcj/house_detail/star_full.png)no-repeat;
+                    background-size: 100% 100%;
+                  }
+                  .start_blank {
+                    background: url("../imgs/wcj/house_detail/star_blank.png") no-repeat;
+                    background-size: 100% 100%;
+                  }
+                }
+                .price{
+                  color: $ajk_color;
+                  @include font-dpr(18px);
+                  span:first-child{
+                    color: #ababab;
+                    @include font-dpr(11px);
+                  }
+                  span:last-child{
+                    color: #ababab;
+                    @include font-dpr(9px);
+                  }
+                }
+                .loc {
+                    @include font-dpr(13px);
+                    height: px2rem(50);
+                    @extend %flex;
+                    @extend %flexCrossCenter;
+                    span{
+                      display: inline-block;
+                      height: px2rem(50);
+                      line-height: px2rem(50);
+                      @include font-dpr(14px);
+                     width: 100%;
+                     color: #ababab;
+                     overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    }
+
+                    i {
+                        display: inline-block;
+                        width: px2rem(18);
+                        height: px2rem(28);
+                        background: url(../imgs/wcj/home/loc.png);
+                        background-size: 100% 100%;
+                        margin-right: px2rem(10);
+                        vertical-align: middle;
+
+                    }
+                }
+            }
+        }
+    }
+    .vertical{
+      @extend %flex;
+      @extend %flexWrap;
+    }
+
+}
+.platform-android .loc{
+  span{
+    [data-dpr="1"] & {
+      height: px2rem(26);
+      line-height: px2rem(26);
+    }
+  }
+}
+ .fixed_home{
+    width:100%;
+    height:px2rem(96);
+    background-color:#fff;
+    position:fixed!important;
+    top:0;
+    z-index:99;
+    opacity: 0;
+    &::before{
+      @include borderMixinBottom;
+    }
+ }
+ .platform-android .fixed_home{
+height:px2rem(96);
+ }
+  .platform-ios .fixed_home{
+    height:px2rem(120);
+ }
+  .nowStyle{
+      .newCity{
+        color:$ajk_color!important;
+      }
+      .mask{
+        >div{
+            color:$ajk_color!important;
+        }
+      }
+  }
+  .fixedHeader {
+            width: 100%;
+            height:px2rem(70);
+            position:fixed;
+            top:px2rem(44);
+            opacity:1;
+            z-index:100;
+            .wrap {
+                position: relative;
+                margin: 0 px2rem(5);
+                height: 100%;
+                div.newCity {
+                    display: flex;
+                    align-items: center;
+                    line-height: px2rem(60);
+                    width: px2rem(110);
+                    overflow: hidden;
+                    height: px2rem(60);
+                    position: absolute;
+                    left: px2rem(10);
+                    color: #fff;
+                    >span {
+                        display: inline-block;
+                        width: px2rem(100);
+                         height: px2rem(60);
+                         line-height: px2rem(60);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        @include font-dpr(14px);
+                        text-align: center;
+                        text-overflow: ellipsis;
+                    }
+                    .icon {
+                        margin-left: 5px;
+                        @include font-dpr(8px);
+                    }
+                }
+                .search_btn {
+                    width: px2rem(584);
+                    height: px2rem(60);
+                    background-color: #fff;
+                    margin-left: px2rem(20);
+                    border-radius: 5px;
+                }
+                .mask {
+                    position: absolute;
+                    height: px2rem(60);
+                    line-height: px2rem(60);
+                    margin: 0 0 0 px2rem(26);
+                    left: px2rem(115);
+                    right: px2rem(30);
+                    top: px2rem(0);
+                    color: #fff;
+                    background-color: #fff;
+                    border-radius: px2rem(10);
+                    div {
+                        text-indent: 10px;
+                        display: inline-block;
+                        height:px2rem(60);
+                        line-height: px2rem(60);
+                        @include font-dpr(14px);
+                        color:#bfbfbf;
+
+                    }
+                }
+            }
+        }
+  #fixedHeader{
+    .mask{
+      background-color: rgb(216,216,216)!important;
+      >div{
+        color: rgb(164,164,164);
+      }
+    }
+    .wrap{
+      i,span{
+        color: #000;
+      }
+
+    }
+  }
+.ion-record:before{
+  @include font-dpr(7px);
+}
+.platform-ios .fixedHeader{
+    top:px2rem(44)
+}
+.platform-android .fixedHeader{
+    top:px2rem(20)
+}
+.platform-android .content{
+    .list{
+      margin-bottom: px2rem(10);
+    }
+}
+.platform-android .home_wrap .intr h2{
+  line-height: px2rem(44)!important;
+}

@@ -1,0 +1,44 @@
+<ion-view view-title='订单详情'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="Nopay" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+    	<div class="Order-form-head">
+    		<p>
+    			<span>订单状态：</span>
+    			<i>待付款</i>
+    		</p>
+    		<span>¥{{order.totalFee|ant}}<i>.00</i></span>
+    	</div>
+       <div class="order" >
+               <div class='hotel' ng-repeat="hotel in order.hotels track by $index">
+                <p><span>{{hotel.hotelName}}</span><span>订单号:{{order.orderCode}}</span></p>
+
+                <div class="item-three" ng-repeat='house in hotel.houses track by $index'>
+                    <img ng-src='{{house.picture}}' />
+                    <ul>
+                        <li class="OrderNum">{{house.houseName}}</li>
+                        <li class="Time">{{house.inTimes}}<span class="Day">共{{house.days}}晚</span></li>
+                        <li class="address">{{house.address}}</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class='large_buttons'>
+               <button type='button' class='button button-calm button-full' ng-click='pay();'>确认支付</button>
+               <button type='button' style='background-color:#fff' class='button button-stable button-full' ng-click="cancelOrder();">取消订单</button>
+            </div>
+        <div class="Order-form-remind">
+        	<div class="remind">
+        		<div class="title">特别提醒</div>
+        		<p>请于12点后办理入住，如提前到店，视酒店空房情况安排。</p>
+        		<p>最晚退房时间：<span>12:00(8月9日)</span></p>
+        	</div>
+        	<div class="remind">
+            <span></span>
+        		<p>本订单最晚取消时间和修改时间为<span>18:00(8月7日)</span></p>
+        		<p>当超过最晚取消时间和修改时间后，爱居客将不接受您的取消或修改请求，同时已支付的预付款项不予退还，优惠券订单一经修改或取消后无法恢复</p>
+        	</div>
+        </div>
+    </ion-content>
+</ion-view>

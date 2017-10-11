@@ -1,0 +1,71 @@
+.modal-backdrop-bg {
+  background-color: #333;
+  opacity: 0.3;
+}
+
+.city-picker-modal {
+  background-color: transparent;
+}
+
+.city_picker {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: px2rem(560);
+  background-color: #fff;
+  z-index: 9999;
+
+  .city_picker_data {
+    header {
+      height: px2rem(60);
+      text-align: right;
+      line-height: px2rem(60);
+      border-bottom: 1px solid $ajk_borderColor;
+      padding-right: px2rem(30);
+
+      span {
+        @include font-dpr(13px);
+        color: $ajk_color;
+      }
+    }
+
+    .city_picker_inner {
+      height: px2rem(500);
+      position: relative;
+
+      ion-scroll {
+        height: px2rem(500);
+        overflow: hidden;
+
+        .scroll {}
+
+        ul {
+          padding-top: px2rem(200);
+          padding-bottom: px2rem(200);
+
+          li {
+            height: px2rem(100);
+            line-height: px2rem(100);
+            text-align: center;
+            @include font-dpr(14px);
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .city_picker_select {
+      height: px2rem(100);
+      width: 100%;
+      position: absolute;
+      background-color: #aaa;
+      opacity: 0.2;
+      z-index: 111;
+      top: px2rem(200);
+    }
+  }
+}
+body::-webkit-scrollbar{
+width:0;
+height:0;
+}

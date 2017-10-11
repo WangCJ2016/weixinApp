@@ -1,0 +1,91 @@
+// @media screen and (min-width:) {
+//
+// }
+.my_checkIn_wrap{
+     position: absolute;
+     width: 100%;
+     height:100%;
+     .checkIn-back{
+       width: px2rem(100);
+    height: px2rem(60);
+    padding-left: px2rem(30);
+    display: inline-block;
+    @extend %flex;
+    @extend %flexCrossCenter;
+    img{
+      width: px2rem(24);
+      height: px2rem(40);
+    }
+     }
+     .checkIn_cont{
+         width:100%;
+         .checkIn_cont_add{
+           @extend %flex;
+           @extend %flexMainJustify;
+           @extend %flexCrossCenter;
+             width:100%;
+             height:px2rem(64);
+             margin-top: px2rem(60);
+             p{
+                position: absolute;
+                @extend %flex;
+                @extend %flexCrossCenter;
+                @extend %flexMainCenter;
+                 width:px2rem(15);
+                 height: px2rem(200);
+                 background: url('../imgs/kwn/checkIn/tanghuang.png') repeat ;
+                 background-size: px2rem(15) 100%;
+                 line-height: px2rem(60);
+                 text-indent: px2rem(20);
+                 top:px2rem(0);
+                 right: px2rem(43);
+                 opacity: .8;
+                 transition: height 2s ease-out;
+                 -webkit-transition: height 2s ease-out;
+                 z-index: 99;
+                 img{
+                  width: px2rem(96);
+                  height: px2rem(100);
+                  position: absolute;
+                  bottom: 0;
+                  right: px2rem(-34);
+                  bottom: px2rem(-50);
+                 }
+             }
+         }
+         h2{
+             width:100%;
+             text-align: center;
+             font:px2rem(46)/px2rem(46) " PingFang SC Medium";
+             color:#ffb354;
+             margin:px2rem(16) 0 px2rem(140) 0;
+         }
+         ul{
+           @extend %flex;
+           @extend %flexMainJustify;
+           @extend %flexWrap;
+             max-width: px2rem(430);
+             margin: 0 auto;
+             li{
+                 width:px2rem(162);
+                 height:px2rem(162);
+                 margin-bottom:px2rem(100);
+                 img{
+                     width:100%;
+                     height:100%;
+                 }
+             }
+         }
+     }
+     .bg{
+       position: absolute;
+       bottom: px2rem(-3);
+       left: 0;
+       width: 100%;
+       height: px2rem(160);
+       img{
+         width: 100%;
+         height: px2rem(160);
+       }
+     }
+ }

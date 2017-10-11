@@ -1,0 +1,28 @@
+<ion-view view-title="房源">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="beLandlord" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+	<ion-content>
+		<div class="myHouse_wrap_house" ng-repeat = 'hotel in hotels track by $index'>
+		 <div class="myHouse_wrap_detail">
+		 	<img ng-src={{hotel.mainPicture}} alt="">
+			<div>
+				<h2>{{hotel.name}}</h2>
+				<p>{{hotel.address}}</p>
+				<p class="num">共:{{hotel.houseCounts}}间&nbsp;今日已出租:{{hotel.leaseCounts}}间</p>
+			</div>
+		 </div>
+		 <div class="myHouse_wrap_btn">
+		 	<div><span ng-click='seeHouse(hotel.id)' >查看</span></div>
+		 	<div><span ui-sref='myhouseDetail({id:hotel.id})'>详情</span></div>
+		 	<div><span ui-sref='myOrderForm({id:hotel.id})'>订单</span></div>
+		 </div>
+		</div>
+		</div>
+    <ion-infinite-scroll
+        ng-if="moreDataCanBeLoaded"
+        on-infinite="loadMoreData()"
+        immediate-check='false'>
+    </ion-infinite-scroll>
+	</ion-content>
+</ion-view>

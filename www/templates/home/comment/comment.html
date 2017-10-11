@@ -1,0 +1,31 @@
+<ion-view title="全部点评">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" ng-click="goHouseDtail()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="comment_wrap">
+            <div class="comment_all">
+                <h2>酒店总评</h2>
+                <div class="stars">
+                    <span class="star_full" ng-repeat='star in star_full track by $index'></span>
+
+                    <span class="star_blank" ng-repeat='star in star_blank track by $index'></span>
+                </div>
+                <span class="point">{{stars}}分</span>
+            </div>
+            <div class="list card comment" ng-repeat='customer in customers track by $index'>
+                <div class="item item-avatar">
+                    <img ng-src="{{customer.headPicture}}">
+                    <h2>{{customer.customer}}<span class="point">{{customer.stars}}分</span><span class="mask"></span></h2>
+                </div>
+                <p class="all">
+                    {{customer.content}}
+                </p>
+                <p class="about">
+                    <span  class="subdued">{{customer.gmtCreate}}</span>
+                </p>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="房态日历">
+    <ion-nav-buttons side="left">
+
+        <button class="button button-clear ajk_back" ng-click='back();' ></button>
+
+    </ion-nav-buttons>
+    <ion-content has-subheader="false" class="has-footer">
+        <div class="myhouse_changeprice_wrap">
+            <h2>{{houseName}}</h2>
+
+                <div class="directive_date fix">
+               <datepick></datepick>
+            </div>
+            
+        </div>
+    </ion-content>
+    <button class='button button-calm button-full ' ng-click='changePrice()' style="position:fixed;bottom: 0;margin: 0">修改价格</button>
+</ion-view>

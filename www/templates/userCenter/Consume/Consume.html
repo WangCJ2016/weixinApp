@@ -1,0 +1,27 @@
+<ion-view view-title='消费流水'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="tab.userCenter" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+        <div class="Consume-list">
+        	<div class="Consume-tittle">
+    			<span>本月</span>
+    		</div>
+        	<div class="list" ng-repeat='consume in consumes track by $index'>
+        		<span class="data">{{consume.gmtCreate|MMdd}}</span>
+        		<p><img ng-src="{{consume.hotels[0].picture}}"/></p>
+	        	<ul>
+	        		<li class="check-in"><span class="money">{{consume.amount}}</span></li>
+	        		<li class="housetype">订单号：{{consume.orderCode}}</li>
+	        		<li class="address">{{consume.hotels[0].hotelName}}</li>
+	        	</ul>
+            <span class="evaluate">{{consume.payTypeStr}}</span>
+        	</div>
+        </div>
+        <ion-infinite-scroll
+            ng-if="moreDataCanBeLoaded"
+            on-infinite="loadMoreData()"
+            immediate-check='false'>
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

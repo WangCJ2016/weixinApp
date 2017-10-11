@@ -1,0 +1,46 @@
+.account_detail_wrap{
+  background-color:$ajk_backColor;
+  height: 100%;
+  .order_detal{
+    background-color:#fff;
+    padding-right: px2rem(30);
+    padding-bottom: px2rem(30);
+    .avater_intr{
+      padding:px2rem(30);
+      @extend %flex;
+      @extend %flexCrossCenter;
+      img{
+        width: px2rem(80);
+        height: px2rem(80);
+        border-radius:50%;
+      }
+      h4{
+        @include font-dpr(15px);
+        color:#000;
+        margin-left: px2rem(30);
+      }
+    }
+  }
+  .other_intr+.other_intr{
+    margin-top:px2rem(50);
+  }
+  .other_intr{
+    margin-left:px2rem(130);
+    display: table;
+    >span{
+      @include font-dpr(14px);
+      line-height: px2rem(30);
+      color:#8d8c8c;
+      display: block;
+      width: px2rem(100);
+      display: table-cell;
+    }
+    >p{
+      margin-right:px2rem(30);
+      @include font-dpr(14px);
+      line-height: px2rem(30);
+      color:#8d8c8c;
+      display: table-cell;
+    }
+  }
+}

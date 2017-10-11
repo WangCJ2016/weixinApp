@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar='true'>
+    <ion-content class="userCenter-back" overflow-scroll="true" style="overflow: hidden">
+    	<div class="clean-wrap">
+			<div class="clean-bar">
+			    <img ng-src="imgs/wcj/home/clean.png"/>
+			</div>
+			<div class="clean-back" ng-click='goback()'>
+			     <img  src="imgs/lj/back.png"/>
+			</div>
+  			<div class="clean-address">
+  				<p>{{hotelName}}</p>
+  				<span>{{houseName}}</span>
+  			</div>
+  			<div class="clean-list">
+  				<ul>
+  					<li class="clean-sweep" ng-click="goService('打扫')"><img src="imgs/lj/clean.png"/><i>打扫</i></li>
+  					<li class="clean-sweep" ng-click="goService('维修')"><img src="imgs/lj/repair.png"/><i>维修</i></li>
+  					<li class="clean-sweep" ng-click='leave();'><img src="imgs/lj/house.png"/><i>退房</i></li>
+  				</ul>
+  			</div>
+		</div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,122 @@
+.userCenter_header{
+   background:rgb(255,179,84) url(../imgs/lj/userBg.png)no-repeat center 70%;
+   background-size: 100% ;
+    width:100%;
+    height:px2rem(400);
+    position:relative;
+    >p{
+      height: px2rem(90)
+    }
+    >div{
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+      @extend %flexDirTop;
+      #logo{
+          width: px2rem(130);
+          height: px2rem(130);
+           border-radius: 50%;
+           border: 1px solid #d8d8d8;
+       }
+       span{
+          color: #fff;
+          @include font-dpr(15px);
+          margin-top: px2rem(20);
+       }
+    }
+}
+.user_tip{
+  width: px2rem(182);
+  height: px2rem(75);
+  position: absolute;
+  top:21%;
+  left: 59%;
+  img{width: 100%;height: 100%;}
+}
+.userCenter-list{
+    width:100%;
+    height:px2rem(130);
+    background-color: white;
+    ul{
+        width: 100%;
+        height:100%;
+        @extend %flex;
+        @extend %flexMainJustify;
+        >a{
+          width: 25%
+        }
+    }
+    li{
+       padding-top: px2rem(20);
+       text-align: center;
+       height:100%;
+       width:100%;
+       img{
+           width:px2rem(55);
+           height: px2rem(50);
+       }
+       .pay{
+           @include font-dpr(13px);
+            color: #000;
+            line-height: px2rem(50);
+       }
+
+    }
+}
+.userCenter-setting-list{
+    padding-top: px2rem(20);
+    .item{
+        height:px2rem(98);
+        border-width: 0;
+        background-color: #FFFFFF;
+        padding:0;
+        margin: 0;
+        @include font-dpr(15px);
+        line-height: px2rem(98);
+        color:#000;
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        .center{
+            height:100%;
+            margin-left: px2rem(30);
+            @extend %flex;
+            p{
+                height:100%;
+                width:px2rem(61);
+                img{
+                    width: px2rem(44);
+                    vertical-align: middle;
+                }
+                span{
+                    height:100%;
+                    display: inline-block;
+                    vertical-align: middle;
+
+
+                }
+            }
+            i{
+                width:px2rem(30);
+                height:100%;
+                position:absolute;
+                top:0;
+                right:px2rem(30);
+                img{
+                   width: 60%;
+                    vertical-align: middle;
+                }
+                span{
+                    height:100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+    }
+}
+.platform-android .userCenter-setting-list{
+
+}

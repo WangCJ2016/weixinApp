@@ -1,0 +1,59 @@
+ .center1{
+        position: absolute;
+        width: 100%;
+        bottom: px2rem(40);
+        text-align: center;
+    }
+    .btmtip {
+        cursor: pointer;
+        border-radius: px2rem(10);
+        background-color: rgba(0,0,0,.8);
+        padding:px2rem(20);
+        display: inline;
+        color: white;
+        margin: 0 auto;
+        line-height:px2rem(40);
+        @include font-dpr(15px);
+    }
+
+.map-tips{
+  width:px2rem(100);
+  height:px2rem(230);
+  position:fixed;
+  top:px2rem(30);
+  right:px2rem(30);
+  .map-btn{
+    width:px2rem(100);
+    height:px2rem(100);
+    background:#000;
+    opacity:0.8;
+    text-align: center;
+    padding-top:px2rem(14);
+    border-radius: px2rem(10);
+    @include font-dpr(11px);
+    font-family:"PingFang SC Medium";
+    color:#fff;
+    p{
+      width:100%;
+      height:px2rem(44);
+      img{
+        width:px2rem(44);
+        height:px2rem(44);
+      }
+      margin-bottom:px2rem(8);
+    }
+  }
+  .navigation{
+    margin-top:px2rem(30);
+  }
+}
+.map_wrap{
+  height: 100%;
+  iframe{
+    width:px2rem(750);
+    height:px2rem(1215);
+    html{
+      height: 100%;
+    }
+  }
+}

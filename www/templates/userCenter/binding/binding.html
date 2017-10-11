@@ -1,0 +1,35 @@
+<ion-view view-title='身份绑定'>
+  <ion-nav-buttons side="left">
+    <button class="button button-clear ajk_back" native-ui-sref="setting" native-options="{type: 'slide', direction:'right'}"></button>
+  </ion-nav-buttons>
+  <ion-content class="userCenter-back">
+    <div ng-if="!bindWhether">
+      <form class="login-txt" name="binging">
+        <p class="tel">
+          <label for="pwd">真实姓名</label>
+          <input id="pwd" name="pwd" type="text" placeholder="请输入您的姓名" ng-model="sendData.name" required/>
+        </p>
+        <p class="pwd">
+          <label for="pwd">身份证号</label>
+          <input id="pwd" number-confirm name="idcard" ng-minlength='18' ng-maxlength='18' maxlength='18' type="tel" ng-pattern='/\d{18}/' placeholder="请输入您的身份证号码" ng-model="sendData.cardNo" required/>
+        </p>
+      </form>
+      <div class="binding">
+        <!-- <input type="button" id="" value="绑定" ng-disabled='binging.$invalid' ng-class='{slect:binging.$valid}' ng-click="buttonBtn()" /> -->
+        <button type="button" class="button button-full button-calm" ng-disabled='binging.$invalid' ng-class='{slect:binging.$valid}' ng-click="buttonBtn()">身份绑定</button>
+      </div>
+    </div>
+    <div ng-if='bindWhether'>
+      <form class="login-txt" name="binging">
+        <p class="tel">
+          <label for="pwd">真实姓名</label>
+          <span>{{name}}</span>
+        </p>
+        <p class="pwd">
+          <label for="pwd">身份证号</label>
+          <span>{{cardNo}}</span>
+        </p>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

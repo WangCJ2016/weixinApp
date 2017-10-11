@@ -1,0 +1,69 @@
+.service_wrap {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+
+    > section {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: px2rem(10);
+        }
+        height: px2rem(220);
+        @extend %flex;
+        @extend %flexMainJustify;
+        @extend %flexCrossCenter;
+        background-color: #fff;
+
+        > img {
+            width: px2rem(88);
+            height: px2rem(98);
+            margin-right: px2rem(50);
+            margin-left: px2rem(60);
+        }
+
+        > p {
+            @include font-dpr(20px);
+            margin-left: px2rem(-110);
+        }
+
+        > span {
+            display: inline-block;
+            width: 1px;
+            height: px2rem(108);
+            border-left: 1px solid #d8d8d8;
+            transform: scaleX(.5);
+            margin-right: px2rem(-44);
+        }
+
+        .toggle {
+            margin-right: px2rem(30);
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #d9d9d9;
+            transform: scaleY(.5);
+        }
+
+        &:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #d9d9d9;
+            color: #d9d9d9;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+    }
+}

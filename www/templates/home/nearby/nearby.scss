@@ -1,0 +1,420 @@
+.bar-stable .button.button-clear.mapbtn{
+   width: px2rem(41);
+    height:px2rem(41);
+    padding: 0;
+    background:url("../imgs/kwn/nearby/daohang.png") no-repeat;
+    background-size:100% 100%;
+}
+.bar-stable .button.button-clear.mapbtn.back{
+    background:url("../imgs/kwn/nearby/list.png") no-repeat;
+    background-size:100% 100%;
+}
+.platform-ios .bar .buttons-right > span{
+  line-height: px2rem(88);
+}
+.modalbtn{
+  background-position-y:px2rem(50)!important;
+}
+.platform-android .modalbtn{
+  background-position-y:px2rem(10)!important;
+}
+.platform-android .nearby-nav{
+   top:px2rem(88)
+}
+.nearby-nav{
+   position:fixed;
+   top:px2rem(120);left:0;
+   z-index:100;
+    width: 100%;
+    height:px2rem(80);
+    &::before{
+      @include borderMixinBottom;
+
+    }
+    @extend %flex;
+    background:#fff;
+    @extend %flexMainJustify;
+    padding:0 px2rem(50);
+    .sort{
+      padding: px2rem(20) 0 px2rem(20) px2rem(20);
+      text-align: right;
+      span{
+        display: inline-block;
+        width: px2rem(45);
+        height: px2rem(45);
+        vertical-align: middle;
+      }
+      .changeStatus1{
+        background: url('../imgs/wcj/home/shupai_rect.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .verticalStatus{
+        background: url('../imgs/wcj/home/hengpai_rect.png') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .nav{
+        text-align: center;
+        @include font-dpr(11px);
+        line-height: px2rem(80);
+        color:$ajk_fontColr;
+        position:relative;
+        i{
+            display:inline-block;
+            width:px2rem(15);
+            height:px2rem(10);
+            background:url("../imgs/kwn/nearby/jiao.png") no-repeat;
+            background-size:100% 100%;
+           position:absolute;
+           top:40%;
+           left:110%;
+        }
+
+    }
+    .frist{
+         line-height: px2rem(24);
+         margin-top:px2rem(20);
+         text-align: center;
+         i{
+            top:30%;
+         }
+    }
+    .active{
+        color:$ajk_color;
+        i{
+            background:url("../imgs/kwn/nearby/jiao2.png") no-repeat;
+            background-size:100% 100%;
+         }
+    }
+}
+.diver{
+  height: px2rem(80);
+}
+.nearby-list{
+    width:100%;
+    .list{
+        height:px2rem(220);
+        @extend %flex;
+        background:#fff;
+        padding:px2rem(20) px2rem(30);
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        img{
+            width: px2rem(240);
+            height:px2rem(180);
+        }
+        .desc{
+          width: px2rem(430);
+           height:px2rem(180);
+           padding-left:px2rem(20);
+           @extend %flex;
+           @extend %flexMainJustify;
+           @extend %flexDirTop;
+           @extend %flexWrap;
+           flex-grow: 1;
+           -webkit-flex-grow:1;
+           h2{
+               margin:0;
+               @include font-dpr(15px);
+               color:#000;
+               font-family:"PingFang SC Bold";
+               line-height: px2rem(60);
+               width: 100%;
+               overflow: hidden;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+           }
+
+           p{
+               .place{
+                  display: block;
+                  line-height: px2rem(60);
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  color: #ababab;
+                  i{
+                    display:inline-block;
+                    width:px2rem(18);
+                    height:px2rem(28);
+                    background:url("../imgs/wcj/home/loc.png");
+                    background-size:100% 100%;
+                    margin-right:px2rem(10);
+                 }
+               }
+           }
+           .money{
+               @include font-dpr(16px);
+               color:$ajk_color;
+               line-height: px2rem(60);
+               em{
+                   @include font-dpr(11px);
+                   color:$ajk_color;
+                   line-height: px2rem(44);
+               }
+               b{
+                   @include font-dpr(11px);
+                   color:#aaa;
+                   line-height: px2rem(44);
+                   font-weight: normal;
+               }
+             }
+        }
+    }
+
+}
+.vertical{
+  @extend %flex;
+  @extend %flexWrap;
+}
+.slideDown{
+  top:px2rem(80)!important;
+}
+.ng-hide{top:px2rem(-1334);}
+.nearby-filtrate{
+    width:100%;
+    height:px2rem(750);
+    background:rgba(0,0,0,.3);
+    position: absolute;
+    transition: all linear 0.5s;
+    z-index:100;
+    .filtrate{
+        width:100%;
+        height:px2rem(750);
+        background: #fff;
+        .filtrate-list{
+          @extend %flex;
+           width:100%;
+           height:px2rem(630);
+           border-bottom: 1px solid $ajk_borderColor;
+           .ban{
+              width:px2rem(210);
+              border-right:1px solid $ajk_borderColor ;
+              li{
+                  width:100%;
+                  height:px2rem(100);
+                  @include font-dpr(13px);
+                  color:$ajk_fontColr;
+                  line-height: px2rem(100);
+                  text-align: center;
+                  i{
+                      width:px2rem(10);
+                     height:100%;
+                     color:$ajk_color;
+                     margin-right:px2rem(10);
+                     display: none;
+                  }
+              }
+              .checkback{
+                  background:$ajk_backColor;
+              }
+              .checked{
+                  display:inline-block;
+              }
+           }
+           .filtrate-list-r{
+              -webkit-flex-grow:1;
+              flex-grow: 1;
+              margin-right: px2rem(30);
+               height:px2rem(630);
+               .price{
+                   width:100%;
+                   height:100%;
+                   padding:0 0 0 px2rem(30);
+                   overflow-y: auto;
+                    li{
+                      width:100%;
+                      height:px2rem(90);
+                      @include font-dpr(13px);
+                      color:$ajk_fontColr;
+                      line-height: px2rem(90);
+                      border-bottom: 1px solid $ajk_borderColor;
+                      @extend %flex;
+                      @extend %flexMainJustify;
+                      span{
+                          display:block;
+                          width:px2rem(330);
+                          overflow: hidden;
+                          white-space: nowrap;
+                          text-overflow: ellipsis;
+                      }
+                      i{
+                          display: block;
+                          width:px2rem(28);
+                          height:px2rem(28);
+                          background: url("../imgs/kwn/nearby/right.png") no-repeat;
+                          background-size: 100% 100%;
+                          margin:px2rem(36) px2rem(20) 0 0;
+                          display:none;
+                      }
+                   }
+                   .show{
+                          color:$ajk_color;
+                          i{
+                              display:block;
+                          }
+                    }
+               }
+               .metro{
+                  width:100%;
+                  max-height:px2rem(600);
+                  @extend %flex;
+                  @include font-dpr(13px);
+                  color:$ajk_fontColr;
+                  line-height: px2rem(100);
+                   overflow-y:auto;
+                  .path{
+                      width:px2rem(180);
+                      height:100%;
+                      padding:0 px2rem(10);
+                      p{
+                         width:100%;
+                         height:px2rem(100);
+                         border-bottom:1px solid $ajk_borderColor;
+                         text-align: center;
+                      }
+                      .right{
+                          color:$ajk_color;
+                      }
+                  }
+                  .show{
+                         color:$ajk_color;
+                         i{
+                             display:block!important;
+                         }
+                   }
+                  .station{
+                    -webkit-flex-grow:1;
+                    flex-grow: 1;
+                      max-height:px2rem(600);
+                      padding:0 px2rem(30);
+                      overflow-y:auto;
+                      p{
+                         width:100%;
+                         height:px2rem(100);
+                         border-bottom:1px solid $ajk_borderColor;
+                         text-align: center;
+                         @extend %flex;
+                         @extend %flexMainJustify;
+                         i{
+                             display: block;
+                             width:px2rem(28);
+                             height:px2rem(28);
+                             background: url("../imgs/kwn/nearby/right.png") no-repeat;
+                             background-size: 100% 100%;
+                             margin:px2rem(36) px2rem(20) 0 0;
+                             display: none;
+                         }
+                      }
+                       .right{
+                              color:$ajk_color;
+                              i{
+                                  display:block;
+                              }
+                          }
+                      .noborder{
+                          border:none;
+                      }
+                  }
+
+               }
+           }
+        }
+        .filtrate-btn{
+            width:100%;
+            height:px2rem(120);
+            @extend %flex;
+            @extend %flexMainJustify;
+            padding:px2rem(20) px2rem(40);
+            @include font-dpr(15px);
+            color:#fff;
+            line-height: px2rem(80);
+            font-family: "PingFang SC Medium";
+            .left-btn{
+                width:px2rem(220);
+                height:px2rem(80);
+                background:#e9e9e9;
+                text-align: center;
+                border-radius:px2rem(10);
+                margin-right:px2rem(60) ;
+                @include font-dpr(15px) ;
+            }
+            .right-btn{
+                width:px2rem(380);
+                height:px2rem(80);
+                background:$ajk_color;
+                text-align: center;
+                border-radius:px2rem(10);
+                @include font-dpr(15px) ;
+            }
+        }
+    }
+}
+
+.nearby-sort{
+    width:100%;
+    position: absolute;
+    z-index: 99;
+    transition: all linear 0.5s;
+    ul{
+        width:100%;
+        background: #fff;
+        margin-bottom:px2rem(30);
+        li{
+            width:100%;
+            height:px2rem(100);
+             @include font-dpr(13px);
+             color:$ajk_fontColr;
+             line-height: px2rem(100);
+             padding:0 px2rem(70);
+             @extend %flex;
+             @extend %flexMainJustify;
+             i{
+                 display: block;
+                 width:px2rem(28);
+                 height:px2rem(28);
+                 background: url("../imgs/kwn/nearby/right.png") no-repeat;
+                 background-size: 100% 100%;
+                 margin:px2rem(36) px2rem(20) 0 0;
+                 display: none;
+             }
+        }
+        .active{
+            color:$ajk_color;
+            background: $ajk_backColor;
+            i{
+               display: block;
+            }
+         }
+    }
+}
+.mapslidedown{
+    top:0;
+}
+.HouseOnMap{
+    width:100%;
+    height:100%;
+    z-index:200;
+    position: absolute;
+    transition: all linear 0.5s;
+}
+.circle{
+    border-radius: 6px;
+    width: px2rem(160);
+    height: px2rem(84);
+    text-align: center;
+    line-height: px2rem(26);
+    color:#fff;
+    background-color: $ajk_color;
+    background-size: 100% 100%;
+    @include font-dpr(13px);
+    padding-top:px2rem(5);
+
+}
+.userCenter-back{
+  .backdrop{
+    background-color: rgba(0,0,0,0.1)!important;
+  }
+}

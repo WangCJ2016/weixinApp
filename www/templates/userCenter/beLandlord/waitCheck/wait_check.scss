@@ -1,0 +1,36 @@
+.waitCheck_wrap {
+	background-color: $ajk_backColor;
+	height: 100%;
+
+	.wait_check {
+		width: 100%;
+		height: px2rem(280);
+		@extend %flex;
+		@extend %flexMainJustify;
+		@extend %flexCrossCenter;
+		@extend %flexDirTop;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fff;
+    border-bottom: 1px solid $ajk_borderColor;
+		img {
+			width: px2rem(105);
+			height: px2rem(105);
+			margin-top: px2rem(60);
+		}
+
+		p {
+			line-height: px2rem(80);
+			@include font-dpr(15px);
+		}
+	}
+
+	p {
+		line-height: px2rem(80);
+		color: #000;
+		text-align: center;
+		@include font-dpr(13px);
+	}
+}

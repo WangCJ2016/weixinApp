@@ -1,0 +1,30 @@
+<ion-view title="我是房东">
+	<ion-nav-buttons side="left">
+			<button class="button button-clear ajk_back" native-ui-sref='tab.userCenter' native-options="{type: 'slide', direction:'right'}"></button>
+	</ion-nav-buttons>
+	<ion-content class='beLandlord' >
+
+		<div class="beLandlord_wrap">
+			<div class="center_box">
+				<figure   class="my_account" ng-class='{active:select}'  ng-click="select&&goNext('myaccount')"  nav-direction="forward">
+					<p class='my_account_img'></p>
+					<figcaption>
+						我的收入
+					</figcaption>
+				</figure>
+				<figure class="join_us active"   ui-sref='landlordProfit' nav-direction="forward">
+					<p class="join_us_img"></p>
+					<figcaption>
+						加盟我们
+					</figcaption>
+				</figure>
+				<figure class="my_house"  ng-class='{active:select}' ng-click="select&&goNext('myHouse')"  nav-direction="forward">
+					<p class="my_house_img"></p>
+					<figcaption>
+						我的房子
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

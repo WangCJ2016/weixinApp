@@ -1,0 +1,16 @@
+.picShow_wrap{
+	background-color: #000;
+	.blank{
+		height: px2rem(400)
+	}
+	.back{
+		position: absolute;
+		left: px2rem(30);
+		top:px2rem(74);
+		width:px2rem(40);
+		height: px2rem(60);
+		background: url(../imgs/wcj/house_detail/left_arr.png)no-repeat center center;
+		background-size: px2rem(19) px2rem(32);
+		z-index: 99
+	}
+}

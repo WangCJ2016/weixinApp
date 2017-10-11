@@ -1,0 +1,106 @@
+<ion-view title='{{nowcity}}'>
+   <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref='tab.home' native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear mapbtn" nav-direction='back' ng-click="mapshow()"></button>
+    </ion-nav-buttons>
+    <div class="nearby-nav" >
+      <!-- <div class="nav frist">12月22日<br/>入住 <i></i></div> -->
+      <div class="nav"  ng-class="{'active': flag}" ng-click="show()" >筛选 <i class="down_arr"></i></div>
+      <div class="nav" ng-class="{'active': sort}" ng-click="sortshow()">默认排序 <i></i></div>
+      <div class="sort" ng-click="rank=!rank"><span class='changeStatus1' ng-class='{verticalStatus:rank}' ></span></div>
+  </div>
+  <ion-content class="userCenter-back">
+
+    <div class="diver"></div>
+    <div ng-if='!rank'>
+		<div class="nearby-list" ng-repeat='hotel in hotels track by $index' ui-sref='houseDtail({id:hotel.id})'>
+				<div class="list">
+			    	<div class="pic">
+			    		<img ng-src = '{{hotel.mainPicture}}'>
+			    	</div>
+			    	<div class="desc">
+			    		<h2>{{hotel.name}}</h2>
+			      	<p><span class="place"><i class="icon"></i>{{hotel.address}}</span></p>
+              <p class="money"><em>¥</em>{{hotel.price}}<b>起</b></p>
+			    	</div>
+			</div>
+    </div>
+		</div>
+    <div ng-if='rank' class="vertical">
+		<div class="ajklist_vertical" ng-repeat='hotel in hotels track by $index' ui-sref='houseDtail({id:hotel.id})'>
+				<div class="list">
+			    	<div class="pic">
+			    		<img ng-src = '{{hotel.mainPicture}}'>
+			    	</div>
+			    	<div class="intr">
+			    		<h2>{{hotel.name}}</h2>
+			      	<p class="loc"><span><i class="icon"></i>{{hotel.address}}</span></p>
+              <p class="price"><span>¥</span>{{hotel.price}}<span>起</span></p>
+			    	</div>
+			</div>
+    </div>
+		</div>
+		<div class="nearby-filtrate" ng-show="flag" ng-class ='{slideDown:flag}'>
+				<div class="filtrate">
+					<div class="filtrate-list">
+						<ul class="ban">
+							<li ng-repeat="screenlist in screenlist track by $index" ng-class="{checkback:$index==i}" ng-click="screenlistClass($index)"><i ng-class="{checked:$index==i}">·</i>{{screenlist}}</li>
+						</ul>
+						<div class="filtrate-list-r">
+							<!--附近-->
+							<ul class="price" ng-show="neighbour">
+								<li ng-class="{show:$index==j}" ng-repeat="neighbouringlist in neighbouringlist track by $index" ng-click="neighbouringClass($index,neighbouringlist)"><span>{{neighbouringlist}}</span><i></i></li>
+							</ul>
+							<!--商圈-->
+							<ul class="price" ng-hide="business">
+								<li ng-repeat="businessArr in businessArr track by $index" ng-class="{show:$index==k}" ng-click="businessClass($index,businessArr)"><span>{{businessArr}}</span><i></i></li>
+							</ul>
+							<!--价格-->
+							<ul class="price" ng-hide="price">
+								<li ng-repeat="pricelist in pricelist track by $index" ng-class="{show:$index==j}" ng-click="pricelistClass($index,pricelist)"><span>{{pricelist}}</span><i></i></li>
+							</ul>
+							<!--区域-->
+							<ul class="price" ng-hide="arealist">
+								<li ng-repeat="areaArr in areaArr track by $index" ng-class="{show:$index==t}" ng-click="areacontClass($index,areaArr)"><span>{{areaArr}}</span><i></i></li>
+							</ul>
+							<ul class="metro" ng-hide="metro">
+								<li class="path">
+									<p ng-repeat="metroArr in metrolistArr track by $index" ng-class="{right:$index==a}" ng-click="metrochecked($index,metroArr)">{{metroArr}}</p>
+								</li>
+								<li class="station">
+									<p ng-repeat="maplistArr in maplistArr track by $index" ng-class="{show:$index==j}" ng-click="maplistClass($index,maplistArr)"><span>{{maplistArr}}</span><i></i></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="filtrate-btn">
+						<div class="left-btn">清空</div>
+						<div class="right-btn" ng-click="search()">确定</div>
+					</div>
+				</div>
+		</div>
+		<div class="nearby-sort" ng-show="sort" ng-class ='{slideDown:sort}'>
+			<ul>
+				<li ng-class="{active:$index==i}" ng-repeat="sortlist in sortlist" ng-click="sortlistclass($index,sortlist)"><span>{{sortlist}}</span><i></i></li>
+			</ul>
+		</div>
+		<div class='backdrop visible' ng-class='{active:flag||sort}' ng-show ='flag||sort' ng-click = 'filterHide()'></div>
+    <script id="map-modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class=''>
+          <button class="button button-clear ajk_back modalbtn" ng-click='closeModal();'></button>
+          <h1 class="title">酒店地图</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div id="HouseOnMap" class="HouseOnMap"></div>
+          {{data}}
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+  </ion-content>
+  <ion-infinite-scroll ng-if="moreDataCanBeLoaded" on-infinite="loadMoreData()" distance="10%" immediate-check='false'>
+  </ion-infinite-scroll>
+</ion-view>

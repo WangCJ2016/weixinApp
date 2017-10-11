@@ -1,0 +1,138 @@
+<ion-view view-title="成为房东">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear ajk_back" native-ui-sref="landlordProfit" native-options="{type: 'slide', direction:'right'}"></button>
+  </ion-nav-buttons>
+  <ion-content overflow-scroll="true" style="overflow: hidden">
+    <div class="joinUs_wrap">
+      <div ng-if="!bindWhether">
+        <section class="intr">
+          <div>
+            <span>真实姓名:</span>
+            <input type="text" placeholder="请输入姓名" ng-pattern='/^[\u4e00-\u9fa5]{2,20}$/' ng-model="data.name">
+          </div>
+          <div>
+            <span>身份证号:</span>
+            <input type="tel" number-confirm ng-minlength='18' ng-maxlength='18' maxlength='18' ng-pattern='/\d{18}/' placeholder="请输入身份证号码" ng-model='data.cardNo'>
+          </div>
+        </section>
+        <div class="upload_idcard">
+          <div class='id_Card' ng-if='idCard'>
+            <div class="" ng-click='getIdCard("font")'>
+              <img src="imgs/wcj/join_us/plus.png" alt="身份证真面">
+              <p>点击上传身份证真反面照片</p>
+            </div>
+            <div class="" ng-click='getIdCard("back")'>
+              <img src="imgs/wcj/join_us/plus.png" alt="身份证反面">
+              <p>点击上传身份证真反面照片</p>
+            </div>
+            <!-- <img src="imgs/wcj/join_us/plus.png" alt="">
+          <p>点击上传身份证真反面照片</p>
+          <p>(可调取摄像头现拍或在相册中选取)</p>
+          <p class="num">0/2</p> -->
+          </div>
+          <div class='id_Card img' ng-if='!idCard'>
+            <div class="" ng-click='getIdCard("font")'>
+              <img ng-src={{fontImg}} alt="">
+            </div>
+            <div class="" ng-click='getIdCard("back")'>
+              <img ng-src={{backImg}} alt="">
+            </div>
+          </div>
+          <label class="item item-input ">
+                <span class="input-label">提示:</span>
+                <p>可调取摄像头现拍或在相册中选取,身份证照片与证件号要求清晰可见,如有看不清则视为无效</p>
+            </label>
+        </div>
+
+        <section class="intr address">
+
+          <div ng-if="!platform" style="margin-bottom:1px">
+            <span>所在地区:</span>
+            <hms-pct-select ng-transclude></hms-pct-select><span class='right'></span>
+          </div>
+          <div ng-if="platform" style="margin-bottom:1px">
+            <span>所在地区:</span>
+            <city-picker></city-icker>
+          </div>
+          <div>
+            <span>详细地址:</span>
+            <input type="text" placeholder="如街道、楼牌号等" ng-model='data.detailAddress'>
+          </div>
+        </section>
+        <div class="submit">
+          <button class="button button-full button-calm" ng-click='submit();'>
+              提交审核
+            </button>
+        </div>
+      </div>
+      <div ng-if="bindWhether">
+        <section class="intr detailintr">
+          <div>
+            <span>真实姓名:</span>
+            <p>{{landlord.name}}</p>
+          </div>
+          <div>
+            <span>身份证号:</span>
+            <p>{{landlord.cardNo}}</p>
+          </div>
+          <div>
+            <span>所在地区:</span>
+            <p>{{landlord.address}}</p>
+          </div>
+          <div>
+            <span>详细地址:</span>
+            <p>{{landlord.detailAddress}}</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </ion-content>
+  <script id="hmsPCTSelect-modal.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar class="bar-calm">
+        <h1 class="title">选择地址</h1>
+        <div class="buttons">
+          <button ng-click="PCTModal.hide();" class="button button-clear">
+          取消
+        </button>
+        </div>
+      </ion-header-bar>
+      <ion-content overflow-scroll="true" style="overflow: hidden">
+        <ion-slide-box show-pager="false" style="height: 100%;" does-continue="false" delegate-handle="PCTSelectDelegate" ng-init="lockSlide()">
+          <ion-slide>
+            <ion-scroll style="height: 100%;" scrollbar-y="false" delegate-handle="PCTSelectProvince">
+              <ion-item class="item-icon-right" ng-click="chooseProvince(item);" ng-repeat="item in provincesData track by $index">
+                <span>{{item}}</span>
+                <i class="icon ion-ios-arrow-right icon-item"></i>
+              </ion-item>
+            </ion-scroll>
+          </ion-slide>
+          <!--省选择结束-->
+
+          <!--市选择开始-->
+          <ion-slide>
+            <ion-scroll style="height: 100%;" scrollbar-y="false" delegate-handle="PCTSelectCity">
+              <ion-item class="item-icon-right" ng-click="chooseCity(item);" ng-repeat="item in citiesData track by $index">
+                <span>{{item}}</span>
+                <i class="icon ion-ios-arrow-right icon-item"></i>
+              </ion-item>
+            </ion-scroll>
+          </ion-slide>
+          <!--市选择结束-->
+
+          <!--县选择开始-->
+          <ion-slide>
+            <ion-scroll style="height: 100%;" scrollbar-y="false" delegate-handle="PCTSelectTown">
+              <ion-item class="item-icon-right" ng-click="chooseTown(item);" ng-repeat="item in townData track by $index">
+                <span>{{item}}</span>
+                <i class="icon ion-ios-arrow-right icon-item"></i>
+              </ion-item>
+            </ion-scroll>
+          </ion-slide>
+        </ion-slide-box>
+
+      </ion-content>
+    </ion-modal-view>
+
+  </script>
+</ion-view>

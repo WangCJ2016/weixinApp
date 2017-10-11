@@ -1,0 +1,62 @@
+.spotLight_wrap {
+  .light {
+    height: px2rem(106);
+    @extend %flex;
+    @extend %flexMainJustify;
+    @extend %flexCrossCenter;
+    border-bottom: 1px solid #e1e1e1;
+   margin-left: px2rem(30);
+    > p {
+      @include font-dpr(15px);
+      color: #000;
+    }
+
+    label {
+      margin-right: px2rem(30);
+    }
+  }
+
+  .slide {
+    @extend %flex;
+    @extend %flexMainCenter;
+    @extend %flexCrossCenter;
+    height: px2rem(106);
+    border-bottom: 1px solid #e1e1e1;
+    > span {
+      display: inline-block;
+      width: px2rem(46);
+      height: px2rem(46);
+      background: url(../imgs/wcj/readLight/light.png)no-repeat center;
+      background-size: px2rem(46) px2rem(46);
+    }
+    .left{
+      margin:0 px2rem(30)
+    }
+    .right{
+      margin:0 px2rem(30);
+    }
+  }
+
+  input[type="range"] {
+    height: px2rem(5);
+    margin: 17px 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+    border: 0;
+    border-radius: px2rem(5);
+    outline: 0;
+    background-color: #ffb354;
+    -webkit-appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: default;
+    height: px2rem(50);
+    width: px2rem(50);
+    background: #e1e1e1;
+    border-radius: 50%;
+    border-color: #fff;
+  }
+}

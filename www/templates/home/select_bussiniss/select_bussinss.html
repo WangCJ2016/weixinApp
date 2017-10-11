@@ -1,0 +1,46 @@
+<ion-view hide-nav-bar='true'>
+    <ion-content class='selectBussiniss_back' overflow-scroll="true" style="overflow: hidden">
+        <div class='selectBussiniss_search'>
+            <span native-ui-sref="tab.home" native-options="{type: 'slide', direction:'down'}"></span>
+            <div class="">
+                <i class="icon s_b_search"></i>
+                <!--<span>花蒋路</span>-->
+                <form>
+                  <input type="search" placeholder="搜索" ng-model='searchText.text'/>
+                  <button style='opacity:0' ng-click="submitSearch()"></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="selectBussinss_wrap">
+            <div class="selectBussinss_list">
+                <div class="first_floor" ng-class="{active:$index==i}" ng-repeat="select in selectArr track by $index" ng-click="selectShow($index)">{{select}}</div>
+            </div>
+            <ul class="metro_list"  ng-show="metroshow">
+                <li ng-repeat="metroArr in metroArr" ng-click="metrochecked(metroArr)">{{metroArr}}</li>
+            </ul>
+            <div class="content_list" ng-class={'ditie':metroshow}>
+                <div class="list metro_cont_list" ng-show="metroContList" ng-repeat="maplistArr in maplistArr track by $index">
+                    <div class="item item-divider initial">
+                        {{maplistArr.letter.toUpperCase()}}
+                    </div>
+                    <p class="item cont_list" href="javascript:void(0);" ng-repeat="maplist in maplistArr.data track by $index" ng-click='goNearby(maplist)'>
+						{{maplist}}
+					</p>
+                </div>
+                <div class="list" ng-show="contentList" ng-repeat="maplistArr in maplistArr track by $index">
+                    <!--<a class="item cont_list" href="javascript:;">
+						全部
+					</a>-->
+                    <div class="item item-divider initial">
+                        {{maplistArr.letter.toUpperCase()}}
+                    </div>
+                    <p class="item cont_list" href="javascript:;" ng-repeat="listArr in maplistArr.data track by $index" ng-click='goNearby(listArr)'>
+						{{listArr}}
+					</p>
+                </div>
+            </div>
+        </div>
+        <div id="panel"></div>
+    </ion-content>
+</ion-view>

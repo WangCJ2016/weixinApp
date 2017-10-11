@@ -1,0 +1,101 @@
+<ion-view hide-nav-bar='true' >
+
+    <ion-content>
+        <div class='orderDetail_wrap'>
+            <div ng-class='{blur:time_select}'>
+          <div class = 'hotel'>
+            <div class='hotel_pics'>
+                <div class='bgpic'></div>
+                <div class='content'>
+                   <div class="topBlank" ng-if='platform'></div>
+                    <div class='topbar'>
+                    <span native-ui-sref='tab.shopCar' native-options="{type: 'slide', direction:'right'}"></span>订单填写<p></p>
+                    </div>
+                    <ion-scroll>
+                    <div ng-repeat='hotel in hotels track by $index'>
+                    <div class='position' >
+                      <span></span>{{hotel.hotelName}}
+                    </div>
+
+                    <div class=rooms>
+                   <div class='room' ng-repeat='house in hotel.carts track by $index'>
+                       <p>{{house.inTime|MMyueddri}}-{{house.leaveTime|MMyueddri}}&nbsp;</p>
+                       <p>{{house.houseName}}</p>
+                       <p>共{{house.inDays}}晚</p>
+                   </div>
+                  </div>
+                   </div>
+                   </ion-scroll>
+                </div>
+            </div>
+            <!-- <div class='mess'>
+                <div class='mess_detail'>
+                    <span class='first'>入住人<i class='bg'></i></span>
+                    <input type="text" value='王小二' />
+                    <span class='bgpic'></span>
+                </div>
+                <div class='mess_detail'>
+                    <span class='first'>手机号<i></i></span>
+                    <input type="text" value='18868877305' />
+                    <span class='bgpic1'></span>
+                </div>
+            </div>
+            <div class='divier'>
+                <span>爱居客服务</span> 免费尊享
+            </div>
+            <div class='mess'>
+                <div class='mess_detail' ng-click='time_select=true'>
+                    <span class='first'>到店时间</span>
+                    <p class='second'>{{time}}前<i></i></p>
+                </div>
+                <div class='mess_detail' ng-click='goInvoice()'>
+                    <span class='first'>发票</span>
+                    <p class='second'>不需要<i></i></p>
+                </div>
+            </div>
+            <div class='divier'>
+                <span>备注</span>
+            </div>
+            <div class='more'>
+                   <input type="text" placeholder='点击输入其他特殊要求'/>
+            </div>
+          </div> -->
+
+            <div class='notice'>
+              <h3>订单政策</h3>
+              <div>
+              	<h4>免费取消&nbsp;全额退款</h4>
+              	<p>最晚取消时间：1月19日&nbsp;18:00前,逾时无法取消和退款。</p>
+              	<p>预定超过3间时，需在1小时内在线支付房费。入住日前一天中午12：00前可免费取消全额退款，晚于该时间段不可取消，并且无法退款。</p>
+              </div>
+              <p></p>
+            </div>
+
+            </div>
+            <div class='arriveTime' ng-show='time_select' ng-class='{fade:time_select}'>
+               <span class='close' ng-click='time_select=false' ></span>
+                <div class="topBlank" ng-if='platform'></div>
+                <div class='topbar' ng-click='tim();'>
+                      到店时间
+                        <p></p>
+                    </div>
+                    <div class='time' ng-repeat='time in arriveTime track by $index' ng-class='{selected:$index==indexi}' ng-click='select($index)'>{{time}}&nbsp;前</div>
+
+                    <div >
+                      <button type='button' class='button button-calm button-full' ng-click='time_select=false'>保存</button>
+                    </div>
+
+            </div>
+
+        </div>
+    </ion-content>
+     <div class='payer'>
+              <div>
+                <span>合计</span>
+                <span>¥{{total}}</span>
+              </div>
+              <div ng-click='submit();'>
+                去支付
+              </div>
+            </div>
+</ion-view>

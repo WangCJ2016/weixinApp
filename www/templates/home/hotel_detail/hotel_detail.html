@@ -1,0 +1,23 @@
+<ion-view title="酒店详情">
+	 <ion-nav-buttons side="left">
+            <button class="button button-clear ajk_back" ng-click='back()'></button>
+    </ion-nav-buttons>
+    <ion-content>
+    	<div class="hotelDetail_wrap">
+    		<div class="hotel_introduce">
+    			<h2>酒店简介</h2>
+    			<div class="hotel_mess">
+    				<p>
+    					<span>房间数量(间):{{roomnum}}间房</span>
+    					<span>联系方式:{{num}}</span>
+    				</p>
+    				<button class="button button-calm" ng-click='call()'><i class="icon call"></i>联系酒店</button>
+    			</div>
+    			<p>
+    				{{profiles}}
+    			</p>
+    		</div>
+
+    	</div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+.myhouse_detail_wrap{
+	background-color:$ajk_backColor;
+	.normal{
+
+
+		>h2{
+			line-height:px2rem(60);
+			color: #000;
+			@include font-dpr(13px);
+			text-indent: px2rem(30);
+			font-family: 'PingFang SC';
+		}
+		.list{
+			background-color:#fff;
+		}
+		.item{
+			height:px2rem(160);
+			background-color: transparent;
+		}
+	}
+	.normal_house{
+		position: relative;
+		&::before{
+			@include borderMixinBottom;
+		}
+	}
+}

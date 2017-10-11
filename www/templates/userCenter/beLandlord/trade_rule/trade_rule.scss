@@ -1,0 +1,15 @@
+.trade_rule_wrap{
+	background-color: $ajk_backColor;
+	padding: px2rem(30);
+	height:100%;
+	h2{
+		@include font-dpr(15px);
+
+	}
+	p{  
+		margin-top: px2rem(20);
+		line-height:px2rem(30);
+		white-space:normal;
+		@include font-dpr(13px);
+	}
+}

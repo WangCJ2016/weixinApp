@@ -1,0 +1,77 @@
+.myhouse_changeprice_wrap{
+    background-color: $ajk_backColor;
+    + .popup-container .popup{
+        width:100%;
+    }
+    >h2{
+         font-family: 'PingFang SC';
+         line-height:px2rem(60);
+         text-indent: px2rem(30);
+         @include font-dpr(12px);
+    }
+    button{
+        position: fixed;
+        bottom:0;
+        margin: 0!important;
+    }
+   ion-scroll{
+    width:100%;
+    height:px2rem(1334);
+   }
+    .backdrop{
+        opacity: 1;
+        visibility:visible;
+    }
+
+    .fix{height:px2rem(2200);overflow:hidden}
+    .selectDate{
+
+        position:absolute;
+        width:100%;
+        z-index:99;
+        height:px2rem(452);
+        bottom:0;
+        left:0;
+        background-color:#fff;
+        >div{
+            border-radius:px2rem(10);
+            margin:0 px2rem(30);
+            margin-bottom:px2rem(40);
+        }
+         >span{
+            position: absolute;
+                display:inline-block;
+                width:px2rem(60);
+                height:px2rem(40);
+                background-color: $ajk_color;
+                border-radius:px2rem(5);
+                color:#fff;
+                right:px2rem(30);
+                top:px2rem(30);
+                text-align:center
+            }
+        h2{
+            line-height:px2rem(100);
+            text-align:center;
+            @include font-dpr(13px);
+
+        }
+        .time{
+
+                background-color:$ajk_backColor;
+                line-height:px2rem(90);
+                @extend %flex;
+                @extend %flexMainJustify;
+                padding: 0 px2rem(20);
+                span:last-child{
+                    color: $ajk_color;
+                }
+                input{
+                    display:inline-block;
+                    height:px2rem(90);
+                    line-height:px2rem(90);
+                    background-color:transparent;
+                }
+            }
+    }
+}

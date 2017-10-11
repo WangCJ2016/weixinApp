@@ -1,0 +1,37 @@
+<ion-view hide-nav-bar='true'>
+	<ion-content has-subheader="false">
+		<div class="my_orderform_wrap">
+			<div class="header">
+				<span><i class="close" native-ui-sref='myHouse' native-options="{type: 'slide', direction:'right'}"></i></span>
+				<div class="select_btn">
+					<span ng-click="select=true" ng-class="{selectBtn:select}">待入住</span>
+					<span ng-click="select=false" ng-class="{selectBtn:!select}">已入住</span>
+				</div>
+			</div>
+			<div >
+
+			  <div class="normal">
+    			<h2>杭州马克菠萝假日酒店<i></i></h2>
+    			<div class="normal_house" ui-sref='orderFormDetail'>
+    				<div class="list item_avatar">
+    					<a class="item">
+    						<img src="imgs/wcj/home/slide_1.png" alt="">
+    						<div>
+    							 <p>杭州市西湖区平海路38号</p>
+    							<p>商务标准房&nbsp;203</p>
+
+                                <p>入住时间:2015.08.18-2015.9.04</p>
+    						</div>
+    					</a>
+    					<span></span>
+    				</div>
+    			</div>
+    		</div>
+			</div>
+			<div class="buttons">
+			<button class="button button-full button-calm">入住</button>
+			<button class="button button-full " style="background-color: #dfdfdf;color:#fff">取消订房</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

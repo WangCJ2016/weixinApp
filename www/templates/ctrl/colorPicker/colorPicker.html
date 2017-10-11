@@ -1,0 +1,23 @@
+<ion-view view-title='调光'>
+  <ion-nav-buttons side="left">
+    <button class="button button-clear ajk_back" ng-click="goback()"></button>
+  </ion-nav-buttons>
+  <ion-content class="colorPicker_wrap" getHeight>
+    <section class="rbgbtns" id='rbgbtns' >
+      <p style="background-color:{{color}}" ng-repeat="color in color1 track by $index" ng-click='colorSubmit(color)'></p>
+    </section>
+    <section class="rbgbtns" id='rbgbtns2' >
+      <p style="background-color:{{color}}" ng-repeat="color in color2 track by $index" ng-click='colorSubmit(color)'></p>
+    </section>
+    <canvas id="myCanvas" canvas>
+         </canvas>
+    <span class="pot" id="pot"></span>
+    <div id='dd'></div>
+
+    <section class="buttons">
+      <a class='check' ng-click="changeRgb()"></a>
+      <div></div>
+      <a class="open" ng-click="color()"></a>
+    </section>
+  </ion-content>
+</ion-view>

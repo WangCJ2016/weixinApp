@@ -1,0 +1,137 @@
+<ion-view hide-nav-bar='true'>
+ <div class="change_bars fixed" ng-show='!fixed' >
+            <div class="change_bar" ng-click='switchOn()'>
+                <p  ng-class="{borderBottom:switch}">
+                    <i class="hotel_detail"></i>酒店详情
+                </p>
+            </div>
+            <div class="change_bar" ng-click='switchOff()'>
+                <p ng-class="{borderBottom:!switch}">
+                    <i class="room_type"></i>房间类型
+                </p>
+            </div>
+        </div>
+    <ion-scroll id='scroll'  class='houseIntr_content'>
+     <div class="houseDetail_wrap">
+        <div class="houseDetail_header" get-height >
+            <img ng-src={{pic}} ng-click = 'gohotelPics();'>
+            <a ng-click='goHome()' class="back"><i></i></a>
+            <div class="share">
+                <a ng-click="collect();"><i class="unlike" ng-if="!whetherCollect"></i><i class="like" ng-if="whetherCollect"></i></a>
+                <a ng-click='share();'><i class="navigation"></i></a>
+            </div>
+            <span class="hotel_name">
+				{{name}}
+			</span>
+            <p class="pics_num" ng-click = 'gohotelPics();'>{{picsLength}}张</p>
+        </div>
+        <div class="change_bars" ng-show='fixed'>
+            <div class="change_bar">
+                <p ng-click='switchOn()' ng-class="{borderBottom:switch}">
+                    <i class="hotel_detail"></i>酒店详情
+                </p>
+            </div>
+            <div class="change_bar">
+                <p ng-click='switchOff()' ng-class="{borderBottom:!switch}">
+                    <i class="room_type"></i>房间类型
+                </p>
+            </div>
+        </div>
+        <div ng-show='switch'  class="hotel_detail_wrap">
+          <div class="hotel_introduce">
+              <h2 ><p><span class="divier"></span>酒店简介</p><p class="see_all" ng-click='seeAll();'>查看全部></p></h2>
+              <p>{{profiles}}
+              </p>
+              <div></div>
+          </div>
+            <div class="hotel_devices">
+                <h2><p><span class="divier"></span>酒店设施</p></h2>
+                <div>
+                  <div>
+                    <div class="hotel_device" ng-repeat='assort in assorts track by $index'>
+                        <div class="img">
+                            <img ng-src="{{assort.src}}" alt="">
+                        </div>
+                        <p>{{assort.name}}</p>
+                    </div>
+                    </div>
+                    <div class="more">
+                      <div class="hotel_device" ng-click='seeAllService();'>
+                          <div class="img" >
+                              <img ng-src="imgs/wcj/house_detail/more.png" alt="">
+                          </div>
+                          <p>更多</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map" ng-click="goMap()">
+                <div class="house_map" id='map'></div>
+                <p class="map_loc"><i></i>{{address}}</p>
+            </div>
+            <div class="comment" ng-click='goHotelFeedback();' ng-if="comment_if">
+                <div class="comment_div" >
+                    <p class="comment_star">
+                        <span class="divier"></span>评价&nbsp;&nbsp;&nbsp;
+                        <i class="start_full" ng-repeat="star in stars track by $index"></i>
+                        <i class="start_blank" ng-repeat="star in star_blank track by $index"></i>
+                    </p>
+                    <p class="comment_num" >查看{{feedbackCount}}条点评<i class="left"></i></p>
+                </div>
+                <div class="comment_atavter" >
+                  <div class="atavter" >
+                    <img ng-src="{{comment_first.headPicture||'imgs/wcj/imghead.png'}}">
+                    <div>
+                      <p>{{comment_first.customer}}</p>
+                    </div>
+                  </div>
+                    <p class="all">
+                        {{comment_first.content}}
+                    </p>
+                </div>
+            </div>
+            <div class="hotel_rule">
+                <h2><span class="divier"></span>酒店规则</h2>
+                <div class="deposit"  style="position:relative">
+                    <span class="blue_back">押金</span>
+                    <span><strong>{{yajin}}</strong>元</span>
+                </div>
+                <div class="drawback">
+                    <div style="position:relative">
+                        <span class="blue_back">退款</span>
+                    </div>
+                    <p>
+                        {{dealRule}}
+                    </p>
+                    <div class="blank">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div ng-hide='switch'   class="room_type">
+            <div class="normal" ng-repeat='room in roomType track by $index'>
+                <h2 >{{room.houseTypex}}</h2>
+                <div class="list">
+                    <div style='background-color:#fff' class="item-two item-two-avater"  ng-click='goHouseIntr(hos.id);' ng-repeat='hos in room.rooms track by $index'>
+                        <img ng-src='{{hos.picture}}'>
+                         <ul class="room_mess" >
+                        	 	 <li class="houseName">{{hos.name}}</li>
+                             <li class="money">¥{{hos.defaultPrice}}</li>
+                        	</ul>
+                          <p class="avater"><i class="icon left_arr"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="blank">
+
+            </div>
+            <ion-infinite-scroll ng-if="moreDataCanBeLoaded" on-infinite="loadMoreData()" distance="10%" immediate-check='false'>
+            </ion-infinite-scroll>
+        </div>
+
+        </div>
+    
+    </ion-scroll>
+</ion-view>

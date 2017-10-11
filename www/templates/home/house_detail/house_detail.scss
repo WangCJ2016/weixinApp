@@ -1,0 +1,664 @@
+
+[data-dpr="2"] {
+  @media screen and (max-width:660px) {
+    .change_bars .change_bar p{
+      width: px2rem(275)!important;
+    }
+  }
+}
+#scroll{
+  width: 100%;
+}
+.houseDetail_wrap {
+  .blank{
+    height: px2rem(100);
+  }
+  background-color: $ajk_backColor;
+  height: 100%;
+  .start_full {
+    background: url(../imgs/wcj/house_detail/star_full.png)no-repeat;
+    background-size: 100% 100%;
+  }
+ .divier{
+   display: inline-block;
+   width: px2rem(8);
+   height: px2rem(30);
+   border-radius: px2rem(5);
+   background-color: $ajk_color;
+   margin-right: px2rem(20);
+ }
+  .start_blank {
+    background: url("../imgs/wcj/house_detail/star_blank.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .houseDetail_header {
+    height: px2rem(382);
+    position: relative;
+    @extend %flex;
+    @extend %flexDirTop;
+    @extend %flexCrossCenter;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .back {
+      position: absolute;
+      width: px2rem(60);
+      height: px2rem(60);
+      left: px2rem(30);
+      background-color: #000;
+      border-radius: 50%;
+      opacity: 0.6;
+      line-height: px2rem(53);
+       text-align: center;
+      i {
+        display: inline-block;
+        width: px2rem(19);
+        height: px2rem(32);
+        background: url(../imgs/wcj/house_detail/left_arr.png)no-repeat;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        margin-left: px2rem(-9);
+      }
+    }
+
+    .share {
+      position: absolute;
+      height: px2rem(60);
+      right: px2rem(30);
+
+      a {
+        display: inline-block;
+        width: px2rem(60);
+        height: px2rem(60);
+        margin-left: px2rem(20);
+        background-color: #ffb354;
+        border-radius: 50%;
+        line-height: px2rem(60);
+        text-align: center;
+
+        i {
+          display: inline-block;
+          width: px2rem(32);
+          height: px2rem(32);
+          vertical-align: middle;
+        }
+
+        .like {
+          background: url(../imgs/wcj/house_detail/like.png)no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .unlike {
+          background: url(../imgs/wcj/house_detail/hotel_collect.png)no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .navigation {
+          background: url(../imgs/wcj/house_detail/navigation.png)no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+
+    .hotel_name {
+      position: absolute;
+      bottom: px2rem(16);
+      left: px2rem(30);
+      color: #fff;
+      @include font-dpr(15px);
+      line-height: px2rem(40);
+    }
+
+    .pics_num {
+      width: px2rem(102);
+      height: px2rem(40);
+      position: absolute;
+      bottom: px2rem(16);
+      right: px2rem(30);
+      color: #fff;
+      @include font-dpr(13px);
+      line-height: px2rem(40);
+      background-color: #000;
+      opacity: 0.6;
+      text-align: center;
+    }
+  }
+
+  .hotel_detail_wrap {
+    background-color: $ajk_backColor;
+  }
+
+  .comment {
+    background-color: #fff;
+    //border-bottom: 1px solid $ajk_backColor;
+    margin-bottom: px2rem(10);
+    .comment_div {
+      @extend %flex;
+      @extend %flexMainJustify;
+      padding: 0 px2rem(30);
+      width: 100%;
+      height: px2rem(80);
+      padding-top: px2rem(10);
+      .comment_star {
+        @extend %flex;
+        @extend %flexCrossCenter;
+        height: px2rem(70);
+        line-height: px2rem(70);
+        @include font-dpr(15px);
+        i {
+          display: inline-block;
+          width: px2rem(20);
+          height: px2rem(17.5);
+        }
+
+        i:first-child {
+          margin-left: px2rem(20);
+        }
+
+        span {
+          color: $ajk_color;
+
+          @include font-dpr(15px);
+        }
+      }
+
+      .comment_num {
+        height: px2rem(80);
+        line-height: px2rem(80);
+        color: #ababab;
+        @include font-dpr(13px);
+
+        i {
+          display: inline-block;
+          width: px2rem(20);
+          height: px2rem(35);
+          background: url(../imgs/wcj/house_detail/right_arr.png)no-repeat;
+          background-size: px2rem(20) px2rem(30);
+          vertical-align: middle;
+          margin-left: px2rem(10);
+        }
+      }
+    }
+
+    .comment_content {
+      white-space: normal;
+      padding: 0 px2rem(30);
+      line-height: px2rem(30);
+    //  border-bottom: 1px solid $ajk_borderColor;
+      padding-bottom: px2rem(30);
+    }
+    .comment_atavter{
+      .atavter{
+        padding: px2rem(30);
+        padding-bottom: 0;
+        @extend %flex;
+        img{
+          width: px2rem(80);
+          height: px2rem(80);
+          border-radius: 50%;
+          margin-right: px2rem(20);
+        }
+        >div{
+           >p{
+             height: px2rem(40);
+             line-height: px2rem(40);
+             position: relative;
+             >span{
+               line-height: px2rem(40);
+             }
+             .mask{
+               width: px2rem(80);
+               height: px2rem(40);
+               background-color: $ajk_color;
+               opacity: 0.2;
+               display: inline-block;
+             }
+             .point{
+               width: px2rem(80);
+               height: px2rem(40);
+               position: absolute;
+               display: inline-block;
+               text-align: center;
+             }
+           }
+        }
+      }
+      .all{
+        line-height: px2rem(43);
+        padding: px2rem(30);
+      }
+    }
+  }
+
+  .map {
+    margin-bottom: px2rem(10);
+  }
+
+  .house_map {
+    background-color: #fff;
+    width: 100%;
+    height: px2rem(200);
+    //border-bottom: 1px solid $ajk_borderColor;
+  }
+
+  .map_loc {
+    line-height: px2rem(60);
+    background-color: #fff;
+    padding: 0 px2rem(30);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    i {
+      display: inline-block;
+      width: px2rem(25);
+      height: px2rem(32);
+      vertical-align: middle;
+      background: url("../imgs/wcj/house_detail/house_loc.png");
+      background-size: px2rem(25) px2rem(32);
+      margin-right: px2rem(10);
+    }
+  }
+
+  .hotel_devices {
+    background-color: #fff;
+    //border-bottom: 1px solid $ajk_borderColor;
+    margin-bottom: px2rem(10);
+    h2 {
+      padding-top: px2rem(10);
+      line-height: px2rem(86);
+      @include font-dpr(15px);
+      color: #000;
+      text-indent: px2rem(30);
+
+      >p{
+        @extend %flex;
+        @extend %flexCrossCenter;
+        @include font-dpr(15px);
+        margin-left: px2rem(30);
+      }
+
+    }
+
+    & > div {
+      position: relative;
+      padding-left: px2rem(30);
+      height: px2rem(140);
+      overflow: hidden;
+      padding-bottom: px2rem(20);
+
+      > div:first-child {
+        overflow: hidden;
+        @extend %flex;
+         -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: px2rem(120);
+        padding-right: px2rem(110);
+      }
+    }
+  .more{
+    width: px2rem(115)!important;
+    position: absolute;
+    right: px2rem(30);
+    top:0;
+    .img{
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+    }
+  }
+    .hotel_device {
+      width: px2rem(115);
+      height: px2rem(120);
+      text-align: center;
+      @extend %flex;
+      @extend %flexDirTop;
+      .img {
+        @extend %flex;
+        @extend %flexMainCenter;
+        @extend %flexCrossCenter;
+        line-height: px2rem(62);
+        height: px2rem(80);
+        img {
+          width: px2rem(40);
+          vertical-align: center;
+        }
+      }
+
+      p {
+        @include font-dpr(11px);
+        max-width: px2rem(115);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: px2rem(30);
+      }
+    }
+
+    .see_all {
+      line-height: px2rem(86);
+      text-indent: px2rem(30);
+      color: $ajk_color;
+      padding-bottom: px2rem(10);
+      text-align: center;
+      @include font-dpr(15px);
+    }
+  }
+
+  .hotel_introduce {
+    background-color: #fff;
+    //border-bottom: 1px solid $ajk_borderColor;
+    margin-bottom: px2rem(10);
+
+    h2 {
+      @extend %flex;
+      @extend %flexMainJustify;
+      padding-top: px2rem(10);
+      line-height: px2rem(70);
+      text-indent: px2rem(30);
+      >p:first-child{
+        @include font-dpr(15px);
+        @extend %flex;
+        @extend %flexCrossCenter;
+        margin-left: px2rem(30);
+      }
+    //  border-bottom: 1px solid $ajk_borderColor;
+    }
+
+    > p {
+      margin:0 px2rem(30);
+      line-height: px2rem(42);
+      padding-top: px2rem(30);
+      height: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    >div{
+      height: px2rem(30);
+    }
+    .see_all {
+      line-height: px2rem(70);
+      text-indent: px2rem(30);
+      color: $ajk_color;
+      margin: 0;
+      text-align: center;
+      margin-right: px2rem(30);
+      @include font-dpr(15px);
+    }
+  }
+
+  .hotel_rule {
+    background-color: #fff;
+
+    .blue_back {
+      display: inline-block;
+      width: px2rem(70);
+      height: px2rem(36);
+      line-height: px2rem(36);
+      text-align: center;
+      color: #616161;
+      position: relative;
+      @include font-dpr(12px);
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top:0;
+        width: px2rem(70);
+        height: px2rem(36);
+        background-color: #ffb354;
+        opacity: 0.2;
+        border-radius: px2rem(5);
+      }
+    }
+
+    .font1 {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top:px2rem(20);
+      width: px2rem(70);
+      height: px2rem(36);
+      line-height: px2rem(36);
+      text-align: center;
+      border-radius: 5px;
+      vertical-align: middle;
+      color: #616161;
+      position: relative;
+      &::before{
+
+      }
+    }
+
+    .font {
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: px2rem(70);
+      height: px2rem(36);
+      line-height: px2rem(36);
+      text-align: center;
+      border-radius: 5px;
+      vertical-align: middle;
+      color: #616161;
+    }
+
+    h2 {
+      padding-top: px2rem(10);
+      line-height: px2rem(70);
+      @include font-dpr(15px);
+      text-indent: px2rem(30);
+      color: $ajk_fontColr;
+      //border-bottom: 1px solid $ajk_borderColor;
+    }
+
+    .deposit {
+      padding: px2rem(20) 0;
+      margin: 0 px2rem(30);
+      @extend %flex;
+      @extend %flexMainJustify;
+      position: relative;
+      &::before{
+        @include borderMixinBottom;
+        [data-dpr="1"] {
+          transform: scaleY(.5) translateY(-1px);
+          -webkit-transform: scaleY(.5) translateY(-1px);
+        }
+      }
+      & > span:last-child {
+        color: $ajk_fontColr;
+        line-height: px2rem(50);
+        strong {
+          color: $ajk_color;
+          margin-right: px2rem(10);
+        }
+      }
+    }
+
+    .drawback {
+      padding: px2rem(10) px2rem(30);
+
+      > div {
+        padding-bottom: px2rem(24);
+      }
+
+      p {
+        line-height: px2rem(42);
+      }
+    }
+  }
+  /*房间类型*/
+  .room_type {
+    background-color: $ajk_backColor;
+  }
+
+  .normal {
+    > h2 {
+      line-height: px2rem(50);
+      @include font-dpr(12px);
+      text-indent: px2rem(30);
+    }
+
+    .item {
+      @extend %flex;
+      @extend %flexCrossCenter;
+      border-top: none;
+      height: px2rem(160);
+      border-width: 0;
+      position: relative;
+      &::before{
+        @include borderMixinBottom;
+      }
+      padding: 0 px2rem(30);
+      margin: 0 !important;
+
+      img {
+        display: block;
+        width: px2rem(150);
+        height: px2rem(120);
+      }
+
+      .room_mess {
+        @extend %flex;
+        @extend %flexMainJustify;
+        -webkit-flex-grow:1;
+        flex-grow:1;
+        margin-left: px2rem(20);
+        height: px2rem(120);
+        div:first-child {
+          @extend %flex;
+          @extend %flexDirTop;
+          @extend %flexMainJustify;
+          h2 {
+            color: #000;
+            @include font-dpr(15px);
+            text-align: left;
+            display: inline;
+            span {
+              @include font-dpr(15px);
+              font-family: 'PingFang SC';
+            }
+          }
+
+          p {
+            @include font-dpr(13px);
+            overflow: visible;
+          }
+        }
+
+        div:last-child {
+          line-height: px2rem(120);
+
+          i,
+          span {
+            vertical-align: middle;
+          }
+
+          .money {
+            @include font-dpr(11px);
+            color: $ajk_color;
+          }
+
+          .price {
+            @include font-dpr(18px);
+            color: $ajk_color;
+          }
+
+          i {
+            display: inline-block;
+            width: px2rem(16);
+            height: px2rem(28);
+            background: url(../imgs/wcj/house_detail/right_arr.png)no-repeat;
+            background-size: 100%;
+            margin-left: px2rem(10);
+          }
+        }
+      }
+    }
+  }
+  .blank{
+    height: px2rem(100);
+  }
+}
+
+.platform-android .houseDetail_wrap .back {
+  top: px2rem(15);
+  i{
+    margin-top:px2rem(2);
+  }
+}
+
+.platform-android .houseDetail_wrap .font {
+  top: px2rem(4);
+  left: 0!important;
+}
+
+.platform-android .houseDetail_wrap .font1 {
+  top: px2rem(24)!important;
+  left: px2rem(0)!important;
+}
+
+.platform-ios .houseDetail_wrap .back {
+  top: px2rem(60);
+}
+
+.platform-android .houseDetail_wrap .share {
+  top: px2rem(15);
+  i{
+    margin-top:px2rem(2);
+  }
+}
+
+.platform-ios .houseDetail_wrap .share {
+  top: px2rem(60);
+}
+
+.change_bars {
+  height: px2rem(97);
+  line-height: px2rem(97);
+  background-color: #fff;
+  position: relative;
+  &::before{
+    @include borderMixinBottom;
+  }
+  .borderBottom {
+    border-bottom: 3px solid $ajk_color;
+  }
+
+  .change_bar {
+    width: 50%;
+    float: left;
+
+    p {
+      color: #000;
+      width: px2rem(200);
+      margin: 0 auto;
+      @include font-dpr(15px);
+      margin-top: -3px;
+      text-align: center;
+      i {
+        display: inline-block;
+        width: px2rem(27);
+        height: px2rem(26);
+        margin-right:px2rem(20);
+        vertical-align: middle;
+      }
+
+      .hotel_detail {
+        background: url(../imgs/wcj/house_detail/hotel_type.png)no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .room_type {
+        background: url(../imgs/wcj/house_detail/house_type.png)no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+.platform-ios .change_bars.fixed {
+  height: px2rem(97);
+}

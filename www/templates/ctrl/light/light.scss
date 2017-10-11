@@ -1,0 +1,174 @@
+
+.light_wrap{
+    background-color: $ajk_backColor;
+  // .model{
+  //     border-bottom: 1px dash $ajk_borderColor;
+  //   height: px2rem(270);
+  //     padding: 0 px2rem(50);
+  //     @extend %flex;
+  //     @extend %flexMainJustify;
+  //     figure{
+  //       height: 100%;
+  //       width: px2rem(130);
+  //       img{
+  //         margin: px2rem(30) 0 px2rem(40) 0;
+  //         width: px2rem(130);
+  //         height: px2rem(130);
+  //       }
+  //       figcaption{
+  //         @include font-dpr(15px);
+  //       }
+  //     }
+  // }
+  .tab_wrap{
+    width: 100%;
+    height: px2rem(98);
+    background-color: #fff;
+    .tab_nav{
+      box-sizing: border-box; 
+      width: 25%;
+      line-height: px2rem(98);
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      display: inline-block;
+      @include font-dpr(18px);
+    }
+    .active {
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-top: 4px solid $ajk_color;
+      border-bottom: none;
+      color: $ajk_color
+    }
+  }
+  .lights{
+    background-color: #fff;
+    padding: px2rem(60) 0;
+    @extend %flex;
+    @extend %flexWrap;
+    figure{
+      width: 33.3333%;
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+      @extend %flexDirTop;
+      height: px2rem(180);
+      p{
+         margin-bottom: px2rem(30);
+         width: px2rem(77);
+         height: px2rem(85);
+      }
+      figcaption{
+        @include font-dpr(14px);
+      }
+    }
+  }
+  .colorLight{
+    p{
+      background: url('../imgs/wcj/light/colorLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .readLight{
+    p{
+      background: url('../imgs/wcj/light/readLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .ON{
+    p{
+      background: url('../imgs/wcj/light/topLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .OFF{
+    p{
+      background: url('../imgs/wcj/light/topLightOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .吊灯ON{
+    p{
+      background: url('../imgs/wcj/light/topLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .吊灯OFF{
+    p{
+      background: url('../imgs/wcj/light/topLightOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .可调射灯ON{
+    p{
+      background: url('../imgs/wcj/light/shedengOn.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .可调射灯OFF{
+    p{
+      background: url('../imgs/wcj/light/shedengOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .浴霸主灯ON{
+    p{
+      background: url('../imgs/wcj/light/yubazhuOn.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .浴霸主灯OFF{
+    p{
+      background: url('../imgs/wcj/light/yubazhuOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .浴霸副灯ON{
+    p{
+      background: url('../imgs/wcj/light/yubafuOn.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .浴霸副灯OFF{
+    p{
+      background: url('../imgs/wcj/light/yubafuOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .卫浴灯ON{
+    p{
+      background: url('../imgs/wcj/light/showerLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .卫浴灯OFF{
+    p{
+      background: url('../imgs/wcj/light/showerLightOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .主灯ON{
+    p{
+      background: url('../imgs/wcj/light/mainLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .主灯OFF{
+    p{
+      background: url('../imgs/wcj/light/mainLightOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .廊灯ON{
+    p{
+      background: url('../imgs/wcj/light/hallwayLight.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .廊灯OFF{
+    p{
+      background: url('../imgs/wcj/light/hallwayLightOff.png')no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.orderform_detail_wrap{
+    background-color: $ajk_backColor;
+    .header{
+    	background-color:#fff;
+    	padding: 0 px2rem(30);
+    	height:px2rem(100);
+      @extend %flex;
+      @extend %flexMainJustify;
+    	display: flex;
+    	justify-content:space-between;
+    	span{
+    		line-height:px2rem(100);
+    	}
+    	span:first-child{
+    		color: #000;
+    		@include font-dpr(15px)
+    	}
+    	span:last-child{
+    		color: #ababab;
+    		@include font-dpr(13px)
+    	}
+    }
+    .mess{
+    	padding:0 px2rem(30);
+    	margin-top: px2rem(20);
+    	background-color:#fff;
+    	>p{
+    		display:flex;
+    		justify-content:space-between;
+    		line-height:px2rem(60);
+    		span{
+    			color:rgb(170,170,170);
+    			@include font-dpr(13px);
+    		}
+    		&:first-child{
+    			line-height:px2rem(80);
+    			border-bottom: 1px solid $ajk_borderColor;
+    		}
+    	}
+    }
+ }

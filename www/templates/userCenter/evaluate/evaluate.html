@@ -1,0 +1,26 @@
+<ion-view view-title='评价'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="Noevaluate" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+      <div class="evaluate_wrap">
+        <section class="title">
+          <img ng-src="{{picture}}" alt="">
+          <p>{{hotelName}}</p>
+        </section>
+        <section class="diver">
+          <p><span>为酒店打分</span></p>
+        </section>
+        <section class="stars">
+          <span class="{{star}}" ng-click='selectStar($index)' ng-repeat="star in stars track by $index"></span>
+        </section>
+        <section class="text">
+          <textarea name="message" ng-model='message.content' placeholder='说说哪里满意或不满意，帮助大家选择' ></textarea>
+        </section>
+        <div></div>
+      </div>
+      <div class="evaluate_buttons">
+        <button type="button" name="button" class="button button-calm button-full" ng-click="submit()">提交评价</button>
+      </div>
+    </ion-content>
+</ion-view>

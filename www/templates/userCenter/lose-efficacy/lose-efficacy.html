@@ -1,0 +1,25 @@
+<ion-view view-title='已结束'>
+    <ion-nav-buttons >
+        <button class="button button-clear ajk_back" native-ui-sref="tab.userCenter" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+      <div class="order" ng-repeat="order in orders track by $index" ng-click='goOrderDetail(order)'>
+              <div class='hotel'>
+               <p><span>订单号:{{order.orderCode}}</span></p>
+               <div class="item-two" >
+                   <img ng-src='{{order.hotelsx[0].houses[0].picture}}' />
+                   <ul>
+                       <li class="Time">下单时间:{{order.orderTime}}</li>
+                       <li class="money">{{order.orderTime}}</li>
+                   </ul>
+               </div>
+               </div>
+           </div>
+            <ion-infinite-scroll
+                ng-if="moreDataCanBeLoaded"
+                on-infinite="loadMoreData()"
+                immediate-check = "false">
+            </ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

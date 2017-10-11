@@ -1,0 +1,27 @@
+<ion-view view-title='待评价'>
+  <ion-nav-buttons side="left">
+    <button class="button button-clear ajk_back" native-ui-sref="tab.userCenter" native-options="{type: 'slide', direction:'right'}"></button>
+  </ion-nav-buttons>
+  <ion-content class="userCenter-back">
+    <div class="Noevaluate-list" ng-repeat="hotel in hotels track by $index">
+      <div class="Noevaluate-head">
+        <h1>{{hotel.hotelName}}</h1>
+      </div>
+        <div class="list">
+          <p><img ng-src={{hotel.picture}} /></p>
+          <ul>
+            <li class="address">{{hotel.address}}</li>
+            <li class="housetype">{{hotel.hotelName}}</li>
+            <li class="time">入住时间：<span>{{hotel.inTime|YYMMdd}}-{{hotel.leaveTime|YYMMdd}}</span></li>
+          </ul>
+          <p class="Noevaluate" ng-click="goevaluate(hotel.hotelId,hotel.houseId,hotel.hotelName,hotel.picture,hotel.subOrderCode)"><input type="button" id="" value="评价" /></p>
+        </div>
+    </div>
+    <ion-infinite-scroll
+        ng-if="moreDataCanBeLoaded"
+        on-infinite="loadMoreData()"
+        immediate-check='false'>
+    </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

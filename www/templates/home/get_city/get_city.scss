@@ -1,0 +1,115 @@
+.getCity_wrap{
+    position: relative;
+     height:100%;
+     .find_cityback{
+        width: 100%;
+        height:px2rem(100);
+        padding-top: px2rem(20);
+        background-color:#fff;
+            .find_city{
+                width: px2rem(690);
+                height:px2rem(60);
+                margin:0 auto;
+                background-color: $ajk_backColor;
+                border-radius:px2rem(30);
+                @extend %flex;
+                @extend %flexMainCenter;
+                @extend %flexCrossCenter;
+                .item{
+                    background-color:$ajk_backColor;
+                    padding:0;
+                }
+                i{
+                    display:inline-block;
+                    width:px2rem(24);
+                    height:px2rem(26);
+                    background:url(../imgs/wcj/get_city/search_btn.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+                input{
+                    width:px2rem(250);
+                    height:px2rem(40);
+                    line-height:px2rem(40);
+                    margin-left: px2rem(20);
+                    background-color:$ajk_backColor;
+                    color:#ababab;
+                    @include font-dpr(14px);
+                }
+            }
+     }
+
+    .getCity_left{
+        width: 100%;
+        overflow-y:auto;
+    }
+    .getCity_cont{
+        background-color:$ajk_backColor;
+        padding:0 px2rem(30) px2rem(30) px2rem(30);
+
+    }
+    .current_loc{
+
+        h2{
+            @include font-dpr(13px);
+            line-height:px2rem(90);
+        }
+        .button{
+          width:px2rem(200);
+          height:px2rem(70);
+          line-height:px2rem(70);
+          border-radius:px2rem(10);
+          border: 1px solid $ajk_borderColor;
+        margin-right: px2rem(5);
+        margin-bottom: px2rem(20);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        }
+    }
+    .cities{
+        margin-bottom: 0;
+        .city{
+            color:#000;
+            height:px2rem(80);
+            @include font-dpr(13px);
+            text-indent: px2rem(30);
+            line-height:px2rem(80);
+            position: relative;
+            &:not(:last-child)::before{
+              @include borderMixinBottom;
+            }
+            padding:0;
+            margin:0;
+        }
+        .initial{
+           text-indent: px2rem(30);
+           padding:0;
+           height:px2rem(50);
+           background: #E6E6E6;
+           line-height:px2rem(50);
+           @include font-dpr(13px);
+           color:#616161;
+            margin:0;
+        }
+    }
+
+}
+.letter_list{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    width:px2rem(60);
+    z-index: 999;
+    h2{
+        color:#ababab;
+        line-height:px2rem(45);
+        @include font-dpr(12px);
+        line-height:px2rem(40);
+    }
+    p{
+        text-align: center;
+        @include font-dpr(13px);
+        line-height:px2rem(40);
+        color:#ababab;
+    }
+}

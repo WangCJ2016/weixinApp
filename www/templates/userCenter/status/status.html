@@ -1,0 +1,37 @@
+<ion-view view-title='已付款'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="Pay" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+        <div class="status-header">
+        	<div class="status-cont">
+        		<p>等待入住</p>
+        		<span>距离入住还剩<i>{{leaveTimes}}</i>天</span>
+        	</div>
+        </div>
+         <div class="order status">
+               <div class='hotel' ng-repeat="hotel in order.hotels track by $index">
+                <p><span>{{hotel.hotelName}}</span></p>
+
+                <div class="item-three" ng-repeat='house in hotel.houses track by $index'>
+                    <img ng-src='{{house.picture}}' />
+                    <ul>
+                        <li >{{house.houseName}}
+                          <p class='cancel' ng-click='cancel(house.subOrderCode);' ng-show="{{house.orderCancel}}">取消预定</p>
+                          <p class='cancel yicancel' ng-show="{{house.yiCancel}}">已取消</p>
+                        </li>
+                        <li class="Time">{{house.inTimes}}<span class="Day">共{{house.days}}晚</span></li>
+                        <li class="money">¥{{house.fee}}</li>
+                    </ul>
+
+                </div>
+                </div>
+            </div>
+        <div class="order-information">
+        	<h3>订单信息</h3>
+        	<p><i>订单编号：</i><span>{{order.orderCode}}</span></p>
+        	<p><i>下单时间：</i><span>{{order.orderTime}}</span></p>
+        	<p><i>合计：</i><span>{{order.totalFee}}</span></p>
+        </div>
+    </ion-content>
+</ion-view>

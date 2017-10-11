@@ -1,0 +1,258 @@
+.houseIntr_fixed.default {
+  opacity: 1;
+  background-color: transparent!important;
+}
+
+.houseIntr_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  opacity: 0;
+
+  .back {
+    position: absolute;
+    width: px2rem(60);
+    height: px2rem(60);
+    left: px2rem(30);
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0.6;
+    line-height: px2rem(53);
+    z-index: 9;
+
+    i {
+      margin-left: px2rem(15);
+      display: inline-block;
+      width: px2rem(19);
+      height: px2rem(32);
+      background: url(../imgs/wcj/house_detail/left_arr.png)no-repeat;
+      background-size: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .share {
+    position: absolute;
+    height: px2rem(60);
+    right: px2rem(30);
+    z-index: 9;
+
+    a {
+      display: inline-block;
+      width: px2rem(60);
+      height: px2rem(60);
+      margin-left: px2rem(20);
+      background-color: #ffb354;
+      border-radius: 50%;
+      line-height: px2rem(60);
+      text-align: center;
+
+      i {
+        display: inline-block;
+        width: px2rem(32);
+        height: px2rem(32);
+        vertical-align: middle;
+      }
+
+      .collect {
+        background: url(../imgs/wcj/house_detail/hotel_collect.png)no-repeat;
+        background-size: 100%;
+      }
+
+      .navigation {
+        background: url(../imgs/wcj/house_detail/navigation.png)no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.platform-ios .houseIntr_fixed {
+  height: px2rem(128);
+  background-color: #fff;
+  .share,.back{
+    top:px2rem(44)
+    }
+}
+
+.platform-android .houseIntr_fixed {
+  height: px2rem(88);
+  background-color: #fff;
+  .share,.back{
+    top:px2rem(20)
+    }
+}
+
+.houseIntr_content {
+  height: 100%;
+}
+
+.houseIntr_wrap {
+  background-color: $ajk_backColor;
+
+  & > div:not([class="top_img"]) {
+    padding: 0 px2rem(30);
+    background: #fff;
+  }
+
+  .top_img {
+    position: relative;
+    height: px2rem(382);
+  >p{
+    position: absolute;
+    bottom: px2rem(10);
+    left: px2rem(30);
+    color: #fff;
+    @include font-dpr(15px);
+    line-height: px2rem(40);
+  }
+    .slide.slider {
+      height: 100%;
+    }
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .house_mess {
+    h2 {
+      @include font-dpr(15px);
+      line-height: px2rem(40);
+      padding-top: px2rem(30);
+      text-align: center;
+    }
+
+    .house_num {
+      color: #ababab;
+      line-height: px2rem(34);
+      text-align: center;
+    }
+
+    p:last-child {
+      margin-top: px2rem(15);
+      line-height: px2rem(30);
+      padding-bottom: px2rem(30);
+    }
+  }
+
+  .house_detail {
+    border-bottom: 1px solid $ajk_borderColor;
+    margin: px2rem(10) 0;
+
+    h2 {
+      padding-top: px2rem(10);
+      @include font-dpr(15px);
+      line-height: px2rem(70);
+      text-align: center;
+    }
+
+    .room {
+      line-height: px2rem(80);
+      @extend %flex;
+      @extend %flexMainJustify;
+      position: relative;
+      &:not(:last-child)::before{
+        @include borderMixinBottom1;
+      }
+      span:first-child {
+        color: #616161;
+      }
+
+      span:last-child {
+        color: #000;
+      }
+    }
+
+    .state {
+      justify-content: space-between;
+      &::before{
+        @include borderMixinBottom;
+        [data-dpr="1"] {
+          transform: scaleY(.5) translateY(-1px);
+          -webkit-transform: scaleY(.5) translateY(-1px);
+        }
+      }
+      line-height: px2rem(80);
+      @extend %flex;
+      @extend %flexMainJustify;
+      position: relative;
+      span:first-child {
+        color: #616161;
+      }
+      span:last-child {
+        color: $ajk_color;
+      }
+    }
+
+    .outtime {
+      border-bottom: none;
+    }
+  }
+
+  .house_devices {
+    height: px2rem(240);
+
+    h2 {
+      @include font-dpr(15px);
+      line-height: px2rem(70);
+      padding-top: px2rem(10);
+      text-align: center;
+    }
+
+    .devices {
+      @extend %flex;
+      @extend %flexWrap;
+      p {
+        width: px2rem(172);
+        line-height: px2rem(60);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @extend %flex;
+        i {
+          display: inline-block;
+          width: px2rem(80);
+          height: px2rem(60);
+          text-align: center;
+          vertical-align: middle;
+          @extend %flex;
+          @extend %flexMainCenter;
+          @extend %flexCrossCenter;
+          img {
+            width: px2rem(40);
+            max-height: px2rem(55);
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .more {
+      height: px2rem(100);
+    }
+  }
+
+  .button {
+    height: px2rem(100);
+    @include font-dpr(15px);
+    opacity: 0.8;
+
+    i {
+      display: inline-block;
+      width: px2rem(44);
+      height: px2rem(46);
+      vertical-align: middle;
+      background: url(../imgs/wcj/house_intr/shop_car.png)no-repeat;
+      background-size: 100%;
+      margin-right: px2rem(10);
+    }
+  }
+}
+
+.platform-android .houseIntr_wrap .room {
+
+}

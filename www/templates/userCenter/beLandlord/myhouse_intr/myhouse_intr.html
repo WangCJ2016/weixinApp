@@ -1,0 +1,59 @@
+<ion-view hide-nav-bar='true'>
+	<ion-content has-subheader="false">
+
+		<div class="myhouse_intr_wrap">
+		 <span class="back" ng-click='goback()'></span>
+			 <ion-slide-box class='slide'>
+            <ion-slide ng-repeat='pic in house.housePictures track by $index'>
+                <div class="box "><img ng-src={{pic}}></div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="mess">
+        	<h2>爱居客酒店-{{house.name}}</h2>
+        	<div>
+        		<h3>房屋信息:</h3>
+        		<p>
+        			{{house.profiles}}
+        		</p>
+        	</div>
+        </div>
+        <div class="basicItem" ui-sref='myhouseBasicmess'>
+             <div>
+              基本信息
+             </div>
+        </div>
+				<div class="myhouse_basicmess_wrap">
+	    	  <div class="wrap">
+	    	  	<p>
+	    			<span>房屋面积</span>
+	    			<span>1000㎡</span>
+	    		</p>
+	    			<p>
+	    			<span>户型</span>
+	    			<span>2室2厅1卫</span>
+	    		</p>
+	    			<p>
+	    			<span>床数</span>
+	    			<span>2张</span>
+	    		</p>
+	    			<p>
+	    			<span>可住人数</span>
+	    			<span>4人</span>
+	    		</p>
+	    	  </div>
+	    	</div>
+         <div class="basicItem">
+             <div>
+              配套设施
+             </div>
+        </div>
+				<div class="myhouse_wrap_wrap">
+	          <div>
+	          <span ng-repeat='assort in assorts track by $index'>{{assort}}</span>
+
+	              </div>
+	        </div>
+		</div>
+	</ion-content>
+
+</ion-view>

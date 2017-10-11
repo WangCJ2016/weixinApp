@@ -1,0 +1,24 @@
+<ion-view view-title='登录'>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="tab.userCenter" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+    <div >
+        <form name='login' class="login-txt">
+        	<p class="tel">
+        		<label for="tel">账号</label>
+        		<input id="tel" type="tel" number-confirm maxlength="11" ng-maxlength='11' ng-minlength='11' placeholder="请输入手机号" ng-model="sendData.account" required />
+        	</p>
+        	<p class="pwd">
+        		<label for="pwd">密码</label>
+        		<input id="pwd" password-confirm type="password" placeholder="6-32位字母数字组合" maxlength='32' ng-minlength="6" ng-maxlength="32"  ng-model="sendData.password" required />
+        	</p>
+        </form>
+        <div class="login-btn" ng-click="loginBtn()" ng-disabled='login.$invalid' ng-class='{select:login.$valid}'>登录</div>
+        <div class="login-forgetpwd">
+        	<a class="register" href="#/register">立即注册</a>
+        	<a class="forgetpwd" href="#/RetrievePwd">忘记密码？</a>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view title="服务">
+  <ion-nav-buttons side="left" get-height>
+    <button class="button button-clear ajk_back" ng-click="goback()"></button>
+  </ion-nav-buttons>
+  <ion-content >
+    <div class="service_wrap">
+    <div style="height:10px"></div>
+    <section>
+      <img src="imgs/wcj/service/dnd.png" alt="">
+      <p>请勿打扰</p>
+      <span></span>
+      <label class="toggle toggle-ajk">
+        <input type="checkbox" ng-model='check.dnd' ng-checked="check.dnd" ng-click="dndService()">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </section>
+    <section>
+      <img src="imgs/wcj/service/clean.png" alt="">
+      <p>立即打扫</p>
+      <span></span>
+      <label class="toggle toggle-ajk">
+        <input type="checkbox" ng-model='check.clean' ng-checked="check.clean" ng-click="cleanService()">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </section>
+  </div>
+  </ion-content>
+</ion-view>

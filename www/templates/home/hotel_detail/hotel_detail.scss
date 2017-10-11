@@ -1,0 +1,149 @@
+.hotelDetail_wrap{
+    background-color:$ajk_backColor;
+    height: 100%;
+    &>div{
+        padding:0 px2rem(30);
+         background:#fff;
+    }
+    .common_devices{
+      padding-bottom: px2rem(20);
+    }
+    .title{
+          background:#fff;
+
+         margin-top: px2rem(10);
+          margin-bottom: 0;
+
+         h2{
+             padding:px2rem(30) 0 px2rem(20) 0;
+             @include font-dpr(15px);
+              line-height:px2rem(30);
+              position: relative;
+              &::before{
+                @include borderMixinBottom;
+              }
+         }
+    }
+    .devices{
+        h2{
+             @include font-dpr(15px);
+              line-height:px2rem(78);
+        }
+        &>div{
+           @extend %flex;
+           -webkit-flex-wrap:wrap;
+            flex-wrap:wrap;
+            p{
+              @extend %flex;
+              @extend %flexDirTop;
+              @extend %flexCrossCenter;
+                width:px2rem(160);
+                text-align: center;
+            line-height:px2rem(60);
+            margin-bottom: px2rem(7);
+           }
+        }
+        i{
+            display:inline-block;
+            width: px2rem(80);
+            height:px2rem(60);
+            text-align:center;
+            vertical-align:middle;
+            img{
+              width: px2rem(40);
+            }
+
+        }
+
+
+    }
+     .devices{
+        >div{
+            i{
+                display:inline-block;
+                width: px2rem(80);
+                height:px2rem(60);
+                text-align:center;
+                vertical-align:middle;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    vertical-align:middle;
+                    display:inline-block;
+                }
+            }
+        }
+    }
+    .common_devices{
+
+        .see_all{
+            line-height:px2rem(80);
+            color:$ajk_color;
+            text-align:center;
+            @include font-dpr(13px);
+            img{
+                display:inline-block;
+                width:px2rem(28);
+                height:px2rem(17);
+                vertical-align:middle;
+                margin-left:px2rem(10);
+            }
+        }
+    }
+    .hotel_introduce{
+        margin-top:px2rem(10);
+        padding-top: px2rem(10);
+        h2{
+           position: relative;
+            @include font-dpr(15px);
+             line-height:px2rem(78);
+              &::before{
+                @include borderMixinBottom;
+              }
+        }
+        >p{
+            margin-top:px2rem(30);
+            line-height:px2rem(40);
+            padding-bottom:px2rem(30);
+        }
+        .hotel_mess{
+            height:px2rem(144);
+            @extend %flex;
+            @extend %flexMainJustify;
+            @extend %flexCrossCenter;
+            p{
+                color:#000;
+
+                span{
+                    display:block;
+                    font-family:'PingFang SC';
+                    line-height:px2rem(30);
+                    &:first-child{
+                        margin-bottom:px2rem(8);
+                    }
+                }
+
+            }
+            button{
+                line-height:px2rem(68);
+                height:px2rem(68);
+                border-radius:px2rem(10);
+                 @include font-dpr(11px);
+                 padding:0 px2rem(20);
+                i{
+                    display:inline-block;
+                    width:px2rem(22);
+                    height:px2rem(22);
+                    vertical-align:middle;
+
+                      background:url(../imgs/wcj/hotel_detail/call_me.png)no-repeat;
+                      background-size:100%;
+                    margin-right:px2rem(8);
+
+
+                }
+            }
+        }
+    }
+}

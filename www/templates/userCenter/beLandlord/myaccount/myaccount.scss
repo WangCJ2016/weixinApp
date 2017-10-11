@@ -1,0 +1,127 @@
+.myaccount_wrap{
+    height:100%;
+    background-color:$ajk_backColor;
+    .dataSelect{
+        height:100%;
+        h2{
+            @include font-dpr(17px);
+            text-indent:px2rem(30);
+            padding-top:px2rem(30);
+            text-align: center;
+        }
+        >div{
+            height:px2rem(80);
+            @extend %flex;
+            @extend %flexMainCenter;
+            @extend %flexCrossCenter;
+            @extend %flexWrap;
+            >p{
+               width:px2rem(150);
+               height:px2rem(76);
+               text-align:center;
+               line-height:px2rem(76);
+               @include font-dpr(15px);
+               color:$ajk_color;
+               background-color:#fff;
+               border-radius: px2rem(10);
+               margin-left:px2rem(30);
+               margin-top:px2rem(20);
+               border:1px solid $ajk_borderColor;
+            }
+        }
+        .active{
+            background-color:$ajk_color;
+            color:#fff;
+        }
+    }
+    .date_select{
+        display:inline-block;
+        width:px2rem(41);
+        height:px2rem(43);
+        background:url(../imgs/wcj/date/calendar.png) no-repeat;
+        background-size:100% 100%;
+        position: absolute;
+        right: px2rem(30);
+        top:px2rem(-60);
+        z-index: 99999;
+
+    }
+    .btns{
+      @extend %flex;
+      @extend %flexMainCenter;
+        span{
+            display: inline-block;
+            margin:0 55px;
+            line-height:px2rem(60);
+            @include font-dpr(15px);
+        }
+        .select{
+            border-bottom: 3px solid $ajk_color;
+        }
+    }
+    .select{
+        .directive_date{
+            box-sizing:border-box;
+            width:100%;
+            padding-bottom: 0;
+        table td {
+         height:px2rem(70);
+         line-height:px2rem(70);
+        }
+       }
+        >p{
+        margin:0 px2rem(30);
+        line-height:px2rem(45);
+        color:#000;
+        span{
+            @include font-dpr(14px);
+            color:#000;
+            margin-left: px2rem(20);
+        }
+    }
+    .date_picker{
+        padding: 0 px2rem(30);
+        background-color:#fff;
+        p{
+            padding-top:px2rem(20);
+            line-height:px2rem(40);
+            color:#000;text-align: right;
+            @include font-dpr(15px);
+        }
+    }
+   .normal{
+    margin-top:px2rem(20);
+    margin-bottom: px2rem(20);
+    .normal_house{
+      margin-bottom:px2rem(10);
+    }
+    h2{
+      line-height:px2rem(90);
+      color: #000;
+      @include font-dpr(15px);
+      text-indent: px2rem(30);
+      background-color:#fff;
+    }
+    .list{
+      background-color:#fff;
+    }
+    .item{
+      background-color:transparent;
+      height:px2rem(180);
+      padding-left:px2rem(30);
+      img{
+        height:px2rem(140);
+        width:px2rem(187);
+      }
+      p{
+        line-height:px2rem(30);
+      }
+      div{
+        height:100%;
+      }
+    }
+  }
+
+    }
+
+}

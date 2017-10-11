@@ -1,0 +1,22 @@
+<ion-view title='酒店地图'>
+	 <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" ng-click="back();"></button>
+    </ion-nav-buttons>
+    <ion-content>
+      <div id='container'></div>
+     <!-- <div id="mapContainer" ></div>-->
+      <div class="map-tips">
+          <div class="map-btn places" ng-click="myplace()">
+            <p><img src="imgs/kwn/map/place.png"></p>
+            <span>我的位置</span>
+          </div>
+        <div class="map-btn navigation" ng-click="init()">
+          <p><img src="imgs/kwn/map/navigation.png"></p>
+          <span>导航</span>
+        </div>
+      </div>
+      <div class='center1'>
+        <div id='bt' class="btmtip" ng-click='selectMapApp();'>点击去地图</div>
+    </div>
+	    </ion-content>
+</ion-view>

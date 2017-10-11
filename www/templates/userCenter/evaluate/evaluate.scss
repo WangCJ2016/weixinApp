@@ -1,0 +1,77 @@
+.evaluate_wrap{
+  background-color: #fff;
+  .title{
+    @extend %flex;
+    @extend %flexMainCenter;
+    @extend %flexCrossCenter;
+    >img{
+      width: px2rem(130);
+      height: px2rem(130);
+      border-radius: 50%;
+      margin:px2rem(30) px2rem(50);
+    }
+    >p{
+      @include font-dpr(15px);
+    }
+  }
+  .diver{
+    margin:px2rem(70) px2rem(30) 0;
+    border-top: 1px solid $ajk_borderColor;
+    >p{
+      width: px2rem(208);
+      height: px2rem(54);
+      margin: px2rem(-27) auto;
+      background-color: #FFF;
+      >span{
+        display: block;
+        width: px2rem(168);
+        height: 100%;
+        border-radius: px2rem(40);
+        border:1px solid $ajk_borderColor;
+        margin: 0 auto;
+        @include font-dpr(13px);
+        color:#616161;
+        text-align: center;
+        line-height: px2rem(54);
+      }
+    }
+  }
+  .stars{
+     margin-top: px2rem(60);
+     @extend %flex;
+     @extend %flexMainCenter;
+     @extend %flexCrossCenter;
+     >span{
+       margin: 0 px2rem(10);
+     }
+  }
+  .star{
+    display: inline-block;
+    width: px2rem(69);
+    height: px2rem(64);
+    background: url(../imgs/lj/star.png)no-repeat;
+    background-size: px2rem(69) px2rem(64);
+  }
+  .star_full{
+    display: inline-block;
+    width: px2rem(69);
+    height: px2rem(64);
+    background: url(../imgs/lj/star_full.png)no-repeat;
+    background-size: px2rem(69) px2rem(64);
+  }
+  .text{
+    margin-top: px2rem(50);
+    padding:0 px2rem(30) px2rem(30);
+    height: px2rem(230);
+    textarea{
+      width:100%;
+      height: 100%;
+      border: 1px solid $ajk_borderColor;
+      line-height: px2rem(50);
+      padding: 0 px2rem(20);
+    }
+  }
+}
+.evaluate_buttons{
+  margin: px2rem(20) px2rem(30);
+}

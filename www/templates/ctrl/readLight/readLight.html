@@ -1,0 +1,37 @@
+<ion-view title="阅读灯">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear ajk_back" ng-click="goback()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="spotLight_wrap">
+      <div class="light">
+        <p>调光白光</p>
+        <label class="toggle toggle-ajk">
+          <input type="checkbox" ng-model='check.white' ng-checked="check.white" ng-click="whiteService()">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="slide">
+        <span class="left"></span>
+        <input type="range" id='range' ng-disabled='!check.white' ng-model='brightness.value1' min="0" max="100" my-value='{{brightness.value1}}' subfn ='changeSubmit(brightness.value1,"调光白光")'  mouse-up/>
+          <span class="right"></span>
+      </div>
+      <div class="light">
+        <p>调光暖光</p>
+        <label class="toggle toggle-ajk">
+          <input type="checkbox" ng-model='check.warm'  ng-checked="check.warm" ng-click="warmService()">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="slide">
+        <span class="left"></span>
+        <input type="range" id='range' ng-model='brightness.value2' ng-disabled='!check.warm'  min="0" max="100" my-value='{{brightness.value2}}' subfn ='changeSubmit(brightness.value2,"调光暖光")'  mouse-up/>
+          <span class="right"></span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

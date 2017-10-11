@@ -1,0 +1,130 @@
+ .tvArrays{
+    height: 100%;
+    overflow: auto;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in!important;
+  }
+.futrue_wrap{
+  padding-top: px2rem(20);
+  height: 100%;
+  float: left;
+  .tv{
+    height: px2rem(160);
+    position: relative;
+    >img{
+      width: px2rem(42);
+      height: px2rem(100);
+      position: absolute;
+      right: px2rem(30);
+      top:50%;
+      margin-top: px2rem(-50);
+    }
+    .tv_item{
+      height: 100%;
+    @extend %flex;
+    @extend %flexMainJustify;
+    @extend %flexCrossCenter;
+    margin-right: px2rem(80);
+    padding: 0 px2rem(50);
+    >p{
+      width: px2rem(118);
+      height: px2rem(119);
+      // border-radius: 50%;
+      // border: px2rem(3) solid #fff;
+      //box-shadow: 3px 3px 5px rgba(0,0,0,0.3),3px 3px 5px rgba(0,0,0,0.3) inset;
+      //background: url('../imgs/wcj/newTv/round.png');
+      background-size: 100% 100%;
+      text-align: center;
+      vertical-align: middle;
+      transition: all 1s;
+      &.activated{
+        transform: scale(.8,.8);
+      }
+      &.on{
+        background: url('../imgs/wcj/newTv/tvoff.png');
+        background-size: 100% 100%;
+        &.active{
+          background: url('../imgs/wcj/newTv/tvon.png');
+          background-size: 100% 100%;
+        }
+      }
+      &.plus{
+        background: url('../imgs/wcj/newTv/tvplus.png');
+        background-size: 100% 100%;
+      }
+      &.munis{
+        background: url('../imgs/wcj/newTv/tvmunis.png');
+        background-size: 100% 100%;
+      }
+      &.mute{
+        background: url('../imgs/wcj/newTv/tvmute.png');
+        background-size: 100% 100%;
+      }
+      &.back{
+        background: url('../imgs/wcj/newTv/tvback.png');
+        background-size: 100% 100%;
+      }
+    }
+    }
+  }
+
+  .round{
+    background: url(../imgs/wcj/tv/round.png) no-repeat;
+    background-size: px2rem(432) px2rem(432);
+    height: px2rem(432);
+    width: px2rem(432);
+    margin: px2rem(120) auto px2rem(50) auto;
+    position: relative;
+    span{
+      position: absolute;
+      width: px2rem(100);
+      height: px2rem(100);
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+    }
+    .up{
+      &.activated {
+        background-color:$ajk_activated_color;
+      }
+      border-radius: 50%;
+      left: 50%;
+      top:0%;
+      margin-left: px2rem(-50);
+      img{
+        width: px2rem(43);
+      }
+    }
+    .down{
+      left: 50%;
+      bottom:12%;
+      margin-left: px2rem(-50);
+      img{
+        width: px2rem(43);
+      }
+    }
+    .left{
+      left: 5%;
+      top:46%;
+      margin-top: px2rem(-50);
+      img{
+        width: px2rem(26);
+      }
+    }
+    .right{
+      right: 3%;
+      top:46%;
+      margin-top: px2rem(-50);
+      img{
+        width: px2rem(26);
+      }
+    }
+    .ok{
+      left: 50%;
+      top:43%;
+      margin-left: px2rem(-50);
+      margin-top: px2rem(-50);
+      @include font-dpr(30px);
+      color: $ajk_color;
+    }
+  }
+}

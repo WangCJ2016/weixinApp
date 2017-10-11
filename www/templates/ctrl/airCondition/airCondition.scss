@@ -1,0 +1,158 @@
+.transform_scroll .scroll{
+  transform: translate3d(0,0,0)!important
+}
+.airCondition_wrap{
+  background-color: $ajk_backColor;
+  height: 100%;
+  float: left;
+  .display{
+    padding: px2rem(60);
+    >div{
+      @extend %flex;
+      @extend %flexCrossCenter;
+      max-width: px2rem(650);
+      margin: 0 auto;
+    }
+    background-color: #000;
+    .speed{
+      width: px2rem(315);
+      height: px2rem(200);
+      border-right: 2px solid #fff;
+      >p{
+        height: px2rem(99);
+        width: px2rem(244);
+      }
+      >p:first-child{
+        border-bottom: 2px solid #fff;
+        @extend %flex;
+        span{
+          @include font-dpr(16px);
+          margin-right: px2rem(80);
+          color: #fff;
+          height: px2rem(30);
+          line-height: px2rem(20);
+          display: inline-block;
+        }
+        .divier{
+          display: inline-block;
+          width: px2rem(8);
+          background-color: $ajk_color;
+          border-radius: px2rem(8);
+        }
+      }
+    }
+    .model{
+      margin-top: px2rem(35);
+      height: px2rem(60)!important;
+      @extend %flex;
+      @extend %flexCrossCenter;
+      span:first-child {
+        @include font-dpr(16px);
+        margin-right: px2rem(50);
+        color: #fff;
+        width: px2rem(100);
+      };
+      span:last-child {
+        @include font-dpr(16px);
+        color: #fff;
+        height: px2rem(80);
+        line-height: px2rem(40);
+      -webkit-writing-mode:vertical-lr;writing-mode:tb-rl;writing-mode:vertical-lr
+      };
+      img{
+        width: px2rem(54);
+        margin-right: px2rem(20);
+      }
+    }
+  }
+  .tem{
+    width: px2rem(315);
+    height: px2rem(200);
+    @extend %flex;
+    @extend %flexMainJustify;
+    @extend %flexDirTop;
+    >p{
+      text-align: center;
+    }
+    >p:first-child{
+      @include font-dpr(16px);
+      color: #fff;
+      line-height: px2rem(25);
+    }
+    >p:last-child{
+      color: $ajk_color;
+      @include font-dpr(44px);
+      line-height: px2rem(60);
+    }
+  }
+  .roundCtrl{
+    width: px2rem(500);
+    height: px2rem(500);
+    margin: px2rem(90) auto;
+    background: url(../imgs/wcj/airCondition/round.png) no-repeat;
+    background-size: px2rem(500) px2rem(500);
+    position: relative;
+    img{
+      width: px2rem(50);
+
+    }
+    >span{
+      width: px2rem(100);
+      height: px2rem(100);
+      @extend %flex;
+      @extend %flexMainCenter;
+      @extend %flexCrossCenter;
+    }
+    .up{
+      &.activated {
+        background-color:$ajk_activated_color;
+      }
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top:3%;
+      margin-left: px2rem(-50);
+    }
+    .down{
+      &.activated {
+        background-color:$ajk_activated_color;
+      }
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      bottom:14%;
+      margin-left: px2rem(-50);
+    }
+    .left{
+      &.activated {
+        background-color:$ajk_activated_color;
+      }
+      border-radius: 50%;
+      position: absolute;
+      left: 9%;
+      top:47%;
+      margin-top: px2rem(-50);
+    }
+    .right{
+      &.activated {
+        background-color:$ajk_activated_color;
+      }
+      border-radius: 50%;
+      position: absolute;
+      right: 7%;
+      top:47%;
+      margin-top: px2rem(-50);
+    }
+    .ok{
+      position: absolute;
+      left: 50%;
+      top:43%;
+      margin-left: px2rem(-62);
+      margin-top: px2rem(-62);
+      width: px2rem(125);
+      height: px2rem(125);
+      @include font-dpr(30px);
+      color: $ajk_color;
+    }
+  }
+}

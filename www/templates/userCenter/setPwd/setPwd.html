@@ -1,0 +1,19 @@
+<ion-view view-title="设置密码">
+	<ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="RetrievePwd" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+        <div class="RetrievePwd-txt">
+          <form name='setPwd' novalidate>
+        	<p class="tel">
+        		<input id="tel" name="tel" type="password" ng-pattern='/[a-zA-Z\d+]{6,36}/' ng-model='password' placeholder="新密码" required />
+        	</p>
+        	<p class="pwd">
+        		<input id="pwd" name="pwd" type="password" ng-model='password_repeat' ng-pattern='/[a-zA-Z\d+]{6,36}/' placeholder="确认新密码" required/>
+        	</p>
+            </form>
+        </div>
+
+       <div class="RetrievePwd-btn" ng-disabled="setPwd.$invalid||password!=password_repeat" ng-class="{slecet:setPwd.$valid&&password==password_repeat}" ng-click="changepwd();">确认提交</div>
+    </ion-content>
+</ion-view>

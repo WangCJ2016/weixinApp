@@ -1,0 +1,103 @@
+.register-txt{
+    width:100%;
+    background-color: white;
+    p{
+        width:100%;
+        height: px2rem(100);
+        @extend %flex;
+        @extend %flexCrossCenter;
+        border-bottom:1px solid #D8D8D8;
+        position: relative;
+        label{
+           line-height: px2rem(100);
+           @include font-dpr(13px);
+           color:#000;
+        }
+        input{
+           height:97%;
+           line-height: px2rem(60);
+           @include font-dpr(13px);
+           color:$ajk_inputColor;
+           margin-left:px2rem(50);
+        }
+
+        .GetCode{
+          input{
+            width: px2rem(156);
+            height:px2rem(56);
+            border: 0;
+            color: #fff;
+            background-color: #ffb354;
+            line-height: 20%;
+            position: absolute;
+            right: px2rem(30);
+            top:px2rem(22);
+            border-radius: px2rem(6);
+            margin-right: px2rem(30);
+          }
+          input[disabled='disabled']{
+            color: black;
+            background-color: #fff;
+            border: 1px solid #aaa;
+          }
+        }
+
+    }
+    .tel{
+         margin:0 px2rem(30);
+         color:#000;
+    }
+    .password{
+        padding:0 px2rem(30);
+    }
+}
+.register-btn{
+    height:px2rem(90);
+    border-radius: px2rem(10);
+    background:#ffcb8a;
+    margin:px2rem(50) px2rem(30);
+    text-align: center;
+    line-height:px2rem(90) ;
+    @include font-dpr(15px);
+    color:#fff;
+    opacity:0.5;
+    &.select{
+        opacity:1
+    }
+}
+.agreement{
+  @extend %flex;
+  @extend %flexMainCenter;
+    padding-left:px2rem(30);
+    align-items:center;
+    position: relative;
+    #box{
+      position: relative;
+      width: px2rem(30);
+      height: px2rem(30);
+      left:px2rem(30);
+      opacity: 0;
+      z-index: 333;
+    }
+    label::before{
+    content: "";
+    display: inline-block;
+    width: px2rem(30);
+    height: px2rem(30);
+    margin-right: 10px;
+
+    background: url(../imgs/wcj/register/unconfirm.png) no-repeat;
+    background-size: px2rem(30) px2rem(30);
+    }
+    input[type=checkbox]:checked + label:before {
+        content: "";
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        font-size: 30px;
+        color: #fff;
+        background: url(../imgs/wcj/register/confirm.png) no-repeat;
+        background-size: px2rem(30) px2rem(30);
+        text-align: center;
+        line-height: 40px;
+    }
+
+}

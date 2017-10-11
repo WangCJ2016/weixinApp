@@ -1,0 +1,24 @@
+.binding{
+    overflow: hidden;
+     margin: px2rem(40) px2rem(30);
+     .slect{
+              opacity:1!important;
+            }
+    .button-calm{
+      border-radius: px2rem(10);
+    }
+    .binding-right{
+        padding-top: px2rem(50);
+        margin-left: px2rem(60);
+        float: left;
+    input{
+            width: px2rem(320);
+            height: px2rem(80);
+            border-radius: 4%;
+            border:1px solid #FFB354;
+            background-color:#FFB354;
+            font-size: px2rem(30);
+             color:#fff;
+        }
+    }
+}

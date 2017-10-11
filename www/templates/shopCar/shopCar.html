@@ -1,0 +1,53 @@
+<ion-view view-title="购物车" ng-click="closeDelete()">
+    <ion-nav-buttons side="left">
+
+    </ion-nav-buttons>
+    <ion-content class="userCenter-back">
+        <ul class="cart-list">
+            <li ng-repeat="list in list track by $index">
+            	<!--酒店名称-->
+                <div class="title" ng-if='list.hotelName'>
+                  <p class='checkbox special' ng-click = 'isbatchcheck(list)' >
+                   <input id={{list.hotelName}} type="checkbox" ng-checked='list.hotelCheck'  >
+                   <label for={{list.hotelName}}></label>
+                  </p>
+                   <span>{{list.hotelName}}</span>
+
+                </div>
+              <!--  酒店列表-->
+                <ion-list ng-repeat="roomList in list.carts track by $index">
+                   <ion-item class="list-cont" ng-click='goHouse(roomList.houseId)'>
+                        <p class='checkbox' ng-click = 'ischcked($event,roomList,list)' >
+                   <input id={{roomList.houseName}} type="checkbox" ng-checked = 'roomList.houseCheck'  >
+                   <label for={{roomList.houseName}}></label>
+
+                   </p>
+                        <div class="list-pic">
+                            <img ng-src="{{roomList.picture}}" />
+                            <span></span>
+                        </div>
+                        <div class="list-desc">
+                            <p> {{roomList.houseName}}</p>
+                            <p>{{roomList.inTime|MMdd}} - {{roomList.leaveTime|MMdd}}<i>共{{roomList.inDays}}晚</i></p>
+                            <div class="price">¥{{roomList.totalFeel}}</div>
+                        </div>
+                    <ion-option-button class="button-positive del" ng-click="delBtn(roomList.id,$event)">删除</ion-option-button>
+                  </ion-item>
+                </ion-list>
+            </li>
+        </ul>
+        <div class="shopCar_blank"></div>
+    </ion-content>
+   <div class="cart-footer">
+		<div class="check-all">
+			<p ng-class="{active:allcheck}" ng-click="isallcheck()"></p>
+			全选
+		</div>
+		<div class="total">
+			
+		</div>
+			<div class="calculate" ng-click='goOrderDetail();' nav-direction="forward">
+				结算
+			</div>
+	</div>
+</ion-view>

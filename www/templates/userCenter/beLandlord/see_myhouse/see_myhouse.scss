@@ -1,0 +1,95 @@
+.seeHouse_wrap{
+  .address{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    line-height:px2rem(80);
+    padding:0 px2rem(30);
+    white-space: nowrap;
+    background-color:#fff;
+    @include font-dpr(14px);
+  }
+  .trade_rule{
+    line-height: px2rem(80);
+    padding:0 px2rem(30);
+    background-color:#fff;
+    @include font-dpr(14px);
+    @extend %flex;
+    @extend %flexMainJustify;
+    @extend %flexCrossCenter;
+    >p{
+      margin-right:px2rem(20);
+      flex-grow:1;
+      -webkit-flex-grow:1;
+    }
+  }
+  i{
+    display: inline-block;
+    width:px2rem(42);
+    height:px2rem(42);
+    vertical-align: middle;
+  }
+  &_rightarr{
+    margin-right:px2rem(-20)!important;
+    margin-top:px2rem(20)!important;
+  }
+  &_slide{
+    .slide{
+    width: 100%;
+    height:px2rem(350);
+    .box,img{
+      height:100%;
+      width:100%;
+    }
+    }
+
+  }
+ .list{
+   padding-bottom: 0;
+
+ }
+  &_intr{
+    background-color:#fff;
+    padding:0 px2rem(30);
+    margin-bottom: px2rem(30);
+    h2{
+      line-height:px2rem(80);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      position: relative;
+      &::before{
+        @include borderMixinBottom;
+      }
+      color: #000;
+      @include font-dpr(15px);
+    }
+    h4{
+      color: #000;
+      @include font-dpr(13px);
+      margin-top: px2rem(20);
+    }
+    p{
+      width:100%;
+      color: #ababab;
+      @include font-dpr(13px);
+      line-height:px2rem(40);
+      white-space: normal;
+      padding-bottom: px2rem(30);
+    }
+  }
+  &_loc{
+    height: px2rem(46)!important;
+    background: url(../imgs/wcj/see_house/loc.png)no-repeat;
+    background-size:100% 100%;
+  }
+  &_rule{
+    background: url(../imgs/wcj/see_house/rule.png)no-repeat;
+    background-size:100% 100%;
+  }
+  &_rightarr{
+    background: url(../imgs/wcj/see_house/right_arr.png)no-repeat;
+    background-size:px2rem(16) px2rem(28);
+  }
+}

@@ -1,0 +1,25 @@
+<ion-view title="酒店图片">
+    <ion-nav-buttons side="left">
+
+            <button class="button button-clear ajk_back" ng-click='back()'></button>
+
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="hotel_pics_wrap">
+
+
+            <div class="hotel_pics">
+                <div class="pic_items">
+                    <div class="pic_item" ng-repeat='hotelPic in hotelPics track by $index' ng-class='{active:indexi==$index}' ng-click='changeColor($index,hotelPic.all)'><p>{{hotelPic.imgsrcs}}<span>({{hotelPic.all.length}})</span></p></div>
+                </div>
+
+                <div class="pics">
+                    <div class="picshow" >
+                        <img ng-repeat="imgsrc in allImgs track by $index" ng-click="ngshowif($index)" ng-src="{{imgsrc}}">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

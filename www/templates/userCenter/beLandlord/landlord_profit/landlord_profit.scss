@@ -1,0 +1,56 @@
+.landlord_profit_wrap{
+	width: 100%;
+	height:100%;
+	background:url(../imgs/wcj/landlord_profit/backimg.png)no-repeat;
+	background-size:100% 105%;
+	background-position-y:-5px;
+	position: relative;
+	@extend %flex;
+	@extend %flexDirTop;
+	-webkit-justify-content:flex-end;
+	justify-content:flex-end;
+	.contents{
+		height:px2rem(302);
+		position: absolute;
+		bottom:px2rem(170);
+		left:px2rem(30);
+		right:px2rem(30);
+		background-color:#fff;
+		opacity: 0.6;
+		padding: 0 px2rem(30);
+		z-index: 2;
+		border-radius:px2rem(10);
+		.content{
+			&:last-child{
+				border-bottom:none;
+			}
+			    width:100%;
+           height:px2rem(100);
+					 position: relative;
+					 &:not(:last-child)::before{
+						 @include borderMixinBottom;
+					 }
+					 @extend %flex;
+		       @extend %flexMainJustify;
+           span:first-child{
+            line-height:px2rem(100);
+            color:#000;
+            @include font-dpr(13px);
+           }
+           span:last-child{
+           	   line-height:px2rem(100);
+            color:#ababab;
+            @include font-dpr(13px);
+            text-decoration: underline;
+           }
+		}
+	}
+	.submit{
+		margin:0 px2rem(25);
+		margin-bottom: px2rem(20);
+		.button{
+			opacity:0.8;
+		  border-radius: px2rem(10);
+		}
+	}
+}

@@ -1,0 +1,288 @@
+.orderDetail_wrap{
+  height: 100%;
+  .topBlank{
+    height: px2rem(40);
+  }
+    .hotel_pics{
+    	position:relative;
+        width: 100%;
+        height: px2rem(500);
+        overflow:hidden;
+        .bgpic{
+        	width:100%;height:100%;
+         background: url(../imgs/wcj/hotelpic.png) no-repeat;
+        background-size:100% px2rem(500);
+        -webkit-filter:blur(3px);
+        filter:blur(3px);
+        }
+        .content{
+        	position: absolute;
+        	left: px2rem(10);right: px2rem(10);top:0;bottom:0;
+        	.topbar{
+            padding: 0 px2rem(20);
+        		height:px2rem(88);
+        		line-height:px2rem(88);
+        		text-align: center;
+        		color: #fff;
+        		@include font-dpr(17px);
+            @extend %flex;
+            @extend %flexMainJustify;
+            @extend %flexCrossCenter;
+        		>span{
+        			display:inline-block;
+        			width:px2rem(24);
+        			height:px2rem(40);
+        			background:url(../imgs/wcj/orderDetail/left_arr.png)no-repeat;
+        			background-size:px2rem(24) px2rem(40);
+              padding: px2rem(30);
+              padding-top: px2rem(8);
+        		}
+        	}
+        	.position{
+            padding: 0 px2rem(30);
+        		height:auto;
+        		color:#fff;
+        		@include font-dpr(14px);
+        		margin-top: px2rem(20);
+        		>span{
+        			display:inline-block;
+        			width:px2rem(18);height:px2rem(28);
+        			background:url(../imgs/wcj/orderDetail/pos.png)no-repeat;
+        			background-size:px2rem(18) px2rem(28);
+        			margin-right:px2rem(20);
+        		}
+        	}
+            .scroll{
+                height:px2rem(350);
+            }
+            .rooms{
+              @extend %flex;
+              @extend %flexMainJustify;
+              @extend %flexWrap;
+                overflow: hidden;
+                margin: 0 px2rem(58);
+            }
+            .room{
+                border:1px solid #fff;
+                border-radius:px2rem(5);
+                padding: px2rem(5);
+                width:px2rem(300);
+                height:px2rem(160);
+                margin-top:px2rem(20);
+                >p{
+                    color:#fff;
+                    @include font-dpr(14px);
+                    text-align:center;
+                    line-height: px2rem(50);
+                }
+
+            }
+
+        }
+        .platform-ios .content{
+            position: absolute;
+            top:px2rem(44)!important;
+        }
+    }
+    // .mess{
+    //   background-color: #fff;
+    //   >div:first-child{
+    //     margin-left: px2rem(30);
+    //     span{
+    //       vertical-align: text-top;
+    //     }
+    //   }
+    //   >div:last-child{
+    //     padding-left: px2rem(30);
+    //   }
+    // 	.mess_detail{
+    // 		height:px2rem(100);
+    //     @extend %flex;
+    //     @extend %flexMainJustify;
+    //     @extend %flexCrossCenter;
+    // 		position: relative;
+    //     &::before{
+    //       @include borderMixinBottom;
+    //     }
+    // 		.first{
+    // 			@include font-dpr(13px);
+    // 			i{
+    // 				display:inline-block;
+    // 				width:px2rem(29);
+    // 				height:px2rem(29);
+    //
+    // 				margin-left:px2rem(20);
+    //         vertical-align: text-top;
+    // 			}
+    //       .bg{
+    //         background: url(../imgs/wcj/orderDetail/why.png) no-repeat;
+    // 				background-size:px2rem(29) px2rem(29);
+    //       }
+    // 		}
+    // 		.second{
+    //       color: #000;
+    // 			@include font-dpr(13px);
+    // 			line-height:px2rem(28);
+    //       padding-right: px2rem(30);
+    // 			i{
+    // 				display:inline-block;
+    // 				width:px2rem(16);
+    // 				height:px2rem(28);
+    // 				background: url(../imgs/wcj/orderDetail/right.png) no-repeat;
+    // 				background-size:px2rem(16) px2rem(28);
+    // 				margin-left:px2rem(20);
+    // 			}
+    // 		}
+    // 		input{
+    // 			@include font-dpr(13px);
+    // 			display:inline-block;
+    // 			height:px2rem(60);
+    // 			line-height:px2rem(60);
+    // 		}
+    // 		>span:last-child{
+    // 			display:inline-block;
+    // 				width:px2rem(55);
+    // 				height:px2rem(55);
+    //         margin-right: px2rem(30);
+    // 				background-size:px2rem(55) px2rem(55);
+    //
+    // 		}
+    // 		.bgpic{
+    // 				background: url(../imgs/wcj/orderDetail/person.png) no-repeat;
+    // 		}
+    // 		.bgpic1{
+    //                background: url(../imgs/wcj/orderDetail/comunication.png) no-repeat;
+    // 		}
+    // 	}
+    //
+    // }
+    .divier{
+    		height:px2rem(60);
+    		background-color:$ajk_backColor;
+    		padding:0 px2rem(30);
+        @extend %flex;
+        @extend %flexCrossCenter;
+    		@include font-dpr(9px);
+    		color:rgb(175,175,175);
+    		>span:first-child{
+    			text-align:center;
+    			display:inline-block;
+    			padding: 0 px2rem(10);
+    			height:px2rem(38);
+    			background-color:rgb(220,219,221);
+    			border-radius:px2rem(5);
+    			color:rgb(119,119,119);
+    			@include font-dpr(9px);
+    			line-height:px2rem(38);
+    			margin-right:px2rem(20)
+    		}
+    	}
+    	.more{
+        @extend %flex;
+        @extend %flexCrossCenter;
+    		height:px2rem(100);
+    		border-bottom:1px solid $ajk_borderColor;
+    		input{
+    			margin: 0 auto;
+              width:px2rem(690);
+              @include font-dpr(12px);
+              white-space: normal;
+              height: px2rem(60);
+              line-height: px2rem(60);
+    		}
+    	}
+    	.notice{
+            margin-top:px2rem(50);
+    		h3{
+    			height:px2rem(76);
+    			line-height:px2rem(76);
+    			@include font-dpr(15px);
+    			text-align:center;
+    		}
+    		>div{
+    			margin:0 auto;
+
+    			height:px2rem(220);
+    			width:px2rem(661);
+    			background:url(../imgs/wcj/orderDetail/rect.png)no-repeat;
+    			background-size:px2rem(661) px2rem(220);
+    			>h4{
+    				padding:px2rem(15) px2rem(18) px2rem(15) px2rem(22);
+    				color:rgb(69,110,181);
+    				@include font-dpr(13px);
+    			}
+    			>p{
+    				@include font-dpr(12px);
+    				padding:0 px2rem(18) 0 px2rem(22);
+    				padding-bottom: px2rem(15);
+    				line-height:px2rem(30)
+    			}
+    		}
+    		>p{
+    			height:px2rem(90);
+    		}
+    	}
+
+        .blur{
+            -webkit-filter:blur(7px);
+        }
+      .ng-hide{left:px2rem(750);}
+
+       .fade{left:0}
+
+        .arriveTime{
+            position:absolute;
+            transition: all linear 0.3s;
+            width:100%;height:100%;
+            top:0;
+            z-index: 14;
+             .topbar{
+                height:px2rem(88);
+                line-height:px2rem(88);
+                text-align: center;
+                color: #fff;
+                @include font-dpr(17px);
+
+                margin:0 px2rem(30);
+
+            }
+            .time{
+                color:#000;
+                 margin:0 auto;
+                @include font-dpr(15px);
+                text-align:center;
+                margin-top:px2rem(85);
+                width:px2rem(180);
+                height:px2rem(60);
+               line-height:px2rem(60);
+
+            }
+              .selected{
+                  border: 1px solid $ajk_color;
+                }
+                >div:last-child{
+                    margin:px2rem(180) px2rem(30) ;
+                    >button{
+                        border-radius: px2rem(10);
+                        @include font-dpr(15px)
+                    }
+                }
+        }
+       .close{
+                    display:inline-block;
+                    width:px2rem(30);
+                    height:px2rem(30);
+                    background:url(../imgs/wcj/orderDetail/close.png)no-repeat;
+                    background-size:px2rem(30) px2rem(30);
+                   position:absolute;
+                   left:px2rem(30);
+                   top:px2rem(30);
+                   z-index:15
+                }
+}
+.platform-ios .close{
+  top:px2rem(70);
+}
+.ionic-citypicker.ajk{
+    @include font-dpr(13px);
+}

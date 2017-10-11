@@ -1,0 +1,135 @@
+.roomPower_wrap{
+ width: 100%;
+    height: 100%;
+     background: url(../imgs/wcj/lock/bg.png)no-repeat;
+    background-size: 100% 100%;
+.roomPower {
+
+    >div {
+        width: 2.133333rem;
+        height: 2.133333rem;
+        border: 3px solid #fff;
+        box-sizing: border-box;
+        position: absolute;
+        border-radius: px2rem(10);
+        figure div {
+            display: block;
+            width: 0.88rem;
+            height: px2rem(80);
+            margin: 0.3rem auto 0;
+            background-size: 100% 100%;
+        }
+        figure figcaption {
+            height: 0.8rem;
+            line-height: 0.8rem;
+            font-size: 0.4rem;
+            text-align: center;
+            color: #fff;
+        }
+    }
+    .elevator {
+        bottom: px2rem(300);
+        left: px2rem(50);
+        div{
+         background: url(../imgs/wcj/lock/elevator.png)no-repeat;
+         background-size: px2rem(66) px2rem(78);
+        }
+    }
+    .door{
+        bottom: px2rem(300);
+        left: 50%;
+        margin-left: px2rem(-80);
+        div{
+         background: url(../imgs/wcj/lock/door.png)no-repeat;
+         background-size: px2rem(66) px2rem(78);
+        }
+    }
+    .stream{
+        bottom:px2rem(300);
+        right:px2rem(50);
+        div{
+         background: url(../imgs/wcj/lock/stream.png)no-repeat;
+         background-size: px2rem(66) px2rem(78);
+        }
+    }
+   .selectIndex0{
+     bottom: px2rem(300);
+        left: px2rem(50);
+     background: #fff;
+     div{background: url(../imgs/wcj/lock/elevator_active.png)no-repeat;background-size:px2rem(66) px2rem(78);}
+     figcaption{
+       color: rgb(255,179,84);
+     }
+   }
+    .selectIndex1{
+      bottom: px2rem(300);
+        left: 50%;
+        margin-left: px2rem(-80);
+     background: #fff;
+     div{background: url(../imgs/wcj/lock/door_active.png)no-repeat;background-size:px2rem(63) px2rem(78)}
+     figcaption{
+       color: rgb(255,179,84);
+     }
+   }
+   .selectIndex2{
+      bottom:px2rem(300);
+        right:px2rem(50);
+     background: #fff;
+     div{background: url(../imgs/wcj/lock/stream_active.png)no-repeat;background-size:px2rem(66) px2rem(78);}
+     figcaption{
+       color: rgb(255,179,84);
+     }
+   }
+}
+ .blank {
+        height: px2rem(280);
+    }
+    .roomCard {
+        width: 6.786667rem;
+        height: 4.253333rem;
+        margin: 0 auto;
+        background: url(../imgs/wcj/lock/rect.png) no-repeat;
+        background-size: 100% 100%;
+        >p{
+         @include font-dpr(17px);
+         color: #000;
+         text-align: center;
+        }
+         >p:first-child{
+         padding-top: px2rem(50);
+         padding-bottom: px2rem(30);
+         text-align: center;
+         img{
+           width: px2rem(47);
+           height: px2rem(24);
+         }
+        }
+        >p.card{
+         color:rgb(255,179,87);
+         line-height: px2rem(60);
+         box-shadow: none;
+         margin: 0 auto;
+        }
+        .key{
+         width: px2rem(171);
+         height: px2rem(170);
+         position: absolute;
+         left: 50%;
+         margin-left: px2rem(-88);
+         top:px2rem(520);
+         background:url(../imgs/wcj/lock/round.png)no-repeat;
+         background-size: px2rem(171) px2rem(170);
+         @extend %flex;
+         @extend %flexMainCenter;
+         @extend %flexCrossCenter;
+         img{
+           width: px2rem(59);
+         }
+        }
+    }
+}
+.platform-ios .roomPower_wrap{
+  p.card{
+    padding-top: px2rem(30);
+  }
+}

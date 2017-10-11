@@ -1,0 +1,46 @@
+<ion-view hide-nav-bar='true'>
+	<ion-content has-subheader="false" overflow-scroll="true" style="overflow: hidden">
+		<div class="my_checkIn_wrap">
+
+			<div class="checkIn_cont">
+				<div class="checkIn_cont_add">
+					<div class="checkIn-back" native-ui-sref='tab.ctrl' native-options="{type: 'slide', direction:'right'}">
+						<img src="imgs/lj/back.png" />
+					</div>
+
+					<p ng-click='goClean();' silde-animation><img src="imgs/kwn/checkIn/more1.png" alt=""></p>
+				</div>
+				<ul>
+					<li ng-click='goLight()' native-options="{type: 'fade'}">
+						<img src="imgs/kwn/checkIn/light.png" />
+					</li>
+					<li ng-click='goTv()' native-options="{type: 'fade'}">
+						<img src="imgs/kwn/checkIn/TV.png" />
+					</li>
+					<li ng-click='goairCondition()' native-options="{type: 'fade'}">
+						<img src="imgs/kwn/checkIn/airconditioning.png" />
+					</li>
+					<li ng-click="goCurtain()">
+						<img src="imgs/kwn/checkIn/curtain.png" />
+					</li>
+					<li ng-click='goLock()'>
+						<img src="imgs/kwn/checkIn/key.png" />
+					</li>
+					<li ng-click="goModel()">
+						<img src="imgs/kwn/checkIn/model.png" />
+					</li>
+					<li ng-click='goService()'>
+						<img src="imgs/kwn/checkIn/service.png" />
+					</li>
+					<li>
+						<img src="imgs/kwn/checkIn/many.png" />
+					</li>
+				</ul>
+			</div>
+			<div class="bg">
+				<img src="imgs/wcj/checkIn/bg.png" alt="">
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

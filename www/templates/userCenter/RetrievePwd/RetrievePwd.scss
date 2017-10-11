@@ -1,0 +1,89 @@
+.RetrievePwd-txt{
+     width:100%;
+     background:#fff;
+    p{
+
+        height: px2rem(102);
+        margin:0 px2rem(30);
+        padding-top: px2rem(21);
+        input{
+          width: 100%;
+           height:px2rem(60);
+           line-height: px2rem(60);
+           @include font-dpr(13px);
+           color:$ajk_inputColor;
+        }
+    }
+    .pwd{
+      margin:0;
+      padding: 0 px2rem(30);
+      padding-top: px2rem(21);
+    }
+    .tel{
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        .GetCode{
+        input{
+          width: px2rem(156);
+          height:px2rem(56);
+          border: 0;
+          color: #fff;
+          background-color: #ffb354;
+          line-height: px2rem(56);
+          position: absolute;
+          right: px2rem(0);
+          top:px2rem(22);
+          border-radius: px2rem(6);
+
+        }
+        input[disabled='disabled']{
+          color: black;
+          background-color: #fff;
+          border: 1px solid #aaa;
+        }
+      }
+        // .slecet{
+        //    background-color: transparent!important;
+        //    border:1px solid $ajk_color!important;
+        // }
+        .gain{
+            width:px2rem(156);
+            height:px2rem(56);
+            border:1px solid #aaa;
+            border-radius: px2rem(6);
+            position:absolute;
+            top:px2rem(23);
+            right:0;
+            text-align: center;
+            line-height:px2rem(56) ;
+            @include font-dpr(12px);
+           color:#323131;
+        }
+    }
+}
+.RetrievePwd-btn{
+    height:px2rem(90);
+    border-radius: px2rem(10);
+    background:#ffb354;
+    margin:px2rem(50) px2rem(30);
+    text-align: center;
+    line-height:px2rem(90) ;
+    @include font-dpr(15px);
+    color:#fff;
+    opacity: 0.5;
+    &.slecet{
+        opacity:1;
+    }
+}
+.bindPhone1{
+  background-color: #fff;
+  label,span{
+    display: inline-block;
+    line-height: px2rem(100);
+    color:#323131;
+    padding: 0 px2rem(30);
+    @include font-dpr(15px);
+  }
+}

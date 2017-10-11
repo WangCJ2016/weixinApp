@@ -1,0 +1,44 @@
+.qrCode_wrap{
+    width: 100%;
+    height: 100%;
+    background-color: $ajk_backColor;
+    .blank{
+        height: px2rem(150);
+    }
+    .content{
+        width: px2rem(690);
+        height: px2rem(900);
+        margin: auto;
+        background-color: #fff;
+        .person{
+          @extend %flex;
+          @extend %flexCrossCenter;
+          padding: px2rem(40) 0 px2rem(10) 0;
+          img{
+                display: inline-block;
+                width: px2rem(130);
+                height: px2rem(130);
+                border-radius: 50%;
+                margin-left:px2rem(30);
+                margin-right:px2rem(30);
+                border: 1px solid $ajk_borderColor;
+            }
+            p{
+                @include font-dpr(15px);
+            }
+        }
+        .qrCode{
+            width: px2rem(600);
+            height: px2rem(600);
+            margin: px2rem(50) auto;
+            img{
+                    margin:px2rem(50) auto;
+                    width: px2rem(500)!important;
+                height: px2rem(500)!important;
+                }
+            canvas{
+
+            }
+        }
+    }
+}

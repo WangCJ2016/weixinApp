@@ -1,0 +1,17 @@
+<ion-view view-title='二维码'>
+	 <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="setting" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content>
+    	<div class="qrCode_wrap">
+    	<div class="blank"></div>
+    		<div class='content'>
+    			<div class="person">
+    				<img ng-src="{{imghead}}" alt="">
+    				<p>{{name}}</p>
+    			</div>
+    			<qr-code class="qrCode" id="qrCode"></qr-code>
+    		</div>
+    	</div>
+    </ion-content>
+</ion-view>

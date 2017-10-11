@@ -1,0 +1,23 @@
+<ion-view title="酒店设施">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" ng-click="back()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+      <div class="hotelDetail_wrap">
+    		<div class="title"><h2>酒店设施</h2></div>
+    		<div class="devices">
+    			<h2 >智能设施</h2>
+    			<div flex="main:left">
+    				<p flex="dir:top cross:center" ng-repeat='assort in assorts track by $index'><i><img ng-src={{assort.img}} alt=""></i>{{assort.name}}</p>
+    			</div>
+
+    		</div>
+    		<div class="devices common_devices">
+    			<h2 >通用设施</h2>
+    			<div flex="main:left">
+    				<p flex="dir:top cross:center" ng-repeat='service in services track by $index'><i flex="main:center cross:center"><img ng-src={{service.img}} alt=""></i>{{service.name}}</p>
+    			</div>
+    		</div>
+    	</div>
+    </ion-content>
+  </ion-view>

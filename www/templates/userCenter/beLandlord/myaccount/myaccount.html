@@ -1,0 +1,65 @@
+<ion-view view-title="我的收入">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="beLandlord" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+        <span class="date_select" ng-click="openDatePicker();">{{month}}</span>
+    </ion-nav-buttons>
+    <ion-content has-subheader="false">
+        <div class="myaccount_wrap">
+           <div ng-if="!dataswitch">
+            <div class="btns">
+                <span ng-click="dayIncome()" ng-class="{select:select}">日报表</span>
+                <span ng-click="monthIncome();" ng-class="{select:!select}">月报表</span>
+            </div>
+            <div ng-show='select' class="select">
+            	 <!-- <p>年总收入:<span>10000</span></p> -->
+            <div class="date_picker directive_date">
+                 <p>本月预估收入:{{monthIncomes}}</p>
+                <date-account year={{year}} month={{month}}></date-account>
+            </div>
+            <div class="normal" ng-repeat = 'dayIncome in DayIncomes track by $index'>
+
+                <div class="normal_house"  >
+                        <div class="item-three" style="background-color:#fff">
+                            <img ng-src={{dayIncome.picture}} alt="">
+                            <ul>
+                                <li>订单号:{{dayIncome.orderCode}}</li>
+                                <li>入住时间:{{dayIncome.inTimes}}</li>
+                                <li class="money">预估收入:{{dayIncome.totalFee}}</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            </div>
+            <div ng-hide="select" class='select'>
+
+                <div class="order" ng-repeat="order in incomeOrders track by $index" >
+               <div class='hotel' >
+                <p><span>{{order.hotelName}}</span><span>订单号:{{order.orderCode}}</span></p>
+
+                <div class="item-three" >
+                    <img ng-src='{{order.picture}}' />
+                    <ul>
+                        <li class="OrderNum">{{order.houseName}}</li>
+                        <li class="Time">{{order.inTimes}}</li>
+                        <li class="money">¥{{order.totalFee}}</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="dataSelect" ng-if="dataswitch">
+              <h2>请选择年份</h2>
+              <div class="years">
+                  <p ng-repeat='year in years track by $index' ng-click='monthSelect(year,$index)' ng-class='{active:indexi==$index}'>{{year}}</p>
+              </div>
+              <h2>请选择月份</h2>
+              <div class='month'>
+                  <p ng-repeat='month in months track by $index' ng-click='daySelect(month,$index)' ng-class='{active:indexii==$index}'>{{month}}</p>
+              </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

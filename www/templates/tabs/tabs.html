@@ -1,0 +1,18 @@
+<ion-tabs class="tabs-icon-top tabs-color-active-calm">
+    <ion-tab title="首页" icon-off="bar_home_off" icon-on="bar_home_on" ui-sref="tab.home">
+        <ion-nav-view name="tab-home"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="发现" icon-off=" bar_discover_off" icon-on="bar_discover_on" href="#/tab/discover">
+        <ion-nav-view name="tab-discover"></ion-nav-view>
+    </ion-tab>
+    <ion-tab   ui-sref='tab.ctrl' >
+        <ion-nav-view name="tab-ctrl"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="购物车" icon-off="bar_shopCar_off" icon-on="bar_shopCar_on" href="#/tab/shopCar">
+        <ion-nav-view name="tab-shopCar"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="我的" icon-off="bar_userCenter_off" icon-on="bar_userCenter_on" href="#/tab/userCenter">
+        <ion-nav-view name="tab-userCenter"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>
+ <div class="ctrl" ui-sref="tab.ctrl" ctrl-btn></div>

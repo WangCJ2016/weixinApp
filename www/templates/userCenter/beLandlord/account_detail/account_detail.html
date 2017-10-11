@@ -1,0 +1,18 @@
+<ion-view view-title="订单信息">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" ng-click='goBack()'></button>
+    </ion-nav-buttons>
+	<ion-content>
+    <div class="account_detail_wrap">
+      <div class="order_detal">
+        <div class="avater_intr">
+          <img ng-src="{{house.picture}}" alt="">
+          <h4>{{hotelName}}</h4>
+        </div>
+        <div class="other_intr clearfix"><span>房型</span><p>{{house.houseName}}</p></div>
+        <div class="other_intr clearfix"><span>地址</span><p>{{house.address}}</p></div>
+        <div class="other_intr clearfix"><span>入住时间</span><p>{{house.inTimes}}</p></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,70 @@
+.ctrl_header{
+    background-color:#FFF;
+    width: 100%;
+    border-bottom:1px solid $ajk_borderColor;
+   position: fixed;
+   top:0;
+   z-index:11;
+   padding-top:px2rem(40);
+      >span{
+        display:inline-block;
+        width:px2rem(90);
+        height:100%;
+        position:absolute;
+        top:px2rem(11);
+        i{
+        position:absolute;
+        display: inline-block;
+        width:px2rem(30);
+        height:px2rem(30);
+        left:px2rem(30);
+        top:50%;
+        margin-top: px2rem(-10);
+        background: url(../imgs/wcj/my_orderform/close.png)no-repeat;
+        background-size: 100% 100%;
+         }
+       }
+        .select_btn{
+           width: px2rem(600);
+           height:100%;
+           margin:0 auto;
+           @extend %flex;
+           @extend %flexMainJustifyRound;
+           span{
+            line-height:px2rem(98);
+            width:px2rem(100);
+            text-align:center;
+            color: #000;
+            @include font-dpr(15px);
+           }
+        }
+        .selectBtn{
+          border-bottom:3px solid $ajk_color;
+        }
+  }
+  .platform-android .ctrl_header{
+    height: px2rem(98);
+    padding-top: 0
+  }
+  .platform-ios .ctrl_header{
+    height: px2rem(128);
+    span{
+      top:px2rem(4);
+    }
+  }
+  .platform-android .my_orderform_wrap{
+    .blank{
+      height: px2rem(88)
+    }
+  }
+
+  .platform-ios .my_orderform_wrap{
+    .blank{
+      height: px2rem(120)
+    }
+  }
+.platform-android .ctrl_header{
+  >span{
+    top:0px;
+  }
+}

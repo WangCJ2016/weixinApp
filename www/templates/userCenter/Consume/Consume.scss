@@ -1,0 +1,91 @@
+.Consume-tittle{
+     height: px2rem(70);
+     background-color:$ajk_backColor;
+     line-height: px2rem(70);
+     span{
+        margin-left: px2rem(30);
+        line-height: px2rem(40);
+       @include font-dpr(15px);
+        color: black;
+     }
+   }
+.Consume-list{
+    background-color: #FFFFFF;
+    h1{
+        padding-top: px2rem(30);
+        margin-left: px2rem(30);
+        @include font-dpr(19px);
+    }
+    .list{
+        width:100%;
+        height:px2rem(160);
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        overflow: hidden;
+        @extend %flex;
+        @extend %flexCrossCenter;
+        @extend %flexMainJustify;
+        margin-bottom: 0!important;
+        .data{
+            width:px2rem(109);
+            height:100%;
+            @include font-dpr(11px);
+            color: #ababab;
+            text-align: center;
+            line-height: px2rem(160);
+            float: left;
+        }
+       p{
+            display: block;
+            width:px2rem(150);
+            height:px2rem(120);
+          img{
+                width:100%;
+                height:px2rem(120);
+                margin:0;
+            }
+        }
+       >span:last-child{
+         color: #ababab;
+         margin-right: px2rem(30);
+       }
+        ul{
+            width: 45%;
+            height:px2rem(120);
+            margin-left: px2rem(20);
+            @extend %flex;
+            @extend %flexMainJustify;
+            @extend %flexDirTop;
+            >li{
+              height: px2rem(40);
+            }
+           .address{
+                @include font-dpr(12px);
+                color:#ababab;
+                line-height: px2rem(61);
+                font-family: "PingFang SC Medium";
+                }
+            .housetype{
+                @include font-dpr(12px);
+                color: #ababab;
+                @extend %flex;
+                line-height: px2rem(40);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            .money{
+                @include font-dpr(18px);
+                color: black;
+                display: inline-block;
+                height: px2rem(40);
+                line-height: px2rem(40);
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,195 @@
+.sweepTime_wrap {
+  height: 100%;
+  background-color: $ajk_backColor;
+
+  .sweepTime_select {
+    > section {
+      background-color: #fff;
+
+      > div {
+        position: relative;
+        &::before{
+          @include borderMixinBottom;
+        }
+        line-height: px2rem(100);
+        @extend %flex;
+        > p {
+          @include font-dpr(13px);
+        }
+
+        > p:first-child {
+          color: rgb(170,170,170);
+        }
+      }
+
+      .service {
+        margin-left: px2rem(30);
+
+        > p:last-child {
+          color: #000;
+          padding-left: px2rem(20);
+        }
+      }
+      .second{
+        > p:last-child {
+          color: rgb(104,104,104);
+        }
+      }
+     .repair{
+       margin-right:px2rem(30);
+       background: url(../imgs/wcj/right_arr.png)no-repeat center right;
+       background-size: px2rem(16) px2rem(28);
+     }
+      .time {
+        padding-left: px2rem(30);
+        justify-content: space-between;
+
+        > p:last-child {
+          padding-right: px2rem(30);
+          @extend %flex;
+          @extend %flexCrossCenter;
+          color: $ajk_color;
+
+          i {
+            margin-left: px2rem(10);
+            display: inline-block;
+            width: px2rem(16);
+            height: px2rem(28);
+            background: url(../imgs/wcj/right_arr.png)no-repeat;
+            background-size: px2rem(16) px2rem(28);
+          }
+        }
+      }
+      .remark{
+        align-items: center;
+        padding-left: px2rem(30);
+        input{
+          width: px2rem(550);
+          height: px2rem(60);
+          line-height: px2rem(60);
+          @include font-dpr(13px);
+        }
+      }
+    }
+
+    .conform_bnt {
+      margin: px2rem(50) px2rem(30);
+    }
+
+    > p {
+      color: rgb(104,104,104);
+      margin: px2rem(40) px2rem(30);
+    }
+
+    .select_time {
+      background-color: #fff;
+      transition: all linear 0.5s;
+      position: absolute;
+      z-index: 12;
+      width: 100%;
+      bottom: px2rem(-450);
+
+      > p {
+        text-align: center;
+        @include font-dpr(15px);
+        color: #000;
+      }
+
+      > p:first-child {
+        line-height: px2rem(80);
+        background-color: rgb(238,238,238);
+      }
+
+      > p:not(:first-child) {
+        line-height: px2rem(70);
+      }
+    }
+    .select_time.repair{
+      bottom: px2rem(-500);
+    }
+    .transitionUp {
+      bottom: 0!important;
+    }
+
+    .select_bg {
+      background: url(../imgs/wcj/services/selectReact.png)no-repeat center;
+      background-size: px2rem(240) px2rem(50);
+      color: $ajk_color!important;
+    }
+  }
+
+  .sweepTime_schedule {
+    > div {
+      padding-left: px2rem(60);
+    }
+
+    .status {
+      background-color: #fff;
+      margin-top: px2rem(20);
+      padding-bottom: px2rem(50);
+      position: relative;
+      > p {
+        @include font-dpr(15px);
+        line-height: px2rem(100);
+      }
+
+      > div {
+        // border-left: 2px solid $ajk_borderColor;
+        // height: px2rem(250);
+        // > p {
+        //   margin-left: px2rem(-10);
+        //   line-height: px2rem(100);
+        //   text-indent: px2rem(50);
+        //   background: url(../imgs/wcj/services/round.png)no-repeat left center;
+        //   background-size: px2rem(20) px2rem(20);
+        //å}
+
+        .statusNow {
+          // background: url(../imgs/wcj/services/seletRound.png)no-repeat left center;
+          // background-size: px2rem(30) px2rem(30);
+          // margin-left: px2rem(-15);
+          // text-indent: px2rem(55);
+          // color: $ajk_color;
+
+        }
+      }
+      .content{
+        border: none;
+        >p{
+          height: px2rem(100);
+          position: relative;
+          border-left: 2px solid $ajk_borderColor;
+          &::after{
+            position: absolute;
+            left: px2rem(-15);
+            bottom: 0;
+            display: inline-block;
+            width: px2rem(30);
+            height: px2rem(30);
+            content: '';
+            background: url(../imgs/wcj/services/round.png)no-repeat left center;
+            background-size: px2rem(30) px2rem(30);
+          }
+          >span{
+            position: absolute;
+            bottom:0;
+            text-indent: px2rem(30);
+            color: rgb(211,211,211);
+            display: inline-block;
+            line-height: px2rem(30);
+          }
+        }
+        .statusNow{
+          border-color: $ajk_color;
+          &::after{
+            background: url(../imgs/wcj/services/seletRound.png)no-repeat left center;
+            background-size: px2rem(30) px2rem(30);
+          }
+          >span{
+            color: $ajk_color;
+          }
+        }
+      }
+    }
+  }
+}

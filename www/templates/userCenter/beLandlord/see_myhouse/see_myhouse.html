@@ -1,0 +1,37 @@
+<ion-view view-title="查看房源">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear ajk_back" native-ui-sref="myHouse" native-options="{type: 'slide', direction:'right'}"></button>
+    </ion-nav-buttons>
+    <ion-content has-subheader="false" style='background-color: #efefef'>
+      <div class="seeHouse_wrap">
+        <div class="seeHouse_wrap_slide">
+            <ion-slide-box class='slide'>
+                <ion-slide ng-repeat='pic in pics track by $index '>
+                    <div class="box "><img ng-src={{pic}}></div>
+                </ion-slide>
+
+            </ion-slide-box>
+        </div>
+        <div class="seeHouse_wrap_intr">
+            <h2>{{hotel.name}}</h2>
+            <div>
+                <h4>房源简介:</h4>
+                 <p >
+                    {{hotel.profiles}}
+                 </p>
+            </div>
+        </div>
+        <div class="list item_normal">
+            <div class="address">
+            	 <i class="seeHouse_wrap_loc" ></i>
+               {{hotel.address}}
+            </div>
+        </div>
+         <div class="trade_rule" ui-sref='tradeRule'>
+             	<i class="seeHouse_wrap_rule"></i>
+               <p>交易规则查看</p>
+             <i class="seeHouse_wrap_rightarr icon-right"></i>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

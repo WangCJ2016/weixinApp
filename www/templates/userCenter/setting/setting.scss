@@ -1,0 +1,84 @@
+.setting-list{
+  padding-top: 0;
+    .item{
+        height:px2rem(100);
+        margin:0;
+        border-width: 0;
+        border-bottom:1px solid $ajk_borderColor;
+        background-color: #fff;
+        padding:0;
+        line-height: px2rem(100);
+        color:#000;
+        .center{
+            height:100%;
+            margin-left: px2rem(30);
+            @extend %flex;
+            >span{
+              @include font-dpr(15px);
+            }
+            p{
+                height:100%;
+                width:px2rem(61);
+                img{
+                    vertical-align: middle;
+                    display:inline-block;
+                    width:px2rem(35);
+                }
+                span{
+                    height:100%;
+                    display: inline-block;
+                   vertical-align: middle;
+                }
+            }
+            i{
+                width:px2rem(30);
+                height:100%;
+                position:absolute;
+                top:0;
+                right:px2rem(30);
+                text-align: right;
+                img{
+                    vertical-align: middle;
+                    display:inline-block;
+                    width:px2rem(16);
+                    height:px2rem(28);
+                }
+                span{
+                    height:100%;
+                    display: inline-block;
+                   vertical-align: middle;
+                }
+            }
+        }
+
+    }
+    .marginB{
+        margin-bottom: px2rem(20);
+    }
+    .headChange{
+        img{
+          width: px2rem(41)!important;
+        }
+    }
+    .bindPhone{
+      p{
+        img:first-child{
+          width: px2rem(32)!important;
+        }
+      }
+    }
+
+}
+.setting-footer.bar{
+    background:#ffb354;
+    height:px2rem(98)!important;
+    position: inherit!important;
+    p{
+        width:100%;
+        height:px2rem(98);
+        text-align: center;
+         @include font-dpr(15px);
+        line-height: px2rem(80);
+        color:#fff;
+    }
+}

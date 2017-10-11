@@ -1,0 +1,89 @@
+.scroll{
+  height:100%;
+}
+.beLandlord_wrap {
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/wcj/be_landlord/back_img.png)no-repeat;
+    background-size: 100% 100%;
+    @extend %flex;
+    @extend %flexMainCenter;
+    @extend %flexCrossCenter;
+    .back {
+        display: inline-block;
+        position: absolute;
+        left: px2rem(30);
+        top: px2rem(25);
+        padding: px2rem(20);
+        >img {
+            display: inline-block;
+            width: px2rem(24);
+            height: px2rem(40);
+        }
+    }
+    .center_box {
+        position: relative;
+        width: px2rem(568);
+        height: px2rem(568);
+        background: url(../imgs/wcj/be_landlord/center_circle.png)no-repeat;
+        background-size: 100% 100%;
+        figure {
+            position: absolute;
+            text-align: center;
+            @extend %flex;
+            @extend %flexDirTop;
+            @extend %flexCrossCenter;
+            p {
+                width: px2rem(56);
+                height: px2rem(56);
+            }
+            .join_us_img {
+                background: url(../imgs/wcj/be_landlord/join_us.png)no-repeat;
+                background-size: px2rem(56) px2rem(56);
+            }
+            .my_account_img {
+                background: url(../imgs/wcj/be_landlord/my_account_1.png)no-repeat;
+                background-size: px2rem(56) px2rem(56);
+            }
+
+            .my_house_img {
+                background: url(../imgs/wcj/be_landlord/my_house_1.png)no-repeat;
+                background-size: px2rem(56) px2rem(56);
+            }
+
+            figcaption {
+                line-height: px2rem(40);
+                color: rgb(171, 171, 171);
+            }
+            
+        }
+        .my_account {
+            left: 50%;
+            top: 2%;
+            margin-left: px2rem(-48);
+
+        }
+        .join_us {
+            top: px2rem(304);
+            left: 4.8%;
+        }
+        .my_house {
+            top: px2rem(304);
+            right: 3.8%;
+
+        }
+        .active .my_account_img {
+              background: url(../imgs/wcj/be_landlord/my_account.png)no-repeat;
+              background-size: px2rem(56) px2rem(56);
+          }
+          .active .my_house_img {
+              background: url(../imgs/wcj/be_landlord/my_house.png)no-repeat;
+              background-size: px2rem(56) px2rem(56);
+          }
+          .active{
+            figcaption {
+                color: $ajk_color;
+            }
+          }
+    }
+}

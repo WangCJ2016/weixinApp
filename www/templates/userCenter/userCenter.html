@@ -1,0 +1,85 @@
+<ion-view hide-nav-bar='true' >
+   <ion-content style="height:100%">
+     <div class="userCenter-back">
+        <div class="userCenter_header">
+            <p></p>
+        	<div ng-click='headimg();'>
+        		<img ng-src={{imghead}} id="logo" ng-show='imghead'/>
+            		<span class="login-register">{{useName}}</span>
+            </div>
+            <div class="user_tip" ng-if="tip">
+              <img src="imgs/lj/user_tip.png" alt="">
+            </div>
+        </div>
+        <div class="userCenter-list">
+        	<ul>
+        	<a href="#/Nopay" nav-direction="forward">
+        		<li>
+        			<img src="imgs/lj/account.png"/>
+        			<p class="pay">待付款</p>
+        		</li>
+        	</a>
+        	<a href="#/Pay" nav-direction="forward">
+        		<li>
+        			<img src="imgs/lj/obligation.png"/>
+        			<p class="pay">已付款</p>
+        		</li>
+        	</a>
+        	<a href="#/Noevaluate" nav-direction="forward">
+        		<li>
+        			<img src="imgs/lj/evaluate.png"/>
+        			<p class="pay">待评价</p>
+        		</li>
+        	</a>
+        	<a href="#/lose-efficacy" nav-direction="forward">
+        		<li>
+        			<img src="imgs/lj/Expired.png"/>
+        			<p class="pay">已结束</p>
+        		</li>
+        	</a>
+        	</ul>
+        </div>
+     <div class=" userCenter-setting-list">
+        <div class="item">
+					<div class="center" ui-sref="Consume" nav-direction="forward">
+						<p>
+							<img src="imgs/lj/runningwater.png"/>
+
+						</p>
+						<span style="margin-left: 10px;font-size: 0.4rem;">消费流水</span>
+						<i>
+							<img src="imgs/lj/arrows.png" alt="" />
+						</i>
+					</div>
+		</div>
+		<div class="item">
+					<div class="center" ui-sref="beLandlord" nav-direction="forward">
+						<p>
+							<img src="imgs/lj/join.png"/>
+
+						</p>
+						<span style="margin-left: 10px;font-size: 0.4rem;">加入我们</span>
+						<i>
+							<img src="imgs/lj/arrows.png" alt="" />
+						</i>
+					</div>
+		</div>
+		<div class="item">
+					<div class="center"  nav-direction="forward">
+						<p>
+							<img src="imgs/lj/about.png"/>
+
+						</p>
+						<span style="margin-left: 10px;font-size: 0.4rem;">关于</span>
+						<i>
+							<img src="imgs/lj/arrows.png" alt="" />
+						</i>
+					</div>
+				</div>
+				</a>
+     </div>
+		</div>
+	</div>
+	</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,165 @@
+.joinUs_wrap {
+  background-color: $ajk_backColor;
+  height: 100%;
+ .intr{
+   background-color: #fff;
+   margin-bottom: px2rem(20);
+   >div{
+     height: px2rem(100);
+     position: relative;
+     &::before{
+       @include borderMixinBottom;
+     }
+     @extend %flex;
+     @extend %flexCrossCenter;
+     >span{
+       @include font-dpr(13px);
+     }
+     >p{
+       padding: px2rem(30);
+       -webkit-flex-grow:1;
+       flex-grow: 1;
+       line-height: px2rem(100);
+       @include font-dpr(13px);
+     }
+     >input{
+       -webkit-flex-grow:1;
+       flex-grow: 1;
+       height: px2rem(60);
+       line-height: px2rem(60);
+       @include font-dpr(13px);
+       padding-left: px2rem(10);
+     }
+   }
+   >div:first-child{
+     margin-left: px2rem(30);
+     @extend %flexMainJustify;
+   }
+   >div:last-child{
+     padding-left: px2rem(30);
+   }
+ }
+.detailintr{
+  >div{
+    margin-left: px2rem(30);
+    padding-left: 0!important;
+  }
+}
+  .upload_idcard {
+    background-color: #fff;
+    width: 100%;
+    height: px2rem(420);
+    @extend %flex;
+    @extend %flexMainCenter;
+    @extend %flexCrossCenter;
+    @extend %flexDirTop;
+    position: relative;
+    &::before{
+      @include borderMixinBottom;
+    }
+    .id_Card {
+      width: px2rem(690);
+      height: px2rem(210);
+      margin-left: px2rem(30);
+      margin-right: px2rem(30);
+      margin-top: px2rem(35);
+      @extend %flex;
+      @extend %flexMainJustify;
+      margin-bottom: px2rem(10);
+      &.img {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        img {
+          display: inline-block;
+          width: px2rem(230);
+          height: px2rem(200);
+          margin: px2rem(5) px2rem(15);
+        }
+      }
+      > div {
+        width: px2rem(330);
+        height: px2rem(210);
+        border: 1px solid $ajk_borderColor;
+        @extend %flex;
+        @extend %flexCrossCenter;
+        @extend %flexDirTop;
+        > img {
+          width: px2rem(44);
+          height: px2rem(44);
+          margin-top: px2rem(60);
+        }
+        span {
+          width: px2rem(44);
+          height: px2rem(44);
+        }
+        p {
+          color: #000;
+          margin-top: px2rem(50);
+         @include font-dpr(10px);
+        }
+      }
+    }
+
+    .item {
+      margin-top: px2rem(30);
+      border: none;
+      width: px2rem(520);
+      -webkit-align-items:flex-start;
+      align-items: flex-start;
+      span {
+        width: px2rem(100);
+        text-align: center;
+        color: #ababab;
+        line-height: px2rem(30);
+        padding: 0;
+        @include font-dpr(12px);
+      }
+
+      p {
+        width: px2rem(420);
+        white-space: normal;
+        @include font-dpr(12px);
+        color: #ababab;
+        line-height: px2rem(30);
+      }
+    }
+  }
+
+  .address {
+    margin-top: px2rem(20);
+
+    i {
+      color: $ajk_fontColr;
+      width: px2rem(32);
+      @include font-dpr(16px);
+    }
+
+    .city_picker {
+      @extend %flex;
+      @extend %flexMainJustify;
+      @extend %flexCrossCenter;
+      @include font-dpr(13px);
+
+      .right {
+        display: inline-block;
+        width: px2rem(16);
+        height: px2rem(28);
+        background: url(../imgs/wcj/see_house/right_arr.png)no-repeat;
+        background-size: px2rem(16) px2rem(28);
+        margin-right: px2rem(30);
+      }
+    }
+  }
+
+  .submit {
+    width: px2rem(692);
+    margin: px2rem(50) auto;
+
+    button {
+      border-radius: px2rem(10);
+    }
+  }
+}
+.item-icon-right .icon{
+  @include font-dpr(12px);
+}

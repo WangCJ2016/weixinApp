@@ -1,0 +1,33 @@
+.discover{
+    width:px2rem(110);
+    height:px2rem(158);
+    position:fixed;
+    top:30%;
+    left:50%;
+    margin-top:px2rem(-79);
+    margin-left:px2rem(-55);
+    p{
+        @include font-dpr(13px);
+        line-height: px2rem(66);
+        color:#b3b3b3;
+    }
+}
+#mapContainer{
+  height: 100%;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+  [data-dpr="2"] &{
+    width: 50%;
+    height: 50%;
+    transform: scale(2);
+    transform-origin: 0 0;
+  }
+  [data-dpr="3"] &{
+    width: 33.3%;
+    height: 33.3%;
+    transform: scale(3);
+    transform-origin: 0 0;
+  }
+}

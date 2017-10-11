@@ -1,0 +1,41 @@
+<ion-view title={{title}}>
+  <ion-nav-buttons side="left">
+     <button class="button button-clear ajk_back" ng-click="goback()"></button>
+ </ion-nav-buttons>
+ <ion-content class='transform_scroll'  style="overflow: hidden;background-color: #000">
+  <div class="slide-pot">
+    <span class="pot" ng-repeat='pot in potArray' ng-class='{active: $index === airState}'></span>
+  </div>
+  <div style="width: 100%; height: 100%; overflow: hidden;">
+    <div class="tvArrays" 
+    on-swipe-right="onSwipeRight($event)" 
+    on-swipe-left="onSwipeLeft($event)"
+    style="width: {{length}}00%;transform: translateX(-{{perWidth * airState}}%);">
+   <div class="airCondition_wrap" ng-repeat='airCondition in airConditionArrays' style="width: {{perWidth}}%">
+     <section class="display">
+       <div>
+       <div class="speed">
+         <p><span>风速</span><span class="divier"></span></p>
+         <p class="model"><span>模式</span><img src="imgs/wcj/airCondition/snow.png" alt=""><span ng-click='changeModel()'>{{airCondition.model}}</span></p>
+       </div>
+       <div class="tem">
+         <p>设置温度：--</p>
+         <p>{{temp}}℃</p>
+       </div>
+       </div>
+     </section>
+     <section class="roundCtrl">
+       <span class="up"
+       ng-click='tempAdd();'>
+       <img src="imgs/wcj/airCondition/temPlus.png" alt=""></span>
+       <span class="down" ng-click="tempReduce();">
+        <img src="imgs/wcj/airCondition/temMunis.png" alt=""></span>
+       <span class="left" ng-click="changeModel();"><img src="imgs/wcj/airCondition/speed.png" alt=""></span>
+       <span class="right"><img src="imgs/wcj/airCondition/wind.png" alt=""></span>
+       <span class="ok" ng-click='off(airCondition.deviceId)'>OFF</span>
+     </section>
+   </div>
+    </div>
+ </div>
+ </ion-content>
+ </ion-view>

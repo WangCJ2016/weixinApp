@@ -1,0 +1,15 @@
+<ion-view hide-nav-bar='true'>
+	<ion-content style='background-color: #000;'>
+		     <div class="picShow_wrap">
+		     <div class="blank"></div>
+		      <div class="back" native-ui-sref='hotelPics' native-options="{type: 'fade', duration:500}"></div>
+		     	<ion-slide-box id='slide' class='slide' active-slide='index'>
+                    <ion-slide ng-repeat='img in imgs track by $index'>
+                        <div class="box">
+                          <img ng-src="{{img}}" alt="">
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+		     </div>
+	</ion-content>
+</ion-view>
