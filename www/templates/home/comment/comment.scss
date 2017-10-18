@@ -11,7 +11,7 @@
     }
    .card{box-shadow: none;border-radius: 0}
     .comment_all {
-        @extend %flex;
+        display: flex;
         border-width: 0;
         position: relative;
         &:before{
@@ -99,8 +99,8 @@
              opacity: 0.2;
         }
         .about {
-          @extend %flex;
-          @extend %flexMainJustify;
+          display: flex;
+          justify-content: space-between;
             padding-bottom: px2rem(25);
             height: px2rem(70);
             a {

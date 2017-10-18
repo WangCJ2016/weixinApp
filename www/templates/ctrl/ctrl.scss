@@ -28,8 +28,8 @@
            width: px2rem(600);
            height:100%;
            margin:0 auto;
-           @extend %flex;
-           @extend %flexMainJustifyRound;
+           display: flex;
+           justify-content: space-around;
            span{
             line-height:px2rem(98);
             width:px2rem(100);

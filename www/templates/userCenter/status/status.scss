@@ -2,8 +2,8 @@
     height:px2rem(224);
     width:100%;
     background:$ajk_color;
-    @extend %flex;
-    @extend %flexMainJustify;
+    display: flex;
+    justify-content: space-between;
     padding:0 px2rem(30) 0 px2rem(70);
     .status-cont{
         height:100%;
@@ -63,7 +63,7 @@
        width: 100%;
        @include font-dpr(13px);
        margin-bottom:px2rem(22);
-       @extend %flex;
+       display: flex;
        i{
            display:block;
            width:px2rem(150);

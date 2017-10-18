@@ -1,0 +1,38 @@
+
+<ion-modal-view class='city-picker-modal'>
+<div class="city_picker slide-up">
+  <div class="city_bg"></div>
+      <div class="city_picker_data">
+        <header class="city_picker_header">
+          <span ng-click='complete();'>完成</span>
+        </header>
+        <div class="city_picker_inner" id='city_picker_inner'>
+          <div class="row">
+            <div class="colo col-33">
+              <ion-scroll delegate-handle="provinceScroll" on-scroll="provinceSelet()">
+                <ul>
+                  <li ng-repeat='province in cityData'>{{province.name}}</li>
+                </ul>
+              </ion-scroll>
+            </div>
+            <div class="colo col-33">
+              <ion-scroll delegate-handle="cityScroll" on-scroll='citySelet()'>
+                <ul>
+                   <li ng-repeat='subCity in subCitys'>{{subCity.name}}</li>
+                </ul>
+              </ion-scroll>
+            </div>
+            <div class="colo col-33">
+              <ion-scroll delegate-handle="townScroll" on-scroll='townSelet()'>
+                <ul>
+                   <li ng-repeat='subTown in subTowns'>{{subTown.name}}</li>
+                </ul>
+              </ion-scroll>
+            </div>
+          </div>
+          <div class="city_picker_select"></div>
+        </div>
+
+      </div>
+</div>
+</ion-modal-view>

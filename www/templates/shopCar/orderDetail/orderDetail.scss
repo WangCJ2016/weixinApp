@@ -25,9 +25,9 @@
         		text-align: center;
         		color: #fff;
         		@include font-dpr(17px);
-            @extend %flex;
-            @extend %flexMainJustify;
-            @extend %flexCrossCenter;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         		>span{
         			display:inline-block;
         			width:px2rem(24);
@@ -56,9 +56,9 @@
                 height:px2rem(350);
             }
             .rooms{
-              @extend %flex;
-              @extend %flexMainJustify;
-              @extend %flexWrap;
+              display: flex;
+              justify-content: space-between;
+              flex-wrap:wrap;
                 overflow: hidden;
                 margin: 0 px2rem(58);
             }
@@ -84,84 +84,13 @@
             top:px2rem(44)!important;
         }
     }
-    // .mess{
-    //   background-color: #fff;
-    //   >div:first-child{
-    //     margin-left: px2rem(30);
-    //     span{
-    //       vertical-align: text-top;
-    //     }
-    //   }
-    //   >div:last-child{
-    //     padding-left: px2rem(30);
-    //   }
-    // 	.mess_detail{
-    // 		height:px2rem(100);
-    //     @extend %flex;
-    //     @extend %flexMainJustify;
-    //     @extend %flexCrossCenter;
-    // 		position: relative;
-    //     &::before{
-    //       @include borderMixinBottom;
-    //     }
-    // 		.first{
-    // 			@include font-dpr(13px);
-    // 			i{
-    // 				display:inline-block;
-    // 				width:px2rem(29);
-    // 				height:px2rem(29);
-    //
-    // 				margin-left:px2rem(20);
-    //         vertical-align: text-top;
-    // 			}
-    //       .bg{
-    //         background: url(../imgs/wcj/orderDetail/why.png) no-repeat;
-    // 				background-size:px2rem(29) px2rem(29);
-    //       }
-    // 		}
-    // 		.second{
-    //       color: #000;
-    // 			@include font-dpr(13px);
-    // 			line-height:px2rem(28);
-    //       padding-right: px2rem(30);
-    // 			i{
-    // 				display:inline-block;
-    // 				width:px2rem(16);
-    // 				height:px2rem(28);
-    // 				background: url(../imgs/wcj/orderDetail/right.png) no-repeat;
-    // 				background-size:px2rem(16) px2rem(28);
-    // 				margin-left:px2rem(20);
-    // 			}
-    // 		}
-    // 		input{
-    // 			@include font-dpr(13px);
-    // 			display:inline-block;
-    // 			height:px2rem(60);
-    // 			line-height:px2rem(60);
-    // 		}
-    // 		>span:last-child{
-    // 			display:inline-block;
-    // 				width:px2rem(55);
-    // 				height:px2rem(55);
-    //         margin-right: px2rem(30);
-    // 				background-size:px2rem(55) px2rem(55);
-    //
-    // 		}
-    // 		.bgpic{
-    // 				background: url(../imgs/wcj/orderDetail/person.png) no-repeat;
-    // 		}
-    // 		.bgpic1{
-    //                background: url(../imgs/wcj/orderDetail/comunication.png) no-repeat;
-    // 		}
-    // 	}
-    //
-    // }
+   
     .divier{
     		height:px2rem(60);
     		background-color:$ajk_backColor;
     		padding:0 px2rem(30);
-        @extend %flex;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
     		@include font-dpr(9px);
     		color:rgb(175,175,175);
     		>span:first-child{
@@ -178,8 +107,9 @@
     		}
     	}
     	.more{
-        @extend %flex;
-        @extend %flexCrossCenter;
+       
+        display: flex;
+        align-items: center;
     		height:px2rem(100);
     		border-bottom:1px solid $ajk_borderColor;
     		input{

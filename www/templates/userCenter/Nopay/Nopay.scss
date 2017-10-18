@@ -48,7 +48,7 @@
                 @include font-dpr(12px);
                 color: #ababab;
                 line-height:px2rem(24);
-                @extend %flex;
+                display: flex;
                  span{
                      margin-left:px2rem(30);
                      @include font-dpr(12px);

@@ -444,6 +444,16 @@ angular.module('starter.services', [])
 
         });
       },
+      // 网页支付获取参数接口
+      getOrderInfo: function(data) {
+        data.token = localStorage.getItem('token');
+        return $http({　
+          method: 'POST',
+          url: AJKUrl + "op/op_getOrderInfo",
+          params: data
+        });
+      },
+
       //服务
       customerCallService: function(data) {
         data.token = localStorage.getItem('token');
@@ -454,7 +464,7 @@ angular.module('starter.services', [])
         });
       },
       //获取服务进度
-      serviceHandleRecords:function(data){
+      serviceHandleRecords: function(data) {
         data.token = localStorage.getItem('token');
         return $http({　
           method: 'POST',
@@ -472,7 +482,7 @@ angular.module('starter.services', [])
         });
       },
       //获取客户信息
-      getCustomerInfo:function(data){
+      getCustomerInfo: function(data) {
         data.token = localStorage.getItem('token');
         return $http({　
           method: 'POST',
@@ -480,7 +490,7 @@ angular.module('starter.services', [])
           params: data
         });
       },
-      queryCustomerOrders:function(data){
+      queryCustomerOrders: function(data) {
         data.token = localStorage.getItem('token');
         return $http({　
           method: 'POST',
@@ -539,7 +549,16 @@ angular.module('starter.services', [])
         data.token = localStorage.getItem('token');
         return $http({　
           method: 'POST',
-          url: AJKUrl + "op/op_queryHostDeviceByType",
+          url: AJKUrl + "we/we_queryHostDeviceByType",
+          params: data
+        });
+      },
+      //获取路数信息
+      querySmartDeviceWays: function(data) {
+        data.token = localStorage.getItem('token');
+        return $http({　
+          method: 'POST',
+          url: AJKUrl + "we/we_querySmartDeviceWays",
           params: data
         });
       },
@@ -549,6 +568,15 @@ angular.module('starter.services', [])
         return $http({　
           method: 'POST',
           url: AJKUrl + "we/we_queryTvDevices",
+          params: data
+        });
+      },
+       // 退出上传灯的状态
+      modifyWaysStatus: function(data) {
+        data.token = localStorage.getItem('token');
+        return $http({　
+          method: 'POST',
+          url: AJKUrl + "we/we_modifyWaysStatus",
           params: data
         });
       },
@@ -592,13 +620,13 @@ angular.module('starter.services', [])
         });
       },
       //坐标转换
-        lngLat:function(data){
-          return $http({　
-              method: 'GET',
-              url:'http://restapi.amap.com/v3/assistant/coordinate/convert',
-              params: data
-          });
-        },
+      lngLat: function(data) {
+        return $http({　
+          method: 'GET',
+          url: 'http://restapi.amap.com/v3/assistant/coordinate/convert',
+          params: data
+        });
+      },
       //获取商圈数据
       getBussinessArea: function() {
         return $http({　
@@ -610,7 +638,52 @@ angular.module('starter.services', [])
 
   })
   .factory('hotelPics', function() {
-    return pics = [];
+    return { a: 1, b: 2 };
+  })
+  .factory('quadrant', function() {
+    var quadrant =  function quadrant(x, x0, y, y0) {
+      if (x <= x0 && y <= y0) {
+        return 3
+      }
+      if (x < x0 && y > y0) {
+        return 4
+      }
+      if (x > x0 && y < y0) {
+        return 2
+      }
+      if (x >= x0 && y >= y0) {
+        return 1
+      }
+    }
+    return quadrant
+  })
+  .factory('encode64', function() {
+    var encode64 = function encode64(input) {
+      var keyStr = "ABCDEFGHIJKLMNOP" + "QRSTUVWXYZabcdef" + "ghijklmnopqrstuv" + "wxyz0123456789+/" + "=";
+      var output = "";
+      var chr1, chr2, chr3 = "";
+      var enc1, enc2, enc3, enc4 = "";
+      var i = 0;
+      do {
+        chr1 = input.charCodeAt(i++);
+        chr2 = input.charCodeAt(i++);
+        chr3 = input.charCodeAt(i++);
+        enc1 = chr1 >> 2;
+        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+        enc4 = chr3 & 63;
+        if (isNaN(chr2)) {
+          enc3 = enc4 = 64;
+        } else if (isNaN(chr3)) {
+          enc4 = 64;
+        }
+        output = output + keyStr.charAt(enc1) + keyStr.charAt(enc2) + keyStr.charAt(enc3) + keyStr.charAt(enc4);
+        chr1 = chr2 = chr3 = "";
+        enc1 = enc2 = enc3 = enc4 = "";
+      } while (i < input.length);
+      return output;
+    }
+    return encode64
   })
   .factory('cityPickerData', function() {
     return [{

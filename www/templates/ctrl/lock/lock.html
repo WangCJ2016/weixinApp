@@ -1,39 +1,24 @@
-<ion-view title="电子卡">
+<ion-view title="门卡">
   <ion-nav-buttons side="left" get-height>
     <button class="button button-clear ajk_back" ng-click="goback()"></button>
   </ion-nav-buttons>
   <ion-content style="top:0!important" overflow-scroll="true" style="overflow: hidden">
-    <div class="roomPower_wrap">
-      <section class="blank"></section>
-      <section class="roomCard">
-          <p><img ng-src="imgs/wcj/lock/three.png" alt=""></p>
-          <p>{{name}}</p>
-          <p class="card">电子房卡</p>
-          <div class="key" id='key' get-poskey my-touchstart="touchStart($event)"  my-touchmove my-touchend="touchEnd($event)">
-              <img ng-src="imgs/wcj/lock/key.png" alt="">
+    <div class='roomCard_bg'> 
+        <div class='round_bg'> 
+          <div class='figure figure_{{arry.name}}' ng-repeat='arry in arrys' ng-click='lockCtrl(arry.name, $index)' ng-class='{active: $index===activeIndex}'>
+              <div>
+                  <img ng-src='imgs/wcj/lock/{{arry.name}}.png' alt="" ng-if='$index!==activeIndex' />  
+                  <img ng-src='imgs/wcj/lock/{{arry.name}}_active.png' ng-if='$index===activeIndex'  alt=""/>       
+              </div>
+              <p class='selectTitle'>{{arry.title}}</p>
+          </div>    
+          <div class='center'>
+            <p class='center_name'>{{name}}</p>
+            <p class='center_num'>{{num}}</p>
           </div>
-      </section>
-        <div class='roomPower'>
-            <div get-poselevator class='elevator' ng-class='{selectIndex0:elevator}' id='elevator'>
-                <figure>
-                    <div></div>
-                    <figcaption>电梯</figcaption>
-                </figure>
-            </div>
-            <div get-posdoor  class='door' ng-class='{selectIndex1:door}' id ="door">
-                <figure>
-                    <div></div>
-                    <figcaption>门</figcaption>
-                </figure>
-            </div>
-            <div get-posstream class='stream' ng-class='{selectIndex2:stream}' id='stream'>
-                <figure>
-                    <div></div>
-                    <figcaption>电源</figcaption>
-                </figure>
-            </div>
-        </div>
+          <img src='imgs/wcj/lock/pots.png' class='pots_top' alt=""/>
 
-    </div>
+        </div>
+      </div>
 </ion-content>
 </ion-view>

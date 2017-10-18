@@ -4,10 +4,8 @@
     	background-color:#fff;
     	padding: 0 px2rem(30);
     	height:px2rem(100);
-      @extend %flex;
-      @extend %flexMainJustify;
-    	display: flex;
-    	justify-content:space-between;
+      display: flex;
+      justify-content: space-between;
     	span{
     		line-height:px2rem(100);
     	}

@@ -2,16 +2,16 @@
    background:rgb(255,179,84) url(../imgs/lj/userBg.png)no-repeat center 70%;
    background-size: 100% ;
     width:100%;
-    height:px2rem(400);
+    height:px2rem(500);
     position:relative;
     >p{
       height: px2rem(90)
     }
     >div{
-      @extend %flex;
-      @extend %flexMainCenter;
-      @extend %flexCrossCenter;
-      @extend %flexDirTop;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
       #logo{
           width: px2rem(130);
           height: px2rem(130);
@@ -36,12 +36,15 @@
 .userCenter-list{
     width:100%;
     height:px2rem(130);
-    background-color: white;
+    position: absolute;
+    bottom: 0;
+    line-height: px2rem(130);
     ul{
         width: 100%;
         height:100%;
-        @extend %flex;
-        @extend %flexMainJustify;
+       
+        display: flex;
+        justify-content: space-between;
         >a{
           width: 25%
         }
@@ -51,14 +54,10 @@
        text-align: center;
        height:100%;
        width:100%;
-       img{
-           width:px2rem(55);
-           height: px2rem(50);
-       }
        .pay{
-           @include font-dpr(13px);
-            color: #000;
-            line-height: px2rem(50);
+           color: #fff;
+    @include font-dpr(15px);
+            line-height: px2rem(130);
        }
 
     }
@@ -81,7 +80,7 @@
         .center{
             height:100%;
             margin-left: px2rem(30);
-            @extend %flex;
+            display: flex;
             p{
                 height:100%;
                 width:px2rem(61);

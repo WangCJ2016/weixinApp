@@ -57,9 +57,9 @@
         margin: px2rem(30);
         position: relative;
         border-radius: px2rem(10);
-        @extend %flex;
-        @extend %flexMainCenter;
-        @extend %flexCrossCenter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: px2rem(55);
             padding-top: px2rem(10);

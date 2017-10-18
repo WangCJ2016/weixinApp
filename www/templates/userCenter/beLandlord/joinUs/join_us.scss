@@ -10,8 +10,8 @@
      &::before{
        @include borderMixinBottom;
      }
-     @extend %flex;
-     @extend %flexCrossCenter;
+     display: flex;
+     align-items: center;
      >span{
        @include font-dpr(13px);
      }
@@ -33,7 +33,7 @@
    }
    >div:first-child{
      margin-left: px2rem(30);
-     @extend %flexMainJustify;
+     justify-content: space-between;
    }
    >div:last-child{
      padding-left: px2rem(30);
@@ -49,10 +49,10 @@
     background-color: #fff;
     width: 100%;
     height: px2rem(420);
-    @extend %flex;
-    @extend %flexMainCenter;
-    @extend %flexCrossCenter;
-    @extend %flexDirTop;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     &::before{
       @include borderMixinBottom;
@@ -63,8 +63,8 @@
       margin-left: px2rem(30);
       margin-right: px2rem(30);
       margin-top: px2rem(35);
-      @extend %flex;
-      @extend %flexMainJustify;
+      display: flex;
+      justify-content: space-between;
       margin-bottom: px2rem(10);
       &.img {
         -webkit-flex-direction: row;
@@ -80,9 +80,9 @@
         width: px2rem(330);
         height: px2rem(210);
         border: 1px solid $ajk_borderColor;
-        @extend %flex;
-        @extend %flexCrossCenter;
-        @extend %flexDirTop;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         > img {
           width: px2rem(44);
           height: px2rem(44);
@@ -135,9 +135,9 @@
     }
 
     .city_picker {
-      @extend %flex;
-      @extend %flexMainJustify;
-      @extend %flexCrossCenter;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       @include font-dpr(13px);
 
       .right {

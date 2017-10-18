@@ -1,91 +1,217 @@
 // @media screen and (min-width:) {
 //
 // }
-.my_checkIn_wrap{
-     position: absolute;
-     width: 100%;
-     height:100%;
-     .checkIn-back{
-       width: px2rem(100);
+.my_checkIn_wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../imgs/kwn/checkIn/home_bg.png') no-repeat;
+  background-size: 100% 100%;
+  .checkIn-back {
+    width: px2rem(100);
     height: px2rem(60);
     padding-left: px2rem(30);
     display: inline-block;
-    @extend %flex;
-    @extend %flexCrossCenter;
-    img{
+    display: flex;
+    align-items: center;
+    img {
       width: px2rem(24);
       height: px2rem(40);
     }
-     }
-     .checkIn_cont{
-         width:100%;
-         .checkIn_cont_add{
-           @extend %flex;
-           @extend %flexMainJustify;
-           @extend %flexCrossCenter;
-             width:100%;
-             height:px2rem(64);
-             margin-top: px2rem(60);
-             p{
-                position: absolute;
-                @extend %flex;
-                @extend %flexCrossCenter;
-                @extend %flexMainCenter;
-                 width:px2rem(15);
-                 height: px2rem(200);
-                 background: url('../imgs/kwn/checkIn/tanghuang.png') repeat ;
-                 background-size: px2rem(15) 100%;
-                 line-height: px2rem(60);
-                 text-indent: px2rem(20);
-                 top:px2rem(0);
-                 right: px2rem(43);
-                 opacity: .8;
-                 transition: height 2s ease-out;
-                 -webkit-transition: height 2s ease-out;
-                 z-index: 99;
-                 img{
-                  width: px2rem(96);
-                  height: px2rem(100);
-                  position: absolute;
-                  bottom: 0;
-                  right: px2rem(-34);
-                  bottom: px2rem(-50);
-                 }
-             }
-         }
-         h2{
-             width:100%;
-             text-align: center;
-             font:px2rem(46)/px2rem(46) " PingFang SC Medium";
-             color:#ffb354;
-             margin:px2rem(16) 0 px2rem(140) 0;
-         }
-         ul{
-           @extend %flex;
-           @extend %flexMainJustify;
-           @extend %flexWrap;
-             max-width: px2rem(430);
-             margin: 0 auto;
-             li{
-                 width:px2rem(162);
-                 height:px2rem(162);
-                 margin-bottom:px2rem(100);
-                 img{
-                     width:100%;
-                     height:100%;
-                 }
-             }
-         }
-     }
-     .bg{
-       position: absolute;
-       bottom: px2rem(-3);
-       left: 0;
-       width: 100%;
-       height: px2rem(160);
-       img{
-         width: 100%;
-         height: px2rem(160);
-       }
-     }
- }
+  }
+  .checkIn_cont {
+    width: 100%;
+    .checkIn_cont_add {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: px2rem(64);
+      margin-top: px2rem(60);
+      p {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: px2rem(15);
+        height: px2rem(200);
+        background: url('../imgs/kwn/checkIn/tanghuang.png') repeat;
+        background-size: px2rem(15) 100%;
+        line-height: px2rem(60);
+        text-indent: px2rem(20);
+        top: px2rem(0);
+        right: px2rem(43);
+        opacity: .8;
+        transition: height 2s ease-out;
+        -webkit-transition: height 2s ease-out;
+        z-index: 99;
+        img {
+          width: px2rem(96);
+          height: px2rem(100);
+          position: absolute;
+          bottom: 0;
+          right: px2rem(-34);
+          bottom: px2rem(-50);
+        }
+      }
+    }
+  }
+  .home_figure {
+    border: 0.04rem solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    transition: tranform 1s ease-out;
+  }
+  .home_figure>img {
+    padding-top: 0.2rem
+  }
+  .home_figure::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    transition-delay: 0.2s;
+    transition: transform 1s;
+    z-index: -1;
+    opacity: 0;
+  }
+  .home_figure.active:after {
+    animation: sonarEffect 1.3s ease-out 75ms infinite;
+  }
+  @keyframes sonarEffect {
+    0% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 0.5;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 1px 2px #978671, 0 0 0 2px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 1px 10px #978671, 0 0 0 10px rgba(255, 255, 255, 0.5);
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  .active {
+    transform: scale(1, 1);
+  }
+  .light {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(680);
+    left: 50%;
+    margin-left: px2rem(-74);
+  }
+  .light>img {
+    width: px2rem(74);
+    padding-top: 0.2rem
+  }
+  .light>figcaption {
+    margin-top: px2rem(10);
+    @include font-dpr(15px)
+  }
+
+  .curtain {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(198);
+    left: 50%;
+    margin-left: px2rem(-79);
+  }
+  .curtain>img {
+    width: px2rem(62);
+    padding-top: 0.2rem;
+  }
+  .curtain>figcaption {
+    margin-top: 0.4rem;
+    @include font-dpr(15px)
+  }
+
+  .lock {
+    width: px2rem(204);
+    height: px2rem(204);
+    top: px2rem(396);
+    left: 50%;
+    margin-left: px2rem(-102);
+  }
+  .lock>img {
+    width: px2rem(80);
+  }
+  .lock>figcaption {
+    margin-top: 0.2rem;
+    @include font-dpr(15px)
+  }
+
+  .tv {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(330);
+    right: px2rem(64);
+  }
+  .tv>img {
+    width: px2rem(60);
+    padding-top: 0.4rem
+  }
+  .tv>figcaption {
+    @include font-dpr(15px) margin-top: 0.2rem
+  }
+
+  .service {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(330);
+    left: px2rem(64);
+  }
+  .service>img {
+    width: px2rem(68);
+    padding-top: 0.2rem;
+  }
+  .service>figcaption {
+    @include font-dpr(15px) margin-top: 0.2rem;
+  }
+  .air {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(528);
+    left: px2rem(64);
+  }
+  .air>img {
+    width: px2rem(60);
+    padding-top: 0.4rem
+  }
+  .air>figcaption {
+    @include font-dpr(15px) margin-top: 0.2rem;
+  }
+
+  .model {
+    width: px2rem(158);
+    height: px2rem(158);
+    top: px2rem(528);
+    right: px2rem(64);
+  }
+  .model>img {
+    width: px2rem(60);
+    padding-top: 0.4rem;
+  }
+  .model>figcaption {
+    margin-top: 0.2rem;
+    @include font-dpr(15px)
+  }
+  .slogan {
+    position: absolute;
+    width: px2rem(422);
+    left: 50%;
+    margin-left: px2rem(-211);
+    bottom: px2rem(102);
+    >img {
+      width: 100%;
+    }
+  }
+}

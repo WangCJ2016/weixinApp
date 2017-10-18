@@ -3,10 +3,9 @@
 }
 .myHouse_wrap{
     &_detail{
-
       height:px2rem(160);
-      @extend %flex;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
      position: relative;
      &::before{
        @include borderMixinBottom;
@@ -19,9 +18,9 @@
       >div{
       	height:px2rem(120);
       	margin-left:px2rem(20);
-        @extend %flex;
-        @extend %flexMainCenter;
-        @extend %flexDirTop;
+        display: flex;
+        justify-content: center;
+         flex-direction: column;
       	h2{
       		color: #000;
       		@include font-dpr(15px);
@@ -45,8 +44,8 @@
     }
    &_btn{
    	 height:px2rem(90);
-     @extend %flex;
-     @extend %flexCrossCenter;
+     display: flex;
+     align-items: center;
    	 background-color: $ajk_backColor;
      position: relative;
      &::before{

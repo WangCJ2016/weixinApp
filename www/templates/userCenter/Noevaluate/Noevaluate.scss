@@ -4,9 +4,9 @@
   .Noevaluate-head {
     height: px2rem(90);
     width: 100%;
-    @extend %flex;
-    @extend %flexMainJustify;
-    @extend %flexCrossCenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     h1 {
       margin-left: px2rem(30);
       @include font-dpr(15px);
@@ -26,8 +26,8 @@
     background-color: #FAF9F9;
     padding-top: px2rem(10);
     margin-bottom: px2rem(20);
-    @extend %flex;
-    @extend %flexCrossCenter;
+    display: flex;
+    align-items: center;
     position: relative;
 
     &::before {
@@ -69,11 +69,9 @@
       height: px2rem(120);
       margin-left: px2rem(20);
       flex-grow: 1;
-      -wekit-flex-grow: 1;
-      @extend %flex;
-      @extend %flexDirTop;
-      @extend %flexMainJustify;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .address {
         display: inline-block;
         @include font-dpr(12px);

@@ -114,6 +114,7 @@ angular.module('ctrl-controller', [])
           pageNo: 1,
           pageSize: 5
         }).success(function(res) {
+          console.log(res)
           if (res.success) {
             $scope.beHouses = res.result;
           } else {
@@ -145,6 +146,7 @@ angular.module('ctrl-controller', [])
         sessionStorage.setItem('hotelName', hotelName);
         sessionStorage.setItem('houseName', houseName);
         sessionStorage.setItem('subOrderCode', subOrderCode);
+        
         var data = {
           houseId: houseId,
           subOrderId: subOrderCode,

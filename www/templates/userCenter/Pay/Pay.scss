@@ -35,7 +35,7 @@
                 @include font-dpr(15px);
                 color: #000;
                 line-height:px2rem(35);
-                @extend %flex;
+                display: flex;
                  span{
                      margin-left:px2rem(30);
                      @include font-dpr(12px);

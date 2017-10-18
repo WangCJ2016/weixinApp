@@ -2,7 +2,7 @@
     width:100%;
     height:px2rem(80);
     background:#fff;
-    @extend %flex;
+    display: flex;
     padding:0 px2rem(30);
     justify-content: space-between;
     margin-bottom:px2rem(20);
@@ -39,7 +39,7 @@
             padding-left: px2rem(30);
             width:100%;
             height:px2rem(90);
-            @extend %flex;
+            display: flex;
             @include font-dpr(15px);
             line-height: px2rem(90);
             color:#000;
@@ -50,7 +50,7 @@
              border-bottom:1px solid $ajk_borderColor;
              padding-left: px2rem(30);
              float:left;
-             @extend %flex;
+             display: flex;
             background-color:#FAF9F9 ;
             .list-pic{
                width:px2rem(150);
@@ -69,7 +69,7 @@
                   @include font-dpr(12px);
                   line-height: px2rem(24);
                   color:#ababab;
-                  @extend %flex;
+                  display: flex;
                   justify-content: space-between;
                   margin-bottom:px2rem(22);
                   span{

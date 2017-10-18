@@ -60,8 +60,8 @@
 
                 background-color:$ajk_backColor;
                 line-height:px2rem(90);
-                @extend %flex;
-                @extend %flexMainJustify;
+                display: flex;
+                justify-content: space-between;
                 padding: 0 px2rem(20);
                 span:last-child{
                     color: $ajk_color;

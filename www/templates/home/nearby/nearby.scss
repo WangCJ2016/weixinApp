@@ -31,9 +31,9 @@
       @include borderMixinBottom;
 
     }
-    @extend %flex;
+    display: flex;
+    justify-content: space-between;
     background:#fff;
-    @extend %flexMainJustify;
     padding:0 px2rem(50);
     .sort{
       padding: px2rem(20) 0 px2rem(20) px2rem(20);
@@ -94,7 +94,7 @@
     width:100%;
     .list{
         height:px2rem(220);
-        @extend %flex;
+        display: flex;
         background:#fff;
         padding:px2rem(20) px2rem(30);
         position: relative;
@@ -109,12 +109,11 @@
           width: px2rem(430);
            height:px2rem(180);
            padding-left:px2rem(20);
-           @extend %flex;
-           @extend %flexMainJustify;
-           @extend %flexDirTop;
-           @extend %flexWrap;
+           display: flex;
+           justify-content: space-between;
+           flex-direction: column;
+           flex-wrap:wrap;
            flex-grow: 1;
-           -webkit-flex-grow:1;
            h2{
                margin:0;
                @include font-dpr(15px);
@@ -166,8 +165,8 @@
 
 }
 .vertical{
-  @extend %flex;
-  @extend %flexWrap;
+  display: flex;
+  flex-wrap:wrap;
 }
 .slideDown{
   top:px2rem(80)!important;
@@ -185,7 +184,7 @@
         height:px2rem(750);
         background: #fff;
         .filtrate-list{
-          @extend %flex;
+          display: flex;
            width:100%;
            height:px2rem(630);
            border-bottom: 1px solid $ajk_borderColor;
@@ -231,8 +230,8 @@
                       color:$ajk_fontColr;
                       line-height: px2rem(90);
                       border-bottom: 1px solid $ajk_borderColor;
-                      @extend %flex;
-                      @extend %flexMainJustify;
+                      display: flex;
+                      justify-content: space-between;
                       span{
                           display:block;
                           width:px2rem(330);
@@ -260,7 +259,7 @@
                .metro{
                   width:100%;
                   max-height:px2rem(600);
-                  @extend %flex;
+                  display: flex;
                   @include font-dpr(13px);
                   color:$ajk_fontColr;
                   line-height: px2rem(100);
@@ -296,8 +295,8 @@
                          height:px2rem(100);
                          border-bottom:1px solid $ajk_borderColor;
                          text-align: center;
-                         @extend %flex;
-                         @extend %flexMainJustify;
+                         display: flex;
+                         justify-content: space-between;
                          i{
                              display: block;
                              width:px2rem(28);
@@ -325,8 +324,8 @@
         .filtrate-btn{
             width:100%;
             height:px2rem(120);
-            @extend %flex;
-            @extend %flexMainJustify;
+            display: flex;
+            justify-content: space-between;
             padding:px2rem(20) px2rem(40);
             @include font-dpr(15px);
             color:#fff;
@@ -369,8 +368,8 @@
              color:$ajk_fontColr;
              line-height: px2rem(100);
              padding:0 px2rem(70);
-             @extend %flex;
-             @extend %flexMainJustify;
+             display: flex;
+             justify-content: space-between;
              i{
                  display: block;
                  width:px2rem(28);

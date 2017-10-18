@@ -17,6 +17,7 @@ angular.module('inHouse-controller', [])
         operate: 'in'
       };
       ApiService.modifySubOrdersStatus(data).success(function(res) {
+        
         if (res.success) {
           var data = {
             houseId: $scope.house.houseId,

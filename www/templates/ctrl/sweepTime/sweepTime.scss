@@ -12,7 +12,7 @@
           @include borderMixinBottom;
         }
         line-height: px2rem(100);
-        @extend %flex;
+        display: flex;
         > p {
           @include font-dpr(13px);
         }
@@ -46,8 +46,8 @@
 
         > p:last-child {
           padding-right: px2rem(30);
-          @extend %flex;
-          @extend %flexCrossCenter;
+          display: flex;
+          align-items: center;
           color: $ajk_color;
 
           i {

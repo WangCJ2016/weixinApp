@@ -1,85 +1,175 @@
 .model_wrap {
-  @extend %flex;
-  @extend %flexWrap;
-  max-width: px2rem(750);
-  margin: 0 auto;
-  > p {
-    width: px2rem(375);
-    height: px2rem(375);
-    border-radius: px2rem(10);
-    position: relative;
-    overflow: hidden;
-    span {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
+  width: 100%;
+  height: 100%;
+  .models_bg {
+    height: 100%;
+    background: url(../imgs/wcj/model/models_bg.png);
+    background-size: 100% 100%;
+  }
+  .model_item {
+    width: px2rem(570);
+    margin: 0 auto;
+  }
+  .figure {
+    width: px2rem(222);
+    display: inline-block;
+    position: static;
+    &:nth-child(2n) {
+      margin-left: px2rem(126)
     }
   }
-  .activat::after{
-    content: '';
+  .model_img {
     display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #000;
-    animation:mymove .5s ;
-    animation-fill-mode: forwards;
-	-webkit-animation:mymove .5s ;
-  -webkit-animation-fill-mode: forwards;
+    width: px2rem(222);
+    height: px2rem(222);
+    border-radius: px2rem(30);
+    text-align: center;
+    line-height: px2rem(222);
+    border: px2rem(4) solid #8b1734;
+    transition: all 1s;
   }
-  @keyframes mymove
-{
-from {
-  top:2.5rem;
-  left: 2.5rem;
-  width: 5rem;
-  height: 5rem;
-  opacity: 0;
-}
-to {
-  opacity: .3;
-  top:-2.5rem;
-  left: -2.5rem;
-  width: 15rem;
-  height: 15rem;
-}
-}
+  .img {
+    width: 1.28rem;
+  }
+  .img_getup {
+    width: 1.28rem;
+    vertical-align: middle;
+  }
+  .img_wrap>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/common.png') no-repeat center center;
+    background-size: px2rem(122) px2rem(122);
+  }
+  .figcaption {
+    width: 100%;
+    @include font-dpr(17px);
+    text-align: center;
+    margin-top: 0.2rem;
+    color: #fff;
+  }
+  .起床 {
+    border: px2rem(4) solid #ea7f4c;
+    margin-top: 0.5rem;
+  }
+  .起床>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/getup.png') no-repeat center center;
+    background-size: px2rem(128) px2rem(120);
+  }
+  .起床.active {
+    background-color: #ea7f4c;
+  }
+  .睡眠,
+  .sleep {
+    border: px2rem(4) solid #db4e79;
+    margin-top: 0.5rem;
+  }
+  .睡眠>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/sleep.png') no-repeat center center;
+    background-size: px2rem(124) px2rem(146);
+  }
+  .睡眠.active,
+  .sleep.active {
+    background-color: #db4e79;
+  }
+  .sleep+figcaption {
+    margin-left: 1.26rem;
+  }
+  .阅读 {
+    border: px2rem(4) solid #25b394;
+    margin-top: 1rem;
+  }
+  .阅读>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/reading.png') no-repeat center center;
+    background-size: 1.48rem 1.16rem;
+  }
 
-@-webkit-keyframes mymove /* Safari and Chrome */
-{
-  from {
-    top:2.5rem;
-    left: 2.5rem;
-    width: 5rem;
-    height: 5rem;
-    opacity: 0;
+  .阅读.active {
+    background-color: #25b394;
   }
-  to {
-    opacity: .3;
-    top:-2.5rem;
-    left: -2.5rem;
-    width: 15rem;
-    height: 15rem;
+  .外出,
+  .checkout {
+    border: px2rem(4) solid #e89544;
+    margin-top: 1rem;
   }
-}
-.model_img{
-  background: url('../imgs/wcj/model/yingbin.png') no-repeat 100% 100%;
-}
-.外出情景{
-  background: url('../imgs/wcj/model/waichu.png') no-repeat 100% 100%;
-}
-.迎宾情景{
-  background: url('../imgs/wcj/model/yingbin.png') no-repeat 100% 100%;
-}
-.起床情景{
-  background: url('../imgs/wcj/model/qichuang.png') no-repeat 100% 100%;
-}
-.影视情景{
-  background: url('../imgs/wcj/model/yingshi.png') no-repeat 100% 100%;
-}
-.阅读情景{
-  background: url('../imgs/wcj/model/yuedu.png') no-repeat 100% 100%;
-}
-.睡眠情景{
-  background: url('../imgs/wcj/model/shuimian.png') no-repeat 100% 100%;
-}
+  .外出>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/checkout.png') no-repeat center center;
+    background-size: px2rem(108) px2rem(120);
+  }
+  .外出.active,
+  .checkout.active {
+    background-color: #e89544;
+  }
+
+  .影视,
+  .movie {
+    border: px2rem(4) solid #61bb7b;
+    margin-top: 1rem;
+  }
+  .影视>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/movie.png') no-repeat center center;
+    background-size: px2rem(140) px2rem(124);
+  }
+  .影视.active,
+  .movie.active {
+    background-color: #61bb7b;
+  }
+  .会客,
+  .meeting {
+    border: px2rem(4) solid #367da3;
+    margin-top: 1rem;
+  }
+  .会客>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/meeting.png') no-repeat center center;
+    background-size: px2rem(144) px2rem(118);
+  }
+  .会客.active,
+  .meeting.active {
+    background-color: #367da3;
+  }
+
+  .用餐 {
+    border: px2rem(4) solid #ea7f4c;
+    margin-top: 0.5rem;
+  }
+  .用餐>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/用餐.png') no-repeat center center;
+    background-size: 1.26rem 1.26rem;
+  }
+  .用餐.active {
+    background-color: #ea7f4c;
+  }
+  .迎宾 {
+    border: px2rem(4) solid #25b394;
+    margin-top: 1rem;
+  }
+  .迎宾>div {
+    width: 100%;
+    height: 100%;
+    background: url('../imgs/wcj/model/common.png') no-repeat center center;
+    background-size: px2rem(126) px2rem(126);
+  }
+  .迎宾.active {
+    background-color: #25b394;
+  }
+  .second {
+    margin-left: 1.26rem;
+  }
+  .second+figcaption {
+    margin-left: 1.26rem;
+  }
 }

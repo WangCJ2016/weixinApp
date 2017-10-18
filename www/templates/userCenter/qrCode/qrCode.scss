@@ -11,8 +11,8 @@
         margin: auto;
         background-color: #fff;
         .person{
-          @extend %flex;
-          @extend %flexCrossCenter;
+          display: flex;
+          align-items: center;
           padding: px2rem(40) 0 px2rem(10) 0;
           img{
                 display: inline-block;

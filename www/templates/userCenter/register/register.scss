@@ -4,8 +4,8 @@
     p{
         width:100%;
         height: px2rem(100);
-        @extend %flex;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
         border-bottom:1px solid #D8D8D8;
         position: relative;
         label{
@@ -66,8 +66,8 @@
     }
 }
 .agreement{
-  @extend %flex;
-  @extend %flexMainCenter;
+  display: flex;
+  justify-content: center;
     padding-left:px2rem(30);
     align-items:center;
     position: relative;

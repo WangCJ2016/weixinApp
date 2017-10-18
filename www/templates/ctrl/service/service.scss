@@ -1,69 +1,47 @@
-.service_wrap {
-    width: 100%;
+
+.service_wrap{
     height: 100%;
-    background-color: #f6f6f6;
-
-    > section {
-        position: relative;
-
-        &:not(:first-child) {
-            margin-top: px2rem(10);
-        }
-        height: px2rem(220);
-        @extend %flex;
-        @extend %flexMainJustify;
-        @extend %flexCrossCenter;
-        background-color: #fff;
-
-        > img {
-            width: px2rem(88);
-            height: px2rem(98);
-            margin-right: px2rem(50);
-            margin-left: px2rem(60);
-        }
-
-        > p {
-            @include font-dpr(20px);
-            margin-left: px2rem(-110);
-        }
-
-        > span {
-            display: inline-block;
-            width: 1px;
-            height: px2rem(108);
-            border-left: 1px solid #d8d8d8;
-            transform: scaleX(.5);
-            margin-right: px2rem(-44);
-        }
-
-        .toggle {
-            margin-right: px2rem(30);
-        }
-
-        &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            height: 1px;
-            border-top: 1px solid #d9d9d9;
-            transform: scaleY(.5);
-        }
-
-        &:after {
-            content: " ";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            right: 0;
-            height: 1px;
-            border-top: 1px solid #d9d9d9;
-            color: #d9d9d9;
-            -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-            -webkit-transform: scaleY(.5);
-            transform: scaleY(.5);
-        }
-    }
+.service_bg{
+  height: 100%;
+  background: url(../imgs/wcj/service/service_bg.png);
+  background-size: 100% 100%;
+}
+.marignTop{
+  width: 1px;
+  height: px2rem(60);
+}
+.rect{
+  width: px2rem(650);
+  height: px2rem(420);
+  background: url('../imgs/wcj/service/rect.png');
+  background-size: 100% 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.service_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: px2rem(250);
+  align-items: center;
+}
+.swape{
+  width: px2rem(98);
+}
+.ring{
+  width: px2rem(99);
+}
+.content{
+  @include font-dpr(15px);
+  color: #fff;
+}
+.selectedlight{
+  width: px2rem(80);
+}
+.unselectedlight{
+  width: px2rem(72)
+}
+.active{}
 }

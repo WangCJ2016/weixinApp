@@ -1,41 +1,72 @@
 <ion-view title={{title}}>
   <ion-nav-buttons side="left">
-     <button class="button button-clear ajk_back" ng-click="goback()"></button>
- </ion-nav-buttons>
- <ion-content class='transform_scroll' style="overflow-x: hidden; overflow-y:visible;background-color: rgb(236,241,245);">
-  <div class="slide-pot">
-    <span class="pot" ng-repeat='pot in potArray' ng-class='{active: $index === tvState}'></span>
-  </div>
-  <div class="tvArrays" 
-    on-swipe-right="onSwipeRight()" 
-    on-swipe-left="onSwipeLeft()"
-    style="width: {{length}}00%; transform: translateX(-{{perWidth * tvState}}%);">
-    <div class="futrue_wrap" ng-repeat='tv in tvArrays' style="width: {{perWidth}}%">
-     <section class="tv">
-       <div class="tv_item">
-         <p ng-click='tvon(tv, tv.tv_status, $index)' class='on' ng-class="{active:tv.tv_status === 'ON'}"></p>
-         <p ng-click='tvAdd(tv)' class='plus'></p>
-         <p ng-click='tvMunis(tv)' class='munis'></p>
-       </div>
-        <img ng-src="imgs/wcj/newTv/tv.png" alt="">
-     </section>
-     <section class="tv">
-       <div class="tv_item">
-         <p ng-click='tvBoxOn(tv)' class='on' ng-class="{active:tvboxswitch}"></p>
-         <p ng-click='tvBoxMute(tv)' class='mute'></p>
-         <p ng-click='tvBoxReturn(tv)' class='back'></p>
-       </div>
-       <img ng-src="imgs/wcj/newTv/topBox.png" alt="">
-     </section>
-     <section class="round">
-       <span ng-click="tvBoxUp(tv)" class="up" ><img ng-src="imgs/wcj/tv/up.png" alt=""></span>
-       <span ng-click="tvBoxDown(tv)" class="down" ><img ng-src="imgs/wcj/tv/down.png" alt=""></span>
-       <span ng-click="tvBoxLeft(tv)" class="left" ><img ng-src="imgs/wcj/tv/left.png" alt=""></span>
-       <span ng-click="tvBoxRight(tv)" class="right"><img ng-src="imgs/wcj/tv/right.png" alt=""></span>
-       <span ng-click="tvBoxOk(tv)" class="ok">ok</span>
-     </section>
-   </div>
-
-  </div> 
- </ion-content>
- </ion-view>
+    <button class="button button-clear ajk_back" ng-click="goback()"></button>
+  </ion-nav-buttons>
+  <ion-content class='transform_scroll' style="overflow-x: hidden; overflow-y:visible;background: url('imgs/wcj/newTv/tv_bg.png');background-size: 100% 100%">
+    <div class="slide-pot">
+      <span class="pot" ng-repeat='pot in potArray' ng-class='{active: $index === tvState}'></span>
+    </div>
+    <div class="tvArrays" on-swipe-right="onSwipeRight()" on-swipe-left="onSwipeLeft()" style="width: {{length}}00%; transform: translateX(-{{perWidth * tvState}}%);">
+      <div class="futrue_wrap" ng-repeat='tv in tvArrays' style="width: {{perWidth}}%">
+        <div class="tvBox">
+          <p class="tv_switch tv_btn" ng-click='tvon(tv, tv.tv_status, $index)' ng-class="{active:tv.tv_status === 'ON'}"></p>
+          <p class="tv_btn tv_v_plus" ng-click='tvAdd(tv)'></p>
+          <p class="tv_btn tv_v_minus" ng-click='tvMunis(tv)'></p>
+        </div>
+        <div class="tvBox">
+          <p class="tv_switch tv_btn" ng-click='tvBoxOn(tv)' ng-class="{active:tvboxswitch}"></p>
+          <p class="tv_btn tv_mute" ng-click='tvBoxMute(tv)'></p>
+          <p class="tv_btn tv_return" ng-click='tvBoxReturn(tv)'></p>
+        </div>
+        <div class="dir_control">
+          <div class="channel_voice">
+            <span class="arr_up round" ng-click="tvBoxUp(tv)"></span>
+            <span class="arr_title">频道</span>
+            <span class="arr_down round" ng-click="tvBoxDown(tv)"></span>
+          </div>
+          <div class="arr_round">
+            <span class="round_up round" ng-click="tvBoxUp(tv)">
+            </span>
+            <span class="round_down round" ng-click="tvBoxDown(tv)"></span>
+            <span class="round_left round" ng-click="tvBoxLeft(tv)"></span>
+            <span class="round_right round" ng-click="tvBoxRight(tv)"></span>
+            <div class="arr_center">
+              <div class="arr_ok" ng-click="tvBoxOk(tv)"}>
+                ok
+              </div>
+            </div>
+          </div>
+          <div class="channel_voice">
+            <span class="arr_up round" ng-click="tvBoxVol_P(tv)"></span>
+            <span class="arr_title">音量</span>
+            <span class="arr_down round" ng-click="tvBoxVol_M(tv)"></span>
+          </div>
+        </div>
+        <div class="review_tv">
+          <p class="review_btn" ng-click="tvBoxStop(tv)">点播</p>
+          <p class="review_btn" ng-click="tvBoxPlay(tv)">回看</p>
+        </div>
+        <div class="tv_num" ng-click='tvBoxNum($event, tv)'>
+          <div class="num_item">
+            <span class="num" data-key='1'>1</span>
+            <span class="num" data-key='2'>2</span>
+            <span class="num" data-key='3'>3</span>
+          </div>
+          <div class="num_item">
+            <span class="num" data-key='4'>4</span>
+            <span class="num" data-key='5'>5</span>
+            <span class="num" data-key='6'>6</span>
+          </div>
+          <div class="num_item">
+            <span class="num" data-key='7'>7</span>
+            <span class="num" data-key='8'>8</span>
+            <span class="num" data-key='9'>9</span>
+          </div>
+          <div class="num_item_last">
+            <span class="num" data-key='0'>0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -26,7 +26,9 @@ angular.module('clean-controller', [])
 		}).success(function(res) {
 			if (res.success) {
 				$ionicLoading.show({
-					template: '退房成功'
+					template: '退房成功',
+          noBackdrop: 'true',
+          duration: 2000
 				});
 				$timeout(function() {
 					$state.go('tab.home');

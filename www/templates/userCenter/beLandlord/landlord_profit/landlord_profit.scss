@@ -5,9 +5,8 @@
 	background-size:100% 105%;
 	background-position-y:-5px;
 	position: relative;
-	@extend %flex;
-	@extend %flexDirTop;
-	-webkit-justify-content:flex-end;
+  display: flex;
+  flex-direction: column;
 	justify-content:flex-end;
 	.contents{
 		height:px2rem(302);
@@ -30,8 +29,8 @@
 					 &:not(:last-child)::before{
 						 @include borderMixinBottom;
 					 }
-					 @extend %flex;
-		       @extend %flexMainJustify;
+           display: flex;
+           justify-content: space-between;
            span:first-child{
             line-height:px2rem(100);
             color:#000;

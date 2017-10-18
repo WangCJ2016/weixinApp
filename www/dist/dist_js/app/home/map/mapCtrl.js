@@ -33,7 +33,6 @@ angular.module('map-controller', [])
     $scope.init = function() {
       $scope.btnshow = false;
       var keywords = [$scope.startAddress, $stateParams.destination];
-      alert(keywords);
       var map = new AMap.Map("container");
       AMap.plugin(["AMap.Driving"], function() {
         var drivingOption = {
@@ -47,7 +46,7 @@ angular.module('map-controller', [])
         }, {
           keyword: keywords[1]
         }], function(status, result) {
-
+          console.log(result)
           $scope.selectMapApp = function() {
             mapApp = [];
             if (ionic.Platform.isIOS()) {

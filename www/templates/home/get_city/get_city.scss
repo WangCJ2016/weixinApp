@@ -12,9 +12,9 @@
                 margin:0 auto;
                 background-color: $ajk_backColor;
                 border-radius:px2rem(30);
-                @extend %flex;
-                @extend %flexMainCenter;
-                @extend %flexCrossCenter;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 .item{
                     background-color:$ajk_backColor;
                     padding:0;

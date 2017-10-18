@@ -2,8 +2,8 @@
   <ion-nav-buttons side="left" get-height>
     <button class="button button-clear ajk_back" ng-click="goback()"></button>
   </ion-nav-buttons>
-  <ion-content >
-    <div class="service_wrap">
+  <ion-content>
+    <!-- <div class="service_wrap">
     <div style="height:10px"></div>
     <section>
       <img src="imgs/wcj/service/dnd.png" alt="">
@@ -27,6 +27,23 @@
         </div>
       </label>
     </section>
-  </div>
+  </div> -->
+    <div class="service_wrap">
+      <div class='service_bg'>
+        <div class='marignTop'></div>
+        <div class='rect'>
+          <div class='service_item' ng-click='modelClick("qingli")'>
+            <img ng-src='imgs/wcj/service/swape.png' alt="" class='swape' />
+            <p class='content'>请即清理</p>
+            <img ng-src='imgs/wcj/service/click_{{check.clean}}.png' alt="" class='selectedlight' />
+          </div>
+          <div class='service_item' ng-click='modelClick("darao")'>
+            <img ng-src='imgs/wcj/service/ring.png' alt="" class='ring' />
+            <p class='content'>请勿打扰</p>
+            <img ng-src='imgs/wcj/service/click_{{check.dnd}}.png' alt="" class='selectedlight' />
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

@@ -1,35 +1,4 @@
 <ion-view hide-nav-bar='true'>
-  <!--  <div class='fixed_home' id='fixed' get-height>
-  </div>
-  <div class="fixedHeader " id="fixedHeader">
-    <div class="search_bar">
-      <div class="wrap">
-        <div class='newCity' ui-sref='getCity'>
-          <span>{{city}}</span><i class="icon ion-arrow-down-b"></i>
-        </div>
-        <!-- <div class="search_btn">
-        </div> -->
-  <!-- <a ng-click='goSelectBussiniss($event)' class="mask">
-          <div>搜索目的、商圈、生活圈</div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="fixedHeader" id="fixedHeaderDefalut">
-    <div class="search_bar">
-      <div class="wrap">
-        <div class='newCity' ui-sref='getCity'>
-          <span>{{city}}</span><i class="icon ion-arrow-down-b"></i>
-        </div>
-        <!-- <div class="search_btn">
-        </div> 
-        <a ng-click='goSelectBussiniss($event)' class="mask">
-          <div>搜索目的、商圈、生活圈</div>
-        </a>
-      </div>
-    </div>
-  </div> -->
-  <!-- <div class="changeStatus" ng-class='{verticalStatus:rank}' ng-click="rank=!rank"></div> -->
   <ion-content  class='has-footer home' style='background-color:#f6f6f6;'>
     <div class="home_wrap">
       <ion-slide-box id='slide' class='slide' does-continue="true" auto-play="true" slide-interval="4000">
@@ -97,23 +66,8 @@
             </div>
           </div>
         </div>
-        <!-- <div class='vertical' ng-if="rank">
-          <div class="ajklist_vertical" ng-repeat="hotel in hotels track by $index" ng-click="goHotelDetail(hotel.id)">
-                <img ng-src={{hotel.mainPicture}}>
-                <div class="intr">
-                  <h2>{{hotel.name}}</h2>
-                  <p class="loc"><i class="icon"></i>{{hotel.address}}</p>
-                  <p class="comment_star">
-                      <i class="start_full" ng-repeat="star in hotel.stars track by $index"></i>
-                      <i class="start_blank" ng-repeat="star in hotel.star_blank track by $index"></i>
-                  </p>
-                  <p class="price"><span>¥</span>{{hotel.price}}<span>起</span></p>
-                </div>
-            </div>
-        </div> -->
       </div>
       <!-- <div class="divier">
-
       </div> -->
     </div>
     <ion-infinite-scroll ng-if="moreDataCanBeLoaded" on-infinite="loadMoreData()" distance="10%" immediate-check='false'>

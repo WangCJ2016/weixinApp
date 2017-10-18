@@ -7,14 +7,14 @@
   }
 
   .rbgbtns {
-    @extend %flex;
-    @extend %flexMainJustify;
+    display: flex;
+    justify-content: space-between;
     &:first-child {
       margin-top: px2rem(120);
     }
     padding: 0 px2rem(30);
 
-    > p {
+    >p {
       width: px2rem(130);
       height: px2rem(60);
       border-radius: px2rem(20);
@@ -28,12 +28,10 @@
   }
 
   canvas {
-    display: block;
-    // height: px2rem(500);
+    display: block; // height: px2rem(500);
     position: absolute;
     top: px2rem(400);
-    left: 50%;
-    // background-color: red;
+    left: 50%; // background-color: red;
   }
 
   .pot {
@@ -54,22 +52,22 @@
   .buttons {
     position: absolute;
     bottom: px2rem(100);
-    @extend %flex;
-    @extend %flexCrossCenter;
-    @extend %flexMainCenter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 
-    > div {
+    >div {
       width: px2rem(100);
     }
 
-    > a {
+    >a {
       width: px2rem(244);
       height: px2rem(85);
       background-size: px2rem(244) px2rem(85);
-      @extend %flex;
-      @extend %flexMainCenter;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       img {
         width: px2rem(63);

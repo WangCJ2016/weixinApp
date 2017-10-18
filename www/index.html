@@ -7,22 +7,22 @@
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
   <meta content="telephone=no,email=no" name="format-detection">
-
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no"/> -->
-  <title>ajkApp</title>
+  <title>爱居客.智慧生活</title>
   <link rel="manifest" href="manifest.json">
   <script type="text/javascript" src='lib/lib-flexible/flexible_css.debug.js'></script>
   <script type="text/javascript" src='lib/lib-flexible/flexible.debug.js'></script>
-
- <!-- build:css dist_css/styles.css -->
+  <!-- build:css dist_css/styles.css -->
   <link href="css/ionic.app.min.css" rel="stylesheet">
- <!-- endbuild -->
+  <!-- endbuild -->
   <script src="lib/ionic/js/ionic.bundle.js"></script>
   <!-- cordova script (this will be a 404 during development) -->
   <script src="lib/ngCordova/dist/ng-cordova.js"></script>
-  <script src="cordova.js"></script>
+ 
   <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
   <script type="text/javascript" src='lib/angular-animate/angular-animate.js'></script>
+  <!-- 网页支付宝支付 -->
+  <script type="text/javascript" src='ap.js'></script>
   <!-- 二维码生成器-->
   <script src='lib/qrcode.min.js'></script>
   <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
@@ -30,83 +30,83 @@
   <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=db834b40077df1a9574a3faf3cd17f72&plugin=AMap.PlaceSearch,AMap.DistrictSearch,AMap.Geocoder,AMap.CitySearch"></script>
   <script type="text/javascript" src="http://cache.amap.com/lbs/static/PlaceSearchRender.js"></script>
   <script src="http://webapi.amap.com/subway?v=1.0&key=db834b40077df1a9574a3faf3cd17f72&callback=cbk"></script>
-<!-- build:js dist_js/app.js -->
-  <script src="js/app.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/directive.js"></script>
-  <script src="js/filters.js"></script>
- <!--  <script src="templates/templates.js"></script> -->
-  <script type="text/javascript" src="templates/home/homeCtrl.js"></script>
-  <script type="text/javascript" src="templates/discover/discover.js"></script>
-  <script type="text/javascript" src="templates/home/get_city/getCityCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/my_orderform/my_orderformCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/landlord_profit/landlord_profit.js"></script>
-  <script type="text/javascript" src="templates/home/house_detail/houseDetailCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/hotel_detail/hotel_detailCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/myhouse_changeprice/myhouse_changepriceCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/myaccount/myaccountCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/my_house/myHouse.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/joinUs/join_us.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/myhouse_detail/myhouse_detail.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/trade_rule/trade_rule.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/see_myhouse/see_myhouse.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/myhouse_intr/myhouse_intr.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/orderform_detail/orderFormDetailCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/account_detail/account_detail.js"></script>
-  <script type="text/javascript" src="templates/userCenter/endOrderDetail/endOrderDetail.js"></script>
-  <script type="text/javascript" src="templates/userCenter/beLandlord/be_landlord.js"></script>
-  <script type="text/javascript" src="templates/userCenter/Order-form/Order-formCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/hotel_pics/hotel_picsCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/nearby/nearbyCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/map/mapCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/hotelService/hotelService.js"></script>
-  <script type="text/javascript" src="templates/home/my_collect/collectCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/house_intr/houseIntrCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/select_date/selectDateCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/comment/comment.js"></script>
-  <script type="text/javascript" src="templates/userCenter/register/registerCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/login/loginCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/RetrievePwd/RetrievePwdCtrl.js"></script>
-  <script type="text/javascript" src="templates/home/select_bussiniss/select_bussinissCtrl.js"></script>
-    <script type="text/javascript" src="templates/home/futrue/futrue.js"></script>
-  <script type="text/javascript" src="templates/shopCar/shopCarCtrl.js"></script>
-  <script type="text/javascript" src="templates/shopCar/invoice/invoice.js"></script>
-  <script type="text/javascript" src="templates/userCenter/userCenterCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/binding/bindingCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/bindingPhone/bindingPhoneCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/ChangePwd/ChangePwd.js"></script>
-  <script type="text/javascript" src="templates/userCenter/setPwd/setPwdCtrl.js"></script>
-  <script type="text/javascript" src="templates/userCenter/setting/setting.js"></script>
-  <script type="text/javascript" src="templates/userCenter/Nopay/Nopay.js"></script>
-  <script type="text/javascript" src="templates/userCenter/Pay/Pay.js"></script>
-  <script type="text/javascript" src="templates/userCenter/Noevaluate/Noevaluate.js"></script>
-  <script type="text/javascript" src="templates/userCenter/lose-efficacy/lose-efficacy.js"></script>
-  <script type="text/javascript" src="templates/userCenter/qrCode/qrCode.js"></script>
-  <script type="text/javascript" src="templates/userCenter/Consume/Consume.js"></script>
-  <script type="text/javascript" src="templates/userCenter/status/status.js"></script>
-  <script type="text/javascript" src="templates/shopCar/orderDetail/orderDetail.js"></script>
-  <script type="text/javascript" src="templates/ctrl/ctrl.js"></script>
-  <script type="text/javascript" src="templates/ctrl/inHouse/inHouse.js"></script>
-  <script type="text/javascript" src="templates/ctrl/airCondition/airCondition.js"></script>
-  <script type="text/javascript" src="templates/ctrl/curtain/curtain.js"></script>
-  <script type="text/javascript" src="templates/ctrl/tv/tv.js"></script>
-  <script type="text/javascript" src="templates/ctrl/sweepTime/sweepTime.js"></script>
-  <script type="text/javascript" src="templates/ctrl/clean/clean.js"></script>
-  <script type="text/javascript" src="templates/ctrl/CheckIn/checkIn.js"></script>
-  <script type="text/javascript" src="templates/ctrl/repair/repair.js"></script>
-  <script type="text/javascript" src="templates/ctrl/model/model.js"></script>
-  <script type="text/javascript" src="templates/ctrl/light/light.js"></script>
-  <script type="text/javascript" src="templates/ctrl/colorPicker/colorPicker.js"></script>
-  <script type="text/javascript" src="templates/ctrl/lock/lock.js"></script>
-  <script type="text/javascript" src="templates/ctrl/service/service.js"></script>
-  <script type="text/javascript" src="templates/ctrl/readLight/readLight.js"></script>
-  <script type="text/javascript" src="templates/home/picShow/picShow.js"></script>
-  <script type="text/javascript" src="templates/userCenter/evaluate/evaluate.js"></script>
-<!-- endbuild -->
+  <!-- build:js dist_js/app.js -->
+  <script src="dist/dist_js/app/app.js"></script>
+  <script src="dist/dist_js/app/controllers.js"></script>
+  <script src="dist/dist_js/app/services.js"></script>
+  <script src="dist/dist_js/app/directive.js"></script>
+  <script src="dist/dist_js/app/filters.js"></script>
+  <script src="dist/dist_js/app/templates.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/homeCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/discover/discover.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/get_city/getCityCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/my_orderform/my_orderformCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/landlord_profit/landlord_profit.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/house_detail/houseDetailCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/hotel_detail/hotel_detailCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/myhouse_changeprice/myhouse_changepriceCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/myaccount/myaccountCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/my_house/myHouse.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/joinUs/join_us.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/myhouse_detail/myhouse_detail.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/trade_rule/trade_rule.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/see_myhouse/see_myhouse.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/myhouse_intr/myhouse_intr.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/orderform_detail/orderFormDetailCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/account_detail/account_detail.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/endOrderDetail/endOrderDetail.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/beLandlord/be_landlord.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/Order-form/Order-formCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/hotel_pics/hotel_picsCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/nearby/nearbyCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/map/mapCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/hotelService/hotelService.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/my_collect/collectCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/house_intr/houseIntrCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/select_date/selectDateCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/comment/comment.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/register/registerCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/login/loginCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/RetrievePwd/RetrievePwdCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/select_bussiniss/select_bussinissCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/futrue/futrue.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/shopCar/shopCarCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/shopCar/invoice/invoice.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/userCenterCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/binding/bindingCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/bindingPhone/bindingPhoneCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/ChangePwd/ChangePwd.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/setPwd/setPwdCtrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/setting/setting.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/Nopay/Nopay.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/Pay/Pay.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/Noevaluate/Noevaluate.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/lose-efficacy/lose-efficacy.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/qrCode/qrCode.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/Consume/Consume.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/status/status.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/shopCar/orderDetail/orderDetail.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/ctrl.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/inHouse/inHouse.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/airCondition/airCondition.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/curtain/curtain.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/tv/tv.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/sweepTime/sweepTime.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/clean/clean.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/CheckIn/checkIn.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/repair/repair.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/model/model.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/light/light.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/colorPicker/colorPicker.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/lock/lock.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/service/service.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/ctrl/readLight/readLight.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/home/picShow/picShow.js"></script>
+  <script type="text/javascript" src="dist/dist_js/app/userCenter/evaluate/evaluate.js"></script>
+  <!-- endbuild -->
 </head>
 
-<body ng-app="starter"> 
+<body ng-app="starter" >
   <!--
       The nav bar that will be updated as we navigate between views.
     -->
@@ -119,7 +119,6 @@
       Templates are in the /templates folder (but you could also
       have templates inline in this html file if you'd like).
     -->
-
   <ion-nav-view></ion-nav-view>
 </body>
 

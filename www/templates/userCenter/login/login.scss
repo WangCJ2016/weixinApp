@@ -10,7 +10,7 @@
     p{
 
         height: px2rem(100);
-        @extend %flex;
+        display: flex;
         margin-left: px2rem(30);
 
         label{
@@ -56,8 +56,8 @@
 }
 .login-forgetpwd{
     margin:0 px2rem(30);
-    @extend %flex;
-    @extend %flexMainJustify;
+    display: flex;
+    justify-content: space-between;
     a{
        @include font-dpr(14px);
     }

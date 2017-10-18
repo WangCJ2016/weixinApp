@@ -7,8 +7,8 @@
     padding-bottom: px2rem(30);
     .avater_intr{
       padding:px2rem(30);
-      @extend %flex;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
       img{
         width: px2rem(80);
         height: px2rem(80);

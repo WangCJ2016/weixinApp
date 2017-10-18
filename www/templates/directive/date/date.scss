@@ -1,7 +1,7 @@
 .directive_date{
 	date-account{
-		@extend %flex;
-	  @extend %flexWrap;
+	  display: flex;
+	  flex-wrap:wrap;
 	    .date,.day{
 	    	height:px2rem(100);
 			text-align:center;
@@ -11,8 +11,8 @@
 			&::before{
 				@include borderMixinBottom;
 			}
-			@extend %flex;
-    	@extend %flexDirTop;
+			display: flex;
+	   flex-direction: column;
 			overflow: hidden;
 			>div{
 				height:50%;
@@ -33,9 +33,9 @@
 	date-account{
 		.date,.day{
 			height:px2rem(80);
-			@extend %flex;
-      @extend %flexMainCenter;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 			>div{
 				height:px2rem(60);
 				width:px2rem(60);
@@ -57,8 +57,8 @@
 		.months{
 			width:100%;
 			 >div{
-         	 @extend %flex;
-		       @extend %flexWrap;
+		       display: flex;
+		       flex-wrap:wrap;
 			}
 		.date,.day{
 			&[disabled="disabled"]{

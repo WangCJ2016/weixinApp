@@ -19,6 +19,7 @@ angular.module('login-controller', [])
 						localStorage.setItem("customerId", res.dataObject.id);
 						localStorage.setItem("loginCount", res.dataObject.loginCount);
 						localStorage.setItem("token", res.dataObject.token);
+						localStorage.setItem("userName", res.dataObject.telephone);
 						$ionicLoading.show({
 							template: "登录成功",
 							noBackdrop: 'true',

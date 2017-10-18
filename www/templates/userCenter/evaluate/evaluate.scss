@@ -1,9 +1,9 @@
 .evaluate_wrap{
   background-color: #fff;
   .title{
-    @extend %flex;
-    @extend %flexMainCenter;
-    @extend %flexCrossCenter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     >img{
       width: px2rem(130);
       height: px2rem(130);
@@ -38,9 +38,9 @@
   }
   .stars{
      margin-top: px2rem(60);
-     @extend %flex;
-     @extend %flexMainCenter;
-     @extend %flexCrossCenter;
+     display: flex;
+    justify-content: center;
+    align-items: center;
      >span{
        margin: 0 px2rem(10);
      }

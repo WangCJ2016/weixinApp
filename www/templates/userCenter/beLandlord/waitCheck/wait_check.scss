@@ -5,10 +5,6 @@
 	.wait_check {
 		width: 100%;
 		height: px2rem(280);
-		@extend %flex;
-		@extend %flexMainJustify;
-		@extend %flexCrossCenter;
-		@extend %flexDirTop;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

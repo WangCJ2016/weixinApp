@@ -43,6 +43,7 @@ angular.module('getCity-controller',[])
 		 $scope.cityChoose = function(city){
 			sessionStorage.setItem("city",city);
 			sessionStorage.setItem("nowcity",city);
+			localStorage.setItem("city", city);
 			$scope.visitedCity.unshift(city);
 			for(var i=0;i<$scope.visitedCity.length;i++){
 				var a = $scope.visitedCity[i];

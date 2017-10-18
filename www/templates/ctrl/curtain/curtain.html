@@ -2,46 +2,26 @@
   <ion-nav-buttons side="left">
     <button class="button button-clear ajk_back" ng-click="goback()"></button>
   </ion-nav-buttons>
-  <ion-content class='transform_scroll' style="overflow-x: hidden; overflow-y:visible; ">
+  <ion-content class='transform_scroll curtain_bg' style="overflow-x: hidden; overflow-y:visible;">
     <div class="slide-pot">
-      <span class="pot pot_curtain" ng-repeat='pot in potArray' ng-class='{active: $index === tvState}' ></span>
+      <span class="pot pot_curtain" ng-repeat='pot in potArray' ng-class='{active: $index === tvState}'></span>
     </div>
-    <div class="tvArrays" 
-    on-swipe-right="onSwipeRight()" 
-    on-swipe-left="onSwipeLeft()"
-    style="width: {{length}}00%;transform: translateX(-{{perWidth * tvState}}%);">
-    <div class="curtain_wrap" 
-    ng-repeat='curtains in curtainArrays'
-    style="width: {{perWidth}}%">
-     <div ng-repeat='curtain in curtains'>
-        <section class="curtain_btns">
-          <span>{{curtain.name}}</span>
-          <div class="btns">
-            <span ng-click='curtainCtrl("OPEN", curtain.wayId);'>打开</span>
-            <span ng-click='curtainCtrl("STOP", curtain.wayId);'>停止</span>
-            <span ng-click='curtainCtrl("CLOSE", curtain.wayId);'>关闭</span>
+    <div class="tvArrays" on-swipe-right="onSwipeRight()" on-swipe-left="onSwipeLeft()" style="width: {{length}}00%;transform: translateX(-{{perWidth * tvState}}%);">
+      <div class="curtain_wrap" ng-repeat='curtains in curtainArrays' style="width: {{perWidth}}%">
+          <div ng-repeat='curtain in curtains'>
+            <p class="curtain_name">{{curtain.name}}</p>
+            <div class="curtain_group">
+              <p ng-repeat='btn in curtainBtns' 
+              class="curtain_btn" 
+              ng-click='curtainCtrl(btn.type, curtain,$index)'
+              ng-class='{active: curtain.chuanglianActiveIndex == $index}'>{{btn.title}}</p>
+            </div>
+            <div class='inputRange' on-release='onRelease($event,curtain.brightness, curtain.wayId)'>
+              <input type="range"  min="0" max="100" ng-model="curtain.brightness" style="background:linear-gradient(to right, #6095f0, white {{curtain.brightness}}%, white)"/>
+            </div>
           </div>
-        </section>
-        <section class="slide">
-            <i class="curtainOn"></i>
-            <input type="range" name="volume" min="0" max="100"  my-value='{{curtain.brightness}}' subfn ='changeSubmit(curtain.brightness, curtain.wayId)'  mouse-up ng-model="curtain.brightness">
-            <i class="curtainOff"></i>
-        </section>
-      </div>
-      <!-- <section class="curtain_btns">
-        <span>纱帘</span>
-        <div class="btns">
-          <span>打开</span>
-          <span>停止</span>
-          <span>关闭</span>
         </div>
-      </section>
-      <section class="slide">
-          <i class="winCurtainOn"></i>
-<input type="range" name="volume" min="0" max="100"  my-value='{{brightness.value2}}' subfn ='changeSubmit(brightness.value2)'  mouse-up ng-model="brightness.value2">
-          <i class="winCurtainOff"></i> -->
-      </section>
+    
     </div>
-</div>
   </ion-content>
 </ion-view>

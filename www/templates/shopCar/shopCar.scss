@@ -61,7 +61,7 @@
       padding-left: px2rem(30);
       width: 100%;
       height: px2rem(90);
-      @extend %flex;
+     display: flex;
       background-color: #fff;
       span {
         height: 100%;
@@ -78,8 +78,8 @@
       border-style: none;
 
       .item-content {
-        @extend %flex;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
         height: 100%;
         padding: 0;
         background-color: #f5f5f5;
@@ -120,10 +120,9 @@
       .list-desc {
         width: px2rem(430);
         height: px2rem(130);
-        @extend %flex;
-        @extend %flexMainJustify;
-        @extend %flexDirTop;
-
+        display: flex;
+        justify-content: space-between;
+         flex-direction: column;
         p {
           @include font-dpr(12px);
           line-height: px2rem(30);
@@ -139,8 +138,8 @@
           @include font-dpr(12px);
           line-height: px2rem(35);
           height: px2rem(30);
-          @extend %flex;
-          @extend %flexMainJustify;
+          display: flex;
+          justify-content: space-between;
           color: $ajk_color;
           @include font-dpr(14px);
           color: $ajk_color;
@@ -179,7 +178,7 @@
   background: #fff;
 
   .check-all {
-    @extend %flex;
+    display: flex;
     width: px2rem(400);
     height: 100%;
     @include font-dpr(15px);

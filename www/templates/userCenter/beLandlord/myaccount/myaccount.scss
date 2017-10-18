@@ -11,10 +11,10 @@
         }
         >div{
             height:px2rem(80);
-            @extend %flex;
-            @extend %flexMainCenter;
-            @extend %flexCrossCenter;
-            @extend %flexWrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap:wrap;
             >p{
                width:px2rem(150);
                height:px2rem(76);
@@ -47,8 +47,8 @@
 
     }
     .btns{
-      @extend %flex;
-      @extend %flexMainCenter;
+      display: flex;
+      justify-content: center;
         span{
             display: inline-block;
             margin:0 55px;

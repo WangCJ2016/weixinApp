@@ -1,9 +1,9 @@
 .spotLight_wrap {
   .light {
     height: px2rem(106);
-    @extend %flex;
-    @extend %flexMainJustify;
-    @extend %flexCrossCenter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #e1e1e1;
    margin-left: px2rem(30);
     > p {
@@ -17,9 +17,9 @@
   }
 
   .slide {
-    @extend %flex;
-    @extend %flexMainCenter;
-    @extend %flexCrossCenter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: px2rem(106);
     border-bottom: 1px solid #e1e1e1;
     > span {

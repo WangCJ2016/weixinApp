@@ -15,9 +15,9 @@
     padding:0 px2rem(30);
     background-color:#fff;
     @include font-dpr(14px);
-    @extend %flex;
-    @extend %flexMainJustify;
-    @extend %flexCrossCenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     >p{
       margin-right:px2rem(20);
       flex-grow:1;

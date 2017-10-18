@@ -38,8 +38,8 @@
            width: px2rem(600);
            height:100%;
            margin:0 auto;
-           @extend %flex;
-           @extend %flexMainJustifyRound;
+           display: flex;
+           justify-content: space-around;
            span{
             line-height:px2rem(98);
             width:px2rem(100);
@@ -59,9 +59,9 @@
       @include font-dpr(15px);
       text-indent: px2rem(30);
       background-color:#fff;
-      @extend %flex;
-      @extend %flexMainJustify;
-      @extend %flexCrossCenter;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       i{
         display:inline-block;
         width:px2rem(32);
@@ -75,7 +75,7 @@
       background-color:#faf9f9;
       align-items:center;
       height: px2rem(180);
-      @extend %flex;
+      display: flex;
       >img{
         height: px2rem(120);
         width: px2rem(160);

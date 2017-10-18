@@ -31,11 +31,11 @@ angular.module('ChangePwd-controller', [])
           },2000)
         }else {
           $ionicLoading.show({
-            template: systemBusy
+            template: res.msg
           });
           $timeout(function(){
             $ionicLoading.hide();
-            $state.go('tab.home')
+            //$state.go('tab.home')
           },2000)
         }
 			}

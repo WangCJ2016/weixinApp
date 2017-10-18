@@ -21,6 +21,7 @@ $ajk_activated_color:#efefef;
     font-size: $font-size * 3;
   }
 }
+
 @mixin borderMixinBottom1 {
     content: "";/* 注意这里为双引号 */
     position: absolute;
@@ -166,56 +167,7 @@ $ajk_activated_color:#efefef;
     -webkit-transform: scaleX(1.5)!important;
   }
 }
-%flex{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-}
-%flexMainLeft {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-}
-%flexMainCenter{
-   -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-%flexMainJustify{
-   -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-%flexMainJustifyRound{
-   -webkit-box-pack: justify;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
-}
-%flexCrossCenter{
-  -webkit-box-align: center;
--webkit-align-items: center;
--ms-flex-align: center;
--ms-grid-row-align: center;
-align-items: center;
-}
-%flexCrossBottom{
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-}
-%flexDirTop{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-%flexWrap{
-  -webkit-flex-wrap:wrap;
-  flex-wrap:wrap;
-}
+
 * {
   @include font-dpr(12px);
   margin: 0;
@@ -550,9 +502,9 @@ h2 {
   height: px2rem(90);
   border-top: 1px solid $ajk_borderColor;
   background-color: #fff;
-  @extend %flex;
-  @extend %flexMainJustify;
-  @extend %flexCrossCenter;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-left: px2rem(30);
 
   > div {
@@ -926,8 +878,8 @@ height: px2rem(110);
     }
     .comment_star{
       height: px2rem(60);
-      @extend %flex;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
       i{
         display: inline-block;
         width: px2rem(30);
@@ -964,14 +916,13 @@ height: px2rem(110);
   height: px2rem(200);
   padding: px2rem(10) px2rem(30);
   background-color: #faf9f9;
-  @extend %flex;
+  display: flex;
   >img{
     width: px2rem(240);
     height: px2rem(180);
   }
   >ul{
     flex-grow: 1;
-    -webkit-flex-grow:1;
     width: px2rem(440);
     margin-left: px2rem(20);
     height: 100%;
@@ -985,9 +936,9 @@ height: px2rem(110);
      @include font-dpr(14px);
      &:first-child{
        line-height: px2rem(76);
-        @extend %flex;
-        @extend %flexMainJustify;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
      }
      &:last-child{
        line-height: px2rem(36);
@@ -1003,7 +954,7 @@ height: px2rem(110);
 
 }
 .iterm-three-avater{
-  @extend %flexCrossCenter;
+  align-items: center;
   >ul{
     width:px2rem(400);
   }
@@ -1019,7 +970,7 @@ height: px2rem(110);
   height: px2rem(160);
   padding: px2rem(20) px2rem(30);
   background-color: #faf9f9;
-  @extend %flex;
+  display: flex;
   position: relative;
   &::before{
     @include borderMixinBottom;
@@ -1060,7 +1011,7 @@ height: px2rem(110);
   }
 }
 .item-two-avater{
-  @extend %flexCrossCenter;
+  align-items: center;
   >ul{
     width:px2rem(400);
   }
@@ -1077,7 +1028,7 @@ height: px2rem(110);
   height: px2rem(260);
   padding: px2rem(20) px2rem(30);
   background-color: #faf9f9;
-  @extend %flex;
+  display: flex;
   >img{
     width: px2rem(260);
     height: px2rem(220);
@@ -1128,8 +1079,8 @@ height: px2rem(110);
 }
 // 控制界面滑动点
 .slide-pot {
-  @extend %flex;
-  @extend %flexMainCenter;
+  display: flex;
+  justify-content: center;
   padding-top: px2rem(10);
   .pot{
     width: px2rem(14);

@@ -16,9 +16,9 @@
       .item_ad {
         height: px2rem(160);
         padding: 0 px2rem(30);
-        @extend %flex;
-        @extend %flexMainJustify;
-        @extend %flexCrossCenter;
+        display: flex;
+         justify-content: space-between;
+         align-items: center;
         border: none!important;
         background-color: #fff;
 
@@ -40,7 +40,7 @@
         }
 
         > div {
-          @extend %flex;
+          display: flex;
         }
 
         .intr {

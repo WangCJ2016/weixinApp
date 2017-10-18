@@ -1,9 +1,5 @@
-@charset "utf-8";
+ @charset "utf-8";
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
-
 $calm: #ffb354 !default; // Include all of Ionic
 @import "../www/lib/ionic/scss/ionic";
 @import "common";

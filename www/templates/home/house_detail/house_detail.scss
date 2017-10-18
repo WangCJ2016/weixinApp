@@ -35,9 +35,9 @@
   .houseDetail_header {
     height: px2rem(382);
     position: relative;
-    @extend %flex;
-    @extend %flexDirTop;
-    @extend %flexCrossCenter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
       width: 100%;
       height: 100%;
@@ -136,15 +136,15 @@
     //border-bottom: 1px solid $ajk_backColor;
     margin-bottom: px2rem(10);
     .comment_div {
-      @extend %flex;
-      @extend %flexMainJustify;
+      display: flex;
+      justify-content: space-between;
       padding: 0 px2rem(30);
       width: 100%;
       height: px2rem(80);
       padding-top: px2rem(10);
       .comment_star {
-        @extend %flex;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
         height: px2rem(70);
         line-height: px2rem(70);
         @include font-dpr(15px);
@@ -194,7 +194,7 @@
       .atavter{
         padding: px2rem(30);
         padding-bottom: 0;
-        @extend %flex;
+        display: flex;
         img{
           width: px2rem(80);
           height: px2rem(80);
@@ -274,8 +274,8 @@
       text-indent: px2rem(30);
 
       >p{
-        @extend %flex;
-        @extend %flexCrossCenter;
+        display: flex;
+        align-items: center;
         @include font-dpr(15px);
         margin-left: px2rem(30);
       }
@@ -291,8 +291,7 @@
 
       > div:first-child {
         overflow: hidden;
-        @extend %flex;
-         -webkit-flex-wrap: wrap;
+       display: flex;
         flex-wrap: wrap;
         height: px2rem(120);
         padding-right: px2rem(110);
@@ -304,21 +303,21 @@
     right: px2rem(30);
     top:0;
     .img{
-      @extend %flex;
-      @extend %flexMainCenter;
-      @extend %flexCrossCenter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
     .hotel_device {
       width: px2rem(115);
       height: px2rem(120);
       text-align: center;
-      @extend %flex;
-      @extend %flexDirTop;
+      display: flex;
+      flex-direction: column;
       .img {
-        @extend %flex;
-        @extend %flexMainCenter;
-        @extend %flexCrossCenter;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: px2rem(62);
         height: px2rem(80);
         img {
@@ -353,15 +352,16 @@
     margin-bottom: px2rem(10);
 
     h2 {
-      @extend %flex;
-      @extend %flexMainJustify;
+      display: flex;
+      justify-content: space-between;
       padding-top: px2rem(10);
       line-height: px2rem(70);
       text-indent: px2rem(30);
       >p:first-child{
         @include font-dpr(15px);
-        @extend %flex;
-        @extend %flexCrossCenter;
+       
+       display: flex;
+       align-items: center;
         margin-left: px2rem(30);
       }
     //  border-bottom: 1px solid $ajk_borderColor;
@@ -457,8 +457,8 @@
     .deposit {
       padding: px2rem(20) 0;
       margin: 0 px2rem(30);
-      @extend %flex;
-      @extend %flexMainJustify;
+      display: flex;
+      justify-content: space-between;
       position: relative;
       &::before{
         @include borderMixinBottom;
@@ -502,8 +502,8 @@
     }
 
     .item {
-      @extend %flex;
-      @extend %flexCrossCenter;
+      display: flex;
+      align-items: center;
       border-top: none;
       height: px2rem(160);
       border-width: 0;
@@ -521,16 +521,16 @@
       }
 
       .room_mess {
-        @extend %flex;
-        @extend %flexMainJustify;
+        display: flex;
+         justify-content: space-between;
         -webkit-flex-grow:1;
         flex-grow:1;
         margin-left: px2rem(20);
         height: px2rem(120);
         div:first-child {
-          @extend %flex;
-          @extend %flexDirTop;
-          @extend %flexMainJustify;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           h2 {
             color: #000;
             @include font-dpr(15px);

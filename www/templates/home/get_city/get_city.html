@@ -13,7 +13,7 @@
     	</div>
          <div class="getCity_left">
     		<div class="getCity_cont">
-	        	<div class="current_loc" id="state_0">
+	        	<div class="current_loc" id="state_0" ng-if='nowCity'>
 	        	    <h2>当前位置</h2>
 	        		<button class="button" ng-click="cityChoose(nowCity)" ui-sref="tab.home">{{nowCity}}</button>
 	        	</div>

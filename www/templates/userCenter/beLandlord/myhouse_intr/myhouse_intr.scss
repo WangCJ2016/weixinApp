@@ -47,9 +47,9 @@
 		line-height: px2rem(100);
 		background-color:#fff;
 		padding:0 px2rem(30);
-		@extend %flex;
-		@extend %flexMainJustify;
-		@extend %flexCrossCenter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 		position: relative;
 		&::before{
 			@include borderMixinBottom;
@@ -92,8 +92,8 @@
 		margin-top: px2rem(10);
 		padding-bottom:px2rem(50);
     >div {
-      @extend %flex;
-      @extend %flexWrap;
+      display: flex;
+      flex-wrap:wrap;
         span {
             display: inline-block;
             width: px2rem(160);

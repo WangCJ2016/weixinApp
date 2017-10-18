@@ -24,9 +24,9 @@
           @include borderMixinBottom;
         }
         overflow: hidden;
-        @extend %flex;
-        @extend %flexCrossCenter;
-        @extend %flexMainJustify;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 0!important;
         .data{
             width:px2rem(109);
@@ -55,9 +55,9 @@
             width: 45%;
             height:px2rem(120);
             margin-left: px2rem(20);
-            @extend %flex;
-            @extend %flexMainJustify;
-            @extend %flexDirTop;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
             >li{
               height: px2rem(40);
             }
@@ -70,7 +70,7 @@
             .housetype{
                 @include font-dpr(12px);
                 color: #ababab;
-                @extend %flex;
+                display: flex;
                 line-height: px2rem(40);
                 white-space: nowrap;
                 text-overflow: ellipsis;

@@ -30,13 +30,12 @@
               line-height:px2rem(78);
         }
         &>div{
-           @extend %flex;
-           -webkit-flex-wrap:wrap;
+           display: flex;
             flex-wrap:wrap;
             p{
-              @extend %flex;
-              @extend %flexDirTop;
-              @extend %flexCrossCenter;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
                 width:px2rem(160);
                 text-align: center;
             line-height:px2rem(60);
@@ -109,9 +108,9 @@
         }
         .hotel_mess{
             height:px2rem(144);
-            @extend %flex;
-            @extend %flexMainJustify;
-            @extend %flexCrossCenter;
+            display: flex;
+             justify-content: space-between;
+              align-items: center;
             p{
                 color:#000;
 

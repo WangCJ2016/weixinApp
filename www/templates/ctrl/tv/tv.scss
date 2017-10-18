@@ -1,130 +1,201 @@
- .tvArrays{
-    height: 100%;
-    overflow: auto;
-    transition: transform 1s ease-in, -webkit-transform 1s ease-in!important;
-  }
-.futrue_wrap{
-  padding-top: px2rem(20);
-  height: 100%;
-  float: left;
-  .tv{
-    height: px2rem(160);
-    position: relative;
-    >img{
-      width: px2rem(42);
-      height: px2rem(100);
-      position: absolute;
-      right: px2rem(30);
-      top:50%;
-      margin-top: px2rem(-50);
-    }
-    .tv_item{
-      height: 100%;
-    @extend %flex;
-    @extend %flexMainJustify;
-    @extend %flexCrossCenter;
-    margin-right: px2rem(80);
-    padding: 0 px2rem(50);
-    >p{
-      width: px2rem(118);
-      height: px2rem(119);
-      // border-radius: 50%;
-      // border: px2rem(3) solid #fff;
-      //box-shadow: 3px 3px 5px rgba(0,0,0,0.3),3px 3px 5px rgba(0,0,0,0.3) inset;
-      //background: url('../imgs/wcj/newTv/round.png');
-      background-size: 100% 100%;
-      text-align: center;
-      vertical-align: middle;
-      transition: all 1s;
-      &.activated{
-        transform: scale(.8,.8);
-      }
-      &.on{
-        background: url('../imgs/wcj/newTv/tvoff.png');
-        background-size: 100% 100%;
-        &.active{
-          background: url('../imgs/wcj/newTv/tvon.png');
-          background-size: 100% 100%;
-        }
-      }
-      &.plus{
-        background: url('../imgs/wcj/newTv/tvplus.png');
-        background-size: 100% 100%;
-      }
-      &.munis{
-        background: url('../imgs/wcj/newTv/tvmunis.png');
-        background-size: 100% 100%;
-      }
-      &.mute{
-        background: url('../imgs/wcj/newTv/tvmute.png');
-        background-size: 100% 100%;
-      }
-      &.back{
-        background: url('../imgs/wcj/newTv/tvback.png');
-        background-size: 100% 100%;
-      }
-    }
-    }
-  }
+ .tvArrays {
+   height: 100%;
+   overflow: auto;
+   transition: transform 1s ease-in, -webkit-transform 1s ease-in!important;
+ }
 
-  .round{
-    background: url(../imgs/wcj/tv/round.png) no-repeat;
-    background-size: px2rem(432) px2rem(432);
-    height: px2rem(432);
-    width: px2rem(432);
-    margin: px2rem(120) auto px2rem(50) auto;
-    position: relative;
-    span{
-      position: absolute;
-      width: px2rem(100);
-      height: px2rem(100);
-      @extend %flex;
-      @extend %flexMainCenter;
-      @extend %flexCrossCenter;
-    }
-    .up{
-      &.activated {
-        background-color:$ajk_activated_color;
-      }
-      border-radius: 50%;
-      left: 50%;
-      top:0%;
-      margin-left: px2rem(-50);
-      img{
-        width: px2rem(43);
-      }
-    }
-    .down{
-      left: 50%;
-      bottom:12%;
-      margin-left: px2rem(-50);
-      img{
-        width: px2rem(43);
-      }
-    }
-    .left{
-      left: 5%;
-      top:46%;
-      margin-top: px2rem(-50);
-      img{
-        width: px2rem(26);
-      }
-    }
-    .right{
-      right: 3%;
-      top:46%;
-      margin-top: px2rem(-50);
-      img{
-        width: px2rem(26);
-      }
-    }
-    .ok{
-      left: 50%;
-      top:43%;
-      margin-left: px2rem(-50);
-      margin-top: px2rem(-50);
-      @include font-dpr(30px);
-      color: $ajk_color;
-    }
-  }
-}
+ .futrue_wrap {
+   padding-top: px2rem(20);
+   height: 100%;
+   float: left;
+   .tvBox {
+     display: flex;
+     justify-content: space-between;
+     padding: 0 px2rem(40);
+   }
+   .tv_btn {
+     width: px2rem(120);
+     height: px2rem(120);
+     border-radius: 50%;
+     &.activated {
+       background-color: #6095f0;
+     }
+   }
+   .tv_switch {
+     background: url('../imgs/wcj/newTv/tv_on.png') no-repeat center center;
+     background-size: px2rem(46) px2rem(52);
+     &.active{
+      background-color: #6095f0!important;
+     }
+   }
+   .tv_v_plus {
+     background: url('../imgs/wcj/newTv/plus_on.png') no-repeat center center;
+     background-size: px2rem(46) px2rem(52)
+   }
+   .tv_v_minus {
+     background: url('../imgs/wcj/newTv/minus_on.png') no-repeat center center;
+     background-size: px2rem(46) px2rem(52)
+   }
+   .tv_mute {
+     background: url('../imgs/wcj/newTv/mute_on.png') no-repeat center center;
+     background-size: px2rem(46) px2rem(52)
+   }
+   .tv_return {
+     background: url('../imgs/wcj/newTv/return_on.png') no-repeat center center;
+     background-size: px2rem(46) px2rem(52)
+   }
+   .dir_control {
+     margin: px2rem(30);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .channel_voice {
+     width: px2rem(90);
+     height: px2rem(350);
+     border-radius: px2rem(45);
+     border: px2rem(2) solid #6095f0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+   }
+
+   .arr_common {
+     display: inline-block;
+     width: px2rem(90);
+     height: px2rem(90);
+     border-radius: 50%;
+     position: relative;
+   }
+
+   .arr_title {
+     text-align: center;
+     color: #6095f0;
+     @include font-dpr(17px);
+   }
+
+   .arr_up {
+     @extend .arr_common;
+     background: url(../imgs/wcj/newTv/arr_top.png) no-repeat center center;
+     background-size: px2rem(38) px2rem(22);
+   }
+
+   .round_up {
+     @extend .arr_up;
+     position: absolute;
+     left: 50%;
+     margin-left: px2rem(-45);
+     background-color: transparent;
+     transition: all .2s ease-in;
+   }
+
+   .round:active {
+     background-color: rgba(0, 0, 0, .3);
+   }
+
+   .arr_down {
+     @extend .arr_common;
+     background: url(../imgs/wcj/newTv/arr_down.png) no-repeat center center;
+     background-size: px2rem(34) px2rem(20);
+   }
+
+   .round_down {
+     @extend .arr_down;
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     margin-left: px2rem(-45);
+   }
+
+   .round_left {
+     @extend .arr_common;
+     background: url(../imgs/wcj/newTv/arr_left.png) no-repeat center center;
+     background-size: px2rem(22) px2rem(38);
+     position: absolute;
+     top: 50%;
+     margin-top: px2rem(-45);
+   }
+
+   .round_right {
+     @extend .arr_common;
+     background: url(../imgs/wcj/newTv/arr_right.png) no-repeat center center;
+     background-size: px2rem(22) px2rem(38);
+     position: absolute;
+     right: 0;
+     top: 50%;
+     margin-top: px2rem(-45);
+   }
+
+   .arr_round {
+     width: px2rem(380);
+     height: px2rem(380);
+     border: px2rem(2) solid #6095f0;
+     border-radius: 50%;
+     position: relative;
+   }
+
+   .arr_center {
+     width: px2rem(180);
+     line-height: px2rem(180);
+     border: px2rem(2) solid #6095f0;
+     border-radius: 50%;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     margin-left: px2rem(-90);
+     margin-top: px2rem(-90);
+     text-align: center;
+   }
+
+   .arr_ok {
+     width: px2rem(120);
+     line-height: px2rem(120);
+     border-radius: 50%;
+     background-color: #6095f0;
+     display: inline-block;
+     vertical-align: middle;
+     color: #fefeff;
+     @include font-dpr(25px);
+   }
+   .review_tv {
+     margin: px2rem(38) px2rem(190);
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .review_btn {
+     width: px2rem(120);
+     line-height: px2rem(60);
+     border: px2rem(2) solid #6095f0;
+     color: #fff;
+     @include font-dpr(17px);
+     text-align: center;
+     transition: all 0.2s;
+   }
+   .tv_num {
+     width: px2rem(584);
+     margin: 0 auto;
+     border-top: px2rem(2) solid #6095f0;
+   }
+
+   .num_item {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .num {
+     margin: px2rem(10) 0;
+     width: px2rem(100);
+     line-height: px2rem(70);
+     text-align: center;
+     color: #fff;
+     @include font-dpr(25px);
+     font-weight: 200
+   }
+   .num_item_last {
+     width: 100%;
+     text-align: center;
+   }
+ }
